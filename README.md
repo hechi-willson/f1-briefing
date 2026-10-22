@@ -1,26 +1,28 @@
 # F1 Briefing
 
-Öffentliches Briefing zum jeweils aktuellen Formel-1-Rennwochenende, veröffentlicht über GitHub Pages.
+Public briefing for the current Formula 1 race weekend, published via GitHub Pages.
 
 Live: https://hechi-willson.github.io/f1-briefing/
 
-## Inhalt
+> **Note:** The page content itself is in German. Only the repository metadata (README, commit messages, issues, PRs) is in English.
 
-- Session-Zeiten (Umschalter Wien / Ortszeit)
-- Strecke, Reifen und Strategie
-- Wetter pro Session
-- Fahrer- und Konstrukteurs-WM
-- Neue FIA-Dokumente
-- Ergebnisse, Startaufstellung und Rennergebnis, laufend ergänzt übers Wochenende
+## Contents
 
-## Aktualisierung
+- Session times (toggle between Vienna and local track time)
+- Track, tyres and strategy
+- Weather per session
+- Drivers' and Constructors' Championship standings
+- New FIA documents
+- Results, starting grid and race result, added throughout the weekend
 
-Die Seite wird an Rennwochenenden automatisch mehrmals täglich aktualisiert und in der Rennwoche auf das nächste Rennen umgestellt. Jeder Commit entspricht einem Update der Seite.
+## Updates
 
-## Technik
+On race weekends the page is updated automatically several times a day, and it is switched to the next race during race week. Each commit corresponds to one page update.
 
-Eine einzelne `index.html` ohne externe Abhängigkeiten (HTML, CSS, etwas Vanilla-JS für den Zeitzonen-Umschalter). Hell/dunkel folgt der Systemeinstellung.
+## Tech
 
-## Benachrichtigungen
+A single `index.html` with no external dependencies (HTML, CSS, and a bit of vanilla JS for the time zone toggle). Light/dark mode follows the system setting.
 
-Bei jedem Push auf `main` ruft eine GitHub Action einen Webhook auf (JSON mit Commit-ID, Commit-Nachricht, Zeitpunkt und Seiten-Link). Neue Commits gibt es auch als Feed: https://github.com/hechi-willson/f1-briefing/commits/main.atom
+## Notifications
+
+On every push to `main`, a GitHub Action calls a webhook (JSON with commit ID, commit message, timestamp and page link). New commits are also available as a feed: https://github.com/hechi-willson/f1-briefing/commits/main.atom
