@@ -1,0 +1,32 @@
+name: Webhook an Arno
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Webhook aufrufen
+        env:
+          WEBHOOK_URL: ${{ secrets.ARNO_WEBHOOK_URL }}
+          WEBHOOK_KEY: ${{ secrets.ARNO_WEBHOOK_KEY }}
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
+          COMMIT_TIME: ${{ github.event.head_commit.timestamp }}
+        run: |
+          if [ -z "$WEBHOOK_URL" ] || [ -z "$WEBHOOK_KEY" ]; then
+            echo "Secrets fehlen, übersprungen."; exit 0
+          fi
+          payload=$(jq -n \
+            --arg repo "$GITHUB_REPOSITORY" \
+            --arg sha "$GITHUB_SHA" \
+            --arg message "$COMMIT_MSG" \
+            --arg timestamp "$COMMIT_TIME" \
+            --arg page "https://hechi-willson.github.io/f1-briefing/" \
+            --arg commit_url "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/commit/$GITHUB_SHA" \
+            '{event:"f1-briefing-update", repo:$repo, sha:$sha, message:$message, timestamp:$timestamp, page:$page, commit_url:$commit_url}')
+          curl -fsS --retry 3 -X POST "$WEBHOOK_URL" \
+            -H "Authorization: Bearer $WEBHOOK_KEY" \
+            -H "Content-Type: application/json" \
+            -d "$payload" -o /dev/null -w "HTTP %{http_code}\n"
