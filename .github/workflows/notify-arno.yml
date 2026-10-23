@@ -1,30 +1,35 @@
-name: Webhook an Arno
+name: Notify Arno
 
+# Fires only after GitHub Pages has finished deploying the new version,
+# so the webhook never arrives before the page is live.
 on:
-  push:
-    branches: [main]
+  workflow_run:
+    workflows: ["pages-build-deployment"]
+    types: [completed]
 
 jobs:
   notify:
+    if: github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
-      - name: Webhook aufrufen
+      - name: Call webhook
         env:
           WEBHOOK_URL: ${{ secrets.ARNO_WEBHOOK_URL }}
           WEBHOOK_KEY: ${{ secrets.ARNO_WEBHOOK_KEY }}
-          COMMIT_MSG: ${{ github.event.head_commit.message }}
-          COMMIT_TIME: ${{ github.event.head_commit.timestamp }}
+          SHA: ${{ github.event.workflow_run.head_sha }}
+          COMMIT_MSG: ${{ github.event.workflow_run.head_commit.message }}
+          COMMIT_TIME: ${{ github.event.workflow_run.head_commit.timestamp }}
         run: |
           if [ -z "$WEBHOOK_URL" ] || [ -z "$WEBHOOK_KEY" ]; then
-            echo "Secrets fehlen, übersprungen."; exit 0
+            echo "Secrets missing, skipped."; exit 0
           fi
           payload=$(jq -n \
             --arg repo "$GITHUB_REPOSITORY" \
-            --arg sha "$GITHUB_SHA" \
+            --arg sha "$SHA" \
             --arg message "$COMMIT_MSG" \
             --arg timestamp "$COMMIT_TIME" \
             --arg page "https://hechi-willson.github.io/f1-briefing/" \
-            --arg commit_url "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/commit/$GITHUB_SHA" \
+            --arg commit_url "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/commit/$SHA" \
             '{event:"f1-briefing-update", repo:$repo, sha:$sha, message:$message, timestamp:$timestamp, page:$page, commit_url:$commit_url}')
           curl -fsS --retry 3 -X POST "$WEBHOOK_URL" \
             -H "Authorization: Bearer $WEBHOOK_KEY" \
