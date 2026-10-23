@@ -41,6 +41,7 @@ dt{color:var(--muted)}dd{margin:0}
 .bar .fill{height:100%;border-radius:4px;background:var(--bar)}
 .bar.em .fill{background:var(--bar-em)}.bar.em{font-weight:600}
 .bar .v{text-align:right;font-variant-numeric:tabular-nums}
+.bars.wide .bar{grid-template-columns:140px 1fr 64px}
 ol.links{margin:0;padding:0;list-style:none;counter-reset:n;display:flex;flex-direction:column;gap:8px}
 ol.links li{counter-increment:n}
 ol.links a{display:flex;gap:12px;align-items:baseline;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 12px;color:var(--fg);text-decoration:none}
@@ -90,6 +91,20 @@ footer{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font
 <div class="row"><div class="lead">Joker</div><div class="t">Stopp unter SC oder VSC</div><div class="d">Spart einen großen Teil der 20,6 s Boxenverlust.</div></div>
 </div>
 <p>2025 fuhren 13 Fahrer Medium auf Soft, der damalige Hard (C1) blieb ungenutzt.</p>
+</section>
+
+<section id="energie">
+<div class="head"><h2>Power Unit / Energie</h2><span class="cap">FIA Doc 8</span></div>
+<div class="grid">
+<dl><dt>Rennen</dt><dd>8,5 MJ/Runde</dd><dt>Rennen mit Overtake</dt><dd>9,0 MJ/Runde</dd><dt>Qualifying</dt><dd>8,5 MJ/Runde</dd></dl>
+<dl><dt>Freies Training</dt><dd>9,0 MJ/Runde</dd><dt>Out-Laps (außer Rennen)</dt><dd>9,0 MJ/Runde</dd><dt>Ratenlimit</dt><dd>100 kW/s</dd></dl>
+</div>
+<p>Power Limited Distance im Verhältnis zur Streckenlänge: 51,6 %</p>
+<div class="bars wide">
+<div class="bar"><span>Streckenlänge</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="v">5513 m</span></div>
+<div class="bar em"><span>Power Limited</span><div class="track"><div class="fill" style="width:51.6%"></div></div><span class="v">2847 m</span></div>
+</div>
+<p>Recharge ist die Energie, die pro Runde maximal zurückgewonnen werden darf (Art. C5.2.10). Die Power Limited Distance gehört zu den Vorgaben für die maximale Leistungsreduktion der PU (Art. C5.12.8). Streckenlänge laut FIA (Centreline 5,513 km, Doc 7 und Doc 8). <a href="https://www.fia.com/system/files/decision-document/2026_united_states_grand_prix_-_power_unit_information.pdf">PDF Doc 8</a></p>
 </section>
 
 <section id="wetter">
@@ -150,7 +165,7 @@ footer{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font
 
 <footer>
 <p>Quellen: FIA-Dokumente United States GP 2026, Pirelli Preview, Open-Meteo (Stand 21.10.2026), formula1.com</p>
-<p id="stand">Stand: 23.10.2026 09:44 Wien</p>
+<p id="stand">Stand: 23.10.2026 10:03 Wien</p>
 </footer>
 </main>
 <script>
