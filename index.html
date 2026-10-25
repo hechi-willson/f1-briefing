@@ -53,6 +53,8 @@ ol.links a{display:flex;gap:12px;align-items:baseline;background:var(--card);bor
 ol.links a:hover{border-color:var(--accent)}
 ol.links a::before{content:counter(n);color:var(--accent);font-weight:700;min-width:1.2em}
 ol.links .meta{color:var(--muted);font-size:.85rem;margin-left:auto;white-space:nowrap}
+ol.links .gap{display:flex;gap:12px;align-items:baseline;border:1px dashed var(--line);border-radius:8px;padding:6px 12px;color:var(--muted);font-size:.85rem}
+ol.links .gap::before{content:counter(n);font-weight:700;min-width:1.2em}
 footer{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:.85rem}
 </style>
 </head>
@@ -128,7 +130,7 @@ footer{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font
 </section>
 
 <section id="ergebnisse">
-<div class="head"><h2>Ergebnisse</h2><span class="cap">FIA Doc 17, 22, 43, 44, formula1.com</span></div>
+<div class="head"><h2>Ergebnisse</h2><span class="cap">FIA Doc 17, 22, 32, 43, 44</span></div>
 <div class="head sub"><h3>Qualifying</h3><span class="cap">FIA Doc 43</span></div>
 <table>
 <thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Q3-Zeit</th><th>Abstand</th></tr></thead>
@@ -162,8 +164,8 @@ footer{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font
 <tr><td>21</td><td>Colapinto (Strafe)</td><td>22</td><td>Bortoleto (Strafe)</td></tr>
 </tbody>
 </table>
-<div class="head sub"><h3>Freies Training</h3><div class="tools"><span class="cap" id="fp-cap">formula1.com, FIA-PDF fehlt</span>
-<div class="seg" role="group" aria-label="Training"><button type="button" data-fp="fp1" data-cap="FIA Doc 17" aria-pressed="false">FP1</button><button type="button" data-fp="fp2" data-cap="FIA Doc 22" aria-pressed="false">FP2</button><button type="button" data-fp="fp3" data-cap="formula1.com, FIA-PDF fehlt" aria-pressed="true">FP3</button></div></div></div>
+<div class="head sub"><h3>Freies Training</h3><div class="tools"><span class="cap" id="fp-cap">FIA Doc 32</span>
+<div class="seg" role="group" aria-label="Training"><button type="button" data-fp="fp1" data-cap="FIA Doc 17" aria-pressed="false">FP1</button><button type="button" data-fp="fp2" data-cap="FIA Doc 22" aria-pressed="false">FP2</button><button type="button" data-fp="fp3" data-cap="FIA Doc 32" aria-pressed="true">FP3</button></div></div></div>
 <div class="fp" id="fp1" hidden>
 <table>
 <thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Zeit</th><th>Abstand</th></tr></thead>
@@ -322,7 +324,7 @@ footer{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font
 </section>
 
 <section id="motortausch">
-<div class="head"><h2>Strafen</h2><span class="cap">FIA Doc 13–15, 35–38, 44</span></div>
+<div class="head"><h2>Strafen</h2><span class="cap">FIA Doc 13–15, 28, 35–38, 44</span></div>
 <table>
 <thead><tr><th>Fahrer</th><th>Element / Vergehen</th><th>Nr. / erlaubt</th><th>Strafe</th></tr></thead>
 <tbody>
@@ -362,14 +364,25 @@ footer{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font
 <li><a href="https://www.fia.com/system/files/decision-document/2026_united_states_grand_prix_-_new_pu_elements_for_this_competition.pdf">Doc 13 – Neue PU-Elemente für Austin<span class="meta">fia.com · 23.10.26</span></a></li>
 <li><a href="https://www.fia.com/system/files/decision-document/2026_united_states_grand_prix_-_infringement_-_car_43_-_pu_element.pdf">Doc 14 – Strafe Colapinto, PU-Element<span class="meta">fia.com · 23.10.26</span></a></li>
 <li><a href="https://www.fia.com/system/files/decision-document/2026_united_states_grand_prix_-_infringement_-_car_5_-_pu_elements.pdf">Doc 15 – Strafe Bortoleto, PU-Elemente<span class="meta">fia.com · 23.10.26</span></a></li>
+<li><span class="gap">Doc 16 – Strafe Lindblad, PU-Element, zurückgezogen<span class="meta">23.10.26</span></span></li>
 <li><a href="https://www.fia.com/system/files/decision-document/2026_united_states_grand_prix_-_free_practice_1_classification.pdf">Doc 17 – Ergebnis FP1<span class="meta">fia.com · 23.10.26</span></a></li>
 <li><a href="https://www.fia.com/system/files/decision-document/2026_united_states_grand_prix_-_race_directors_competition_notes_v2.pdf">Doc 18 – Race Director's Competition Notes V2<span class="meta">fia.com · 23.10.26</span></a></li>
+<li><span class="gap">Doc 19 – von der FIA nicht veröffentlicht</span></li>
 <li><a href="https://www.fia.com/system/files/decision-document/2026_united_states_grand_prix_-_infringement_-_free_practice_1_deleted_lap_times.pdf">Doc 20 – FP1 gestrichene Runden<span class="meta">fia.com · 23.10.26</span></a></li>
 <li><a href="https://www.fia.com/system/files/decision-document/2026_united_states_grand_prix_-_decision_-_car_63_-_alleged_forcing_another_driver_off_the_track.pdf">Doc 21 – Russell/Leclerc T18, keine Strafe<span class="meta">fia.com · 24.10.26</span></a></li>
 <li><a href="https://www.fia.com/system/files/decision-document/2026_united_states_grand_prix_-_free_practice_2_classification.pdf">Doc 22 – Ergebnis FP2<span class="meta">fia.com · 24.10.26</span></a></li>
 <li><a href="https://www.fia.com/system/files/decision-document/2026_united_states_grand_prix_-_race_director_notes_-_sc2_-_sc1_times.pdf">Doc 23 – Maximalzeit SC2–SC1<span class="meta">fia.com · 24.10.26</span></a></li>
 <li><a href="https://www.fia.com/system/files/decision-document/2026_united_states_grand_prix_-_infringement_-_free_practice_2_deleted_lap_times.pdf">Doc 24 – FP2 gestrichene Runden<span class="meta">fia.com · 24.10.26</span></a></li>
 <li><a href="https://www.fia.com/system/files/decision-document/2026_united_states_grand_prix_-_p1_and_p2_scrutineering.pdf">Doc 25 – Technische Abnahme FP1/FP2<span class="meta">fia.com · 24.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_united_states_grand_prix_-_post-qualifying_procedure.pdf">Doc 26 – Ablauf nach dem Qualifying<span class="meta">fia.com · 24.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_united_states_grand_prix_-_race_directors_competition_notes_v3.pdf">Doc 27 – Race Director's Competition Notes V3<span class="meta">fia.com · 24.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_united_states_grand_prix_-_new_pu_elements_for_this_competition_0.pdf">Doc 28 – Neue PU-Elemente Bortoleto, Cadillac<span class="meta">fia.com · 24.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_united_states_grand_prix_-_summons_-_audi_-_pit_lane_incident_-_car_27.pdf">Doc 29 – Vorladung Audi, Boxengasse Hülkenberg<span class="meta">fia.com · 24.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_united_states_grand_prix_-_summons_-_car_5_-_alleged_impeding_of_car_44.pdf">Doc 30 – Vorladung Bortoleto, Behindern<span class="meta">fia.com · 24.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_united_states_grand_prix_-_summons_-_car_44_-_alleged_impeding_by_car_5.pdf">Doc 31 – Vorladung Hamilton, Behindern<span class="meta">fia.com · 24.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_united_states_grand_prix_-_free_practice_3_classification.pdf">Doc 32 – Ergebnis FP3<span class="meta">fia.com · 24.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_united_states_grand_prix_-_summons_-_car_6_-_alleged_erratic_driving.pdf">Doc 33 – Vorladung Hadjar, Fahrweise<span class="meta">fia.com · 24.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_united_states_grand_prix_-_infringement_-_free_practice_3_deleted_lap_times.pdf">Doc 34 – FP3 gestrichene Runden<span class="meta">fia.com · 24.10.26</span></a></li>
 <li><a href="https://www.fia.com/system/files/decision-document/2026_united_states_grand_prix_-_infringement_-_car_5_-_additional_changes_to_pu_elements.pdf">Doc 35 – Strafe Bortoleto, weitere PU-Elemente<span class="meta">fia.com · 24.10.26</span></a></li>
 <li><a href="https://www.fia.com/system/files/decision-document/2026_united_states_grand_prix_-_infringement_-_car_27_-_alleged_pit_lane_incident.pdf">Doc 36 – Hülkenberg Boxengasse, keine Strafe<span class="meta">fia.com · 24.10.26</span></a></li>
 <li><a href="https://www.fia.com/system/files/decision-document/2026_united_states_grand_prix_-_infringement_-_car_6_-_driving_erratically.pdf">Doc 37 – Hadjar Verwarnung<span class="meta">fia.com · 24.10.26</span></a></li>
