@@ -55,6 +55,19 @@ ol.links a::before{content:counter(n);color:var(--accent);font-weight:700;min-wi
 ol.links .meta{color:var(--muted);font-size:.85rem;margin-left:auto;white-space:nowrap}
 ol.links .gap{display:flex;gap:12px;align-items:baseline;border:1px dashed var(--line);border-radius:8px;padding:6px 12px;color:var(--muted);font-size:.85rem}
 ol.links .gap::before{content:counter(n);font-weight:700;min-width:1.2em}
+.cd{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:0 0 22px;display:flex;align-items:center;justify-content:space-between;gap:12px 18px;flex-wrap:wrap}
+.cd[hidden]{display:none}
+.cd .lbl{color:var(--muted);font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.03em}
+.cd .nm{font-weight:600;font-size:1.05rem;line-height:1.3}
+.cd .when{color:var(--muted);font-size:.9rem}
+.cd .clock{display:flex;gap:6px}
+.cd .u{min-width:52px;text-align:center;border:1px solid var(--line);border-radius:6px;padding:4px 6px;background:var(--bg)}
+.cd .u b{display:block;font-size:1.35rem;line-height:1.2;font-variant-numeric:tabular-nums}
+.cd .u span{color:var(--muted);font-size:.72rem}
+.cd.live{border-left:4px solid var(--accent);background:var(--call)}
+.cd.live .lbl{color:var(--accent)}
+.cd.live .clock,.cd.done .clock{display:none}
+@media (max-width:560px){.cd .clock{width:100%}.cd .u{flex:1;min-width:0}}
 footer{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:.85rem}
 </style>
 </head>
@@ -62,6 +75,22 @@ footer{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font
 <main>
 <h1>Mexiko GP 2026 – Mexiko-Stadt Briefing</h1>
 <p class="summary">Runde 19 im Autódromo Hermanos Rodríguez, 30. Oktober bis 1. November, ohne Sprint. Antonelli hat den ersten Matchball.</p>
+
+<!-- Session countdown: the schedule lives in the JSON block #cd-sessions below.
+     Replace it for each new race weekend (ISO timestamps with UTC offset, duration in minutes). -->
+<div class="cd" id="countdown" hidden aria-live="polite">
+<div><div class="lbl" id="cd-lbl">Nächste Session</div><div class="nm" id="cd-nm"></div><div class="when" id="cd-when"></div></div>
+<div class="clock" id="cd-clock"><div class="u"><b id="cd-d">0</b><span>Tage</span></div><div class="u"><b id="cd-h">00</b><span>Std</span></div><div class="u"><b id="cd-m">00</b><span>Min</span></div><div class="u"><b id="cd-s">00</b><span>Sek</span></div></div>
+</div>
+<script type="application/json" id="cd-sessions">
+[
+  {"name": "1. Freies Training", "short": "FP1", "start": "2026-10-30T19:30:00+01:00", "minutes": 60},
+  {"name": "2. Freies Training", "short": "FP2", "start": "2026-10-30T23:00:00+01:00", "minutes": 60},
+  {"name": "3. Freies Training", "short": "FP3", "start": "2026-10-31T18:30:00+01:00", "minutes": 60},
+  {"name": "Qualifying", "short": "Qualifying", "start": "2026-10-31T22:00:00+01:00", "minutes": 60},
+  {"name": "Rennen", "short": "Rennen", "start": "2026-11-01T21:00:00+01:00", "minutes": 120}
+]
+</script>
 
 <div class="callout"><b>Matchball</b>Antonelli führt mit 123 Punkten vor Russell und 124 vor Hamilton, nach Mexiko sind noch 100 Punkte zu holen. Mit P9 oder besser ist er sicher Weltmeister. Mit P10 reicht es, solange Russell nicht gewinnt; mit P11 oder schlechter, solange weder Russell noch Hamilton gewinnt.</div>
 
@@ -184,6 +213,46 @@ footer{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font
 </main>
 <script>
 (function(){document.querySelectorAll('.seg').forEach(function(g){var b=g.querySelectorAll('button');b.forEach(function(x){x.addEventListener('click',function(){b.forEach(function(y){y.setAttribute('aria-pressed',y===x?'true':'false')});var z=x.getAttribute('data-zone');if(z){document.querySelectorAll('td[data-wien]').forEach(function(td){td.textContent=td.getAttribute('data-'+z)})}var f=x.getAttribute('data-fp');if(f){document.querySelectorAll('.fp').forEach(function(d){d.hidden=d.id!==f});var c=document.getElementById('fp-cap');if(c)c.textContent=x.getAttribute('data-cap')}var l=x.getAttribute('data-lr');if(l){document.querySelectorAll('.lr').forEach(function(d){d.hidden=d.id!==l});var lc=document.getElementById('lr-cap');if(lc)lc.textContent=x.getAttribute('data-cap')}})})})})();
+</script>
+<script>
+// Session countdown: reads #cd-sessions, shows next session, LIVE state or weekend end.
+(function(){
+var box=document.getElementById('countdown'),src=document.getElementById('cd-sessions');
+if(!box||!src)return;
+var list;try{list=JSON.parse(src.textContent)}catch(e){return}
+list=list.map(function(x){var t=Date.parse(x.start);return{name:x.name,short:x.short||x.name,t:t,end:t+(x.minutes||60)*60000}}).filter(function(x){return !isNaN(x.t)}).sort(function(a,b){return a.t-b.t});
+if(!list.length)return;
+function fmt(t){
+  // Always display Vienna time, independent of the visitor's timezone.
+  try{
+    var d=new Date(t);
+    var wd=d.toLocaleDateString('de-AT',{timeZone:'Europe/Vienna',weekday:'short'}).replace('.','');
+    var dt=d.toLocaleDateString('de-AT',{timeZone:'Europe/Vienna',day:'2-digit',month:'2-digit'});
+    var hm=d.toLocaleTimeString('de-AT',{timeZone:'Europe/Vienna',hour:'2-digit',minute:'2-digit',hour12:false});
+    var tz='MEZ';try{var p=new Intl.DateTimeFormat('de-DE',{timeZone:'Europe/Vienna',timeZoneName:'short'}).formatToParts(d);p.forEach(function(q){if(q.type==='timeZoneName')tz=q.value})}catch(e){}
+    if(!/^MES?Z$/.test(tz))tz='Wien';
+    return wd+' '+dt.replace(/\.?$/,'.')+' '+hm+' '+tz;
+  }catch(e){return new Date(t).toLocaleString()}
+}
+function pad(n){return(n<10?'0':'')+n}
+var $=function(id){return document.getElementById(id)};
+function tick(){
+  var now=Date.now(),live=null,next=null;
+  for(var i=0;i<list.length;i++){var x=list[i];if(now>=x.t&&now<x.end){live=x;break}if(now<x.t){next=x;break}}
+  box.classList.remove('live','done');
+  if(live){
+    box.classList.add('live');$('cd-lbl').textContent='Live';$('cd-nm').textContent='LIVE: '+live.name;$('cd-when').textContent='seit '+fmt(live.t);
+  }else if(next){
+    var r=Math.floor((next.t-now)/1000);
+    $('cd-lbl').textContent='Nächste Session';$('cd-nm').textContent=next.name;$('cd-when').textContent=fmt(next.t);
+    $('cd-d').textContent=Math.floor(r/86400);$('cd-h').textContent=pad(Math.floor(r%86400/3600));$('cd-m').textContent=pad(Math.floor(r%3600/60));$('cd-s').textContent=pad(r%60);
+  }else{
+    box.classList.add('done');$('cd-lbl').textContent='Rennwochenende';$('cd-nm').textContent='Wochenende beendet';$('cd-when').textContent='Rennen am '+fmt(list[list.length-1].t);
+  }
+  box.hidden=false;
+}
+tick();setInterval(tick,1000);
+})();
 </script>
 </body>
 </html>
