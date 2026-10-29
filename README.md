@@ -21,7 +21,7 @@ On race weekends the page is updated automatically several times a day, and it i
 
 ## Tech
 
-A single `index.html` with no external dependencies (HTML, CSS, and a bit of vanilla JS for the time zone toggle). Light/dark mode follows the system setting.
+A single `index.html` with no external dependencies (HTML, CSS, and a bit of vanilla JS for the time zone toggle and the session countdown). Dark design matching the Wednesday briefing infographic (F1 red accents, Barlow and Barlow Condensed). The fonts are self-hosted in `fonts/` (SIL Open Font License, see `fonts/OFL.txt`), so no requests go to Google Fonts.
 
 ## Notifications
 
