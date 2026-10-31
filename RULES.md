@@ -28,6 +28,7 @@ Gepflegt von PushPush. Änderungen nur auf Hechis Wunsch. Zuletzt geändert: 31.
 
 ## 4. Briefing-Webseite
 - Live: https://pushpush.live (seit 31.10.2026; alte Adresse https://hechi-willson.github.io/f1-briefing/ leitet weiter). Die Datei `CNAME` (Inhalt `pushpush.live`) im Repo-Hauptverzeichnis muss bleiben, nie löschen oder ändern. (Repo hechi-willson/f1-briefing, öffentlich). Arbeitskopie /workspace/f1-pages/site, Ablauf in /workspace/f1-pages/README.md.
+- Jede Seite (index.html, impressum.html und jede Archivkopie in archiv/, auch die vom Mittwoch Briefing angelegten) behält im `<head>` den Tag `<meta name="robots" content="noindex, nofollow">`. Keine robots.txt mit Disallow anlegen.
 - Die Webseite ist die einzige Briefing-Ablage. Keine Page/Canvas anlegen oder bearbeiten.
 - Nur Inhalte eintragen, die die jeweilige Routine laut Auftrag einträgt. Neue Arten von Inhalten nur nach Hechis Freigabe.
 - Seitentext Deutsch; Commit-Messages, README und Code-Kommentare Englisch.
