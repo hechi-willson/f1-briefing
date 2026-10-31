@@ -202,9 +202,9 @@ footer a{color:var(--muted)}
 
 <section id="ergebnisse">
 <div class="head"><h2>Ergebnisse</h2><span class="cap">formula1.com</span></div>
-<div class="head sub"><h3>Freies Training</h3><div class="tools"><span class="cap" id="fp-cap">formula1.com</span>
-<div class="seg" role="group" aria-label="Training"><button type="button" data-fp="fp1" data-cap="formula1.com" aria-pressed="true">FP1</button></div></div></div>
-<div class="fp" id="fp1">
+<div class="head sub"><h3>Freies Training</h3><div class="tools"><span class="cap" id="fp-cap">FIA Doc 26</span>
+<div class="seg" role="group" aria-label="Training"><button type="button" data-fp="fp1" data-cap="formula1.com" aria-pressed="false">FP1</button><button type="button" data-fp="fp2" data-cap="FIA Doc 26" aria-pressed="true">FP2</button></div></div></div>
+<div class="fp" id="fp1" hidden>
 <table>
 <thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Zeit</th><th>Abstand</th></tr></thead>
 <tbody>
@@ -213,6 +213,18 @@ footer a{color:var(--muted)}
 <tr><td>3</td><td>Vesti</td><td>Mercedes</td><td>1:18.861</td><td>+0.733</td></tr>
 <tr><td>4</td><td>Hamilton</td><td>Ferrari</td><td>1:18.866</td><td>+0.738</td></tr>
 <tr><td>5</td><td>Iwasa</td><td>Red Bull</td><td>1:19.113</td><td>+0.985</td></tr>
+</tbody>
+</table>
+</div>
+<div class="fp" id="fp2">
+<table>
+<thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Zeit</th><th>Abstand</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Leclerc</td><td>Ferrari</td><td>1:17.827</td><td>–</td></tr>
+<tr><td>2</td><td>Norris</td><td>McLaren</td><td>1:17.930</td><td>+0.103</td></tr>
+<tr><td>3</td><td>Russell</td><td>Mercedes</td><td>1:17.933</td><td>+0.106</td></tr>
+<tr><td>4</td><td>Antonelli</td><td>Mercedes</td><td>1:18.044</td><td>+0.217</td></tr>
+<tr><td>5</td><td>Verstappen</td><td>Red Bull</td><td>1:18.138</td><td>+0.311</td></tr>
 </tbody>
 </table>
 </div>
@@ -249,18 +261,24 @@ footer a{color:var(--muted)}
 </section>
 
 <section id="motortausch">
-<div class="head"><h2>Strafen</h2><span class="cap">FIA Doc 13</span></div>
+<div class="head"><h2>Strafen</h2><span class="cap">FIA Docs 14, 17, 18, 22, 25, 32–35</span></div>
 <table>
 <thead><tr><th>Fahrer</th><th>Element / Vergehen</th><th>Nr. / erlaubt</th><th>Strafe</th></tr></thead>
 <tbody>
-<tr><td>BOT #77</td><td>ICE</td><td>5. / 4</td><td>offen</td></tr>
-<tr><td>BOT #77</td><td>Turbolader (TC)</td><td>5. / 4</td><td>offen</td></tr>
-<tr><td>BOT #77</td><td>MGU-K</td><td>4. / 3</td><td>offen</td></tr>
-<tr><td>BOT #77</td><td>Energiespeicher (ES)</td><td>4. / 3</td><td>offen</td></tr>
-<tr><td>BOT #77</td><td>Steuerelektronik (PU-CE)</td><td>4. / 3</td><td>offen</td></tr>
+<tr><td>BOT #77</td><td>ICE</td><td>5. / 4</td><td>50 Plätze zurück (gesamt)</td></tr>
+<tr><td>BOT #77</td><td>Turbolader (TC)</td><td>5. / 4</td><td>inkl.</td></tr>
+<tr><td>BOT #77</td><td>MGU-K</td><td>4. / 3</td><td>inkl.</td></tr>
+<tr><td>BOT #77</td><td>Energiespeicher (ES)</td><td>4. / 3</td><td>inkl.</td></tr>
+<tr><td>BOT #77</td><td>Steuerelektronik (PU-CE)</td><td>4. / 3</td><td>inkl.</td></tr>
+<tr><td>VER #3</td><td>FP2, Manöver mit LAW in Kurve 12–14</td><td>–</td><td>1 Platz zurück, 1 Strafpunkt (gesamt 1)</td></tr>
+<tr><td>LAW #30</td><td>FP2, Manöver mit VER in Kurve 12–14</td><td>–</td><td>1 Platz zurück, 1 Strafpunkt (gesamt 4)</td></tr>
+<tr><td>HAD #6</td><td>Fehlverhalten im Paddock</td><td>–</td><td>offen, Anhörung Sa 17:15</td></tr>
+<tr><td>SLA #98</td><td>FP1, Unsafe Release (Kühlgebläse am Auto)</td><td>–</td><td>Audi 7.500 €</td></tr>
+<tr><td>BOR #5</td><td>FP2, Abdeckung von Bauteilen</td><td>–</td><td>Audi 5.000 €</td></tr>
+<tr><td>ALO #14</td><td>Pitlane-Speeding FP1 (80,2) und FP2 (80,1 km/h)</td><td>–</td><td>Aston Martin 2 × 100 €</td></tr>
 </tbody>
 </table>
-<p>Russell plant den nächsten Motortausch mit Rückversetzung erst für Las Vegas.</p>
+<p>BOT startet vom Ende des Feldes. Russell plant den nächsten Motortausch mit Rückversetzung erst für Las Vegas.</p>
 </section>
 
 <section id="historie">
@@ -283,13 +301,35 @@ footer a{color:var(--muted)}
 <li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_self_scrutineering.pdf">Doc 10 – Self Scrutineering<span class="meta">fia.com · 30.10.26</span></a></li>
 <li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_entry_list.pdf">Doc 11 – Entry List<span class="meta">fia.com · 30.10.26</span></a></li>
 <li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_car_presentation_submissions.pdf">Doc 12 – Car Presentation (Updates)<span class="meta">fia.com · 30.10.26</span></a></li>
-<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_new_pu_elements_for_this_competition.pdf">Doc 13 – Neue PU-Elemente (BOT über Limit)<span class="meta">fia.com · 30.10.26</span></a></li>
+<li><span class="gap">Doc 13 – Neue PU-Elemente, zurückgezogen<span class="meta">30.10.26</span></span></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_new_pu_elements_for_this_competition.pdf">Doc 14 – Neue PU-Elemente (BOT über Limit)<span class="meta">fia.com · 30.10.26</span></a></li>
+<li><span class="gap">Doc 15 – nicht veröffentlicht<span class="meta">–</span></span></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_summons_-_audi_-_alleged_release_of_car_98_in_an_unsafe_condition.pdf">Doc 16 – Vorladung Audi, Unsafe Release SLA #98<span class="meta">fia.com · 30.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_car_77_-_pu_elements.pdf">Doc 17 – Strafe BOT #77, PU-Elemente<span class="meta">fia.com · 30.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringment_-_car_14_-_pit_lane_speeding.pdf">Doc 18 – Strafe ALO #14, Pitlane-Speeding FP1<span class="meta">fia.com · 30.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_free_practice_1_classification.pdf">Doc 19 – FP1 Klassement<span class="meta">fia.com · 30.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_free_practice_1_deleted_lap_times.pdf">Doc 20 – FP1 gestrichene Runden, Track Limits<span class="meta">fia.com · 30.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_free_practice_1_deleted_lap_times_-_double_yellow.pdf">Doc 21 – FP1 gestrichene Runden, Doppel-Gelb<span class="meta">fia.com · 30.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_car_98_-_released_in_an_unsafe_condition.pdf">Doc 22 – Strafe Audi, Unsafe Release SLA #98<span class="meta">fia.com · 30.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_summons_-_car_3_-_turn_14_incident_with_car_30.pdf">Doc 23 – Vorladung VER #3, Kurve 14 mit LAW #30<span class="meta">fia.com · 30.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_summons_-_car_30_-_turn_14_incident_with_car_3.pdf">Doc 24 – Vorladung LAW #30, Kurve 14 mit VER #3<span class="meta">fia.com · 30.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringment_-_car_14_-_pit_lane_speeding_0.pdf">Doc 25 – Strafe ALO #14, Pitlane-Speeding FP2<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_free_practice_2_classification.pdf">Doc 26 – FP2 Klassement<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_free_practice_2_deleted_lap_times.pdf">Doc 27 – FP2 gestrichene Runden, Track Limits<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_race_director_notes_-_sc2_-_sc1_times.pdf">Doc 28 – Race Director: Mindestzeit SC2–SC1 1:38.0<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_covering_of_components_on_car_05_during_fp2.pdf">Doc 29 – TD-Bericht: Abdeckung an BOR #5 in FP2<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_summons_-_audi_-_car_5_covering_of_components.pdf">Doc 30 – Vorladung Audi, Abdeckung BOR #5<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_fp1_and_fp2_scrutineering.pdf">Doc 31 – Scrutineering FP1 und FP2<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_car_5_-_covering_components.pdf">Doc 32 – Strafe Audi, Abdeckung BOR #5<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_car_3_-_turn_14_incident_with_car_30_.pdf">Doc 33 – Strafe VER #3, Kurve 14 mit LAW #30<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_car_30_-_turn_14_incident_with_car_3_.pdf">Doc 34 – Strafe LAW #30, Kurve 14 mit VER #3<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_summons_-_car_6_-_alleged_misconduct.pdf">Doc 35 – Vorladung HAD #6, Fehlverhalten im Paddock<span class="meta">fia.com · 31.10.26</span></a></li>
 </ol>
 </section>
 
 <footer>
 <p>Quellen: Pirelli, formula1.com, FIA Doc 58 (USA GP 2026), Open-Meteo (Stand 28.10.2026), tv.orf.at, PITWALL, F1technical. Vorheriges Rennen: <a href="archiv/2026-18-usa-austin.html">USA GP 2026, Austin</a></p>
-<p id="stand">Stand: 30.10.2026 22:45 Wien</p>
+<p id="stand">Stand: 31.10.2026 09:47 Wien</p>
 </footer>
 </main>
 <script>
