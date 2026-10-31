@@ -2,7 +2,7 @@
 
 Public briefing for the current Formula 1 race weekend, published via GitHub Pages.
 
-Live: https://hechi-willson.github.io/f1-briefing/
+Live: https://pushpush.live
 
 > **Note:** The page content itself is in German. Only the repository metadata (README, commit messages, issues, PRs) is in English.
 
