@@ -56,6 +56,10 @@ ol.links .meta{color:var(--muted);font-size:.85rem;margin-left:auto;white-space:
 ol.links .gap{display:flex;gap:12px;align-items:baseline;border:1px dashed var(--line);border-radius:8px;padding:6px 12px;color:var(--muted);font-size:.85rem}
 ol.links .gap::before{content:counter(n);font-weight:700;min-width:1.2em}
 footer{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:.85rem}
+footer #stand,footer .legal{display:inline-block}
+footer .legal::before{content:"·";margin:0 8px}
+footer .legal a{color:var(--muted);text-decoration:none}
+footer .legal a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -471,6 +475,7 @@ footer{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font
 <footer>
 <p>Quellen: FIA-Dokumente United States GP 2026, Pirelli Preview, Open-Meteo (Stand 25.10.2026), formula1.com, OpenF1</p>
 <p id="stand">Stand: 26.10.2026 20:26 Wien</p>
+<p class="legal"><a href="../impressum.html">Impressum</a></p>
 </footer>
 </main>
 <script>
