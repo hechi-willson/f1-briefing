@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0b0c10">
+<meta name="robots" content="noindex">
+<title>Impressum – F1-Briefing</title>
+<style>
+/* Same dark infographic design as index.html */
+@font-face{font-family:'Barlow';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/barlow-400.woff2) format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/barlow-500.woff2) format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/barlow-600.woff2) format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/barlow-700.woff2) format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/barlow-condensed-600.woff2) format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/barlow-condensed-700.woff2) format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:800;font-display:swap;src:url(fonts/barlow-condensed-800.woff2) format('woff2')}
+:root{--bg:#0b0c10;--fg:#f2f2f2;--soft:#d8d8d8;--muted:#9aa0aa;--line:#23262e;--border:#262a33;--card:#15171d;--card2:#1d2027;--red:#e10600;--accent:#ff2a1f;--cond:'Barlow Condensed','Arial Narrow',sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;color:var(--fg);font:17px/1.55 'Barlow',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+ background:radial-gradient(ellipse 900px 600px at 100% 0%,rgba(225,6,0,.24),transparent 70%) no-repeat,var(--bg);min-height:100vh}
+main{max-width:760px;margin:0 auto;padding:34px 18px 44px}
+a{color:var(--accent)}
+h1{font-family:var(--cond);font-weight:800;font-size:2.6rem;line-height:1.02;letter-spacing:.01em;text-transform:uppercase;margin:0;padding:0 0 14px;border-bottom:4px solid var(--red)}
+h1::before{content:"Formel 1 · Briefing";display:block;font-weight:600;font-size:.95rem;letter-spacing:.35em;color:var(--muted);margin-bottom:6px}
+.summary{color:var(--soft);font-size:1.05rem;font-weight:500;margin:14px 0 24px}
+h2{display:flex;align-items:center;gap:10px;font-family:var(--cond);font-weight:700;font-size:1.3rem;line-height:1.2;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);margin:0 0 12px}
+h2::before{content:"";flex:none;width:5px;height:1.05em;background:var(--accent);border-radius:2px}
+section{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px 20px;margin:0 0 16px}
+p{margin:12px 0 0}
+section p{color:var(--soft);font-size:.95rem}
+dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:7px 14px}
+dt{font-family:var(--cond);font-weight:600;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;font-size:.95rem;line-height:1.6}
+dd{margin:0;font-weight:500}
+.back{display:inline-flex;align-items:center;gap:8px;font-family:var(--cond);font-weight:700;font-size:1rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fg);text-decoration:none;background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:8px 14px}
+.back:hover{border-color:var(--red)}
+.back::before{content:"←";color:var(--accent)}
+footer{border-top:1px solid var(--border);margin-top:24px;padding-top:14px;color:#6f7580;font-size:.85rem}
+footer a{color:var(--muted)}
+@media (max-width:560px){
+ body{font-size:16px}
+ main{padding:22px 12px 36px}
+ h1{font-size:2.05rem}
+ h1::before{font-size:.8rem;letter-spacing:.28em}
+ section{padding:15px 14px;border-radius:14px}
+ dl{grid-template-columns:1fr;gap:2px}
+ dd{margin-bottom:10px}
+}
+</style>
+</head>
+<body>
+<main>
+<h1>Impressum</h1>
+<p class="summary">Offenlegung gemäß § 25 Mediengesetz</p>
+
+<section>
+<h2>Offenlegung</h2>
+<dl>
+<dt>Medieninhaber</dt><dd>Andreas Hechenblaickner, Graz</dd>
+<dt>Grundlegende Richtung</dt><dd>Private, nicht-kommerzielle Seite mit Informationen zu Formel-1-Rennwochenenden.</dd>
+</dl>
+</section>
+
+<section>
+<h2>Hinweis</h2>
+<p>Namen und Marken von Formel 1, FIA und Teams gehören ihren jeweiligen Inhabern; diese Seite steht in keiner Verbindung zur Formel 1 oder zur FIA.</p>
+</section>
+
+<p><a class="back" href="index.html">Zum Briefing</a></p>
+
+</main>
+</body>
+</html>

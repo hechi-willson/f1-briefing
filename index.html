@@ -97,6 +97,11 @@ ol.links .gap::before{content:counter(n);font-family:var(--cond);font-weight:800
 .cd.live .clock,.cd.done .clock{display:none}
 footer{border-top:1px solid var(--border);margin-top:24px;padding-top:14px;color:#6f7580;font-size:.85rem}
 footer a{color:var(--muted)}
+/* Impressum link sits next to p#stand but outside it, so the Stand sed in README.md never removes it. Keep it. */
+footer #stand,footer .legal{display:inline-block}
+footer .legal::before{content:"·";margin:0 8px}
+footer .legal a{color:#6f7580;text-decoration:none}
+footer .legal a:hover{color:var(--muted);text-decoration:underline}
 @media (max-width:560px){
  body{font-size:16px}
  main{padding:22px 12px 36px}
@@ -330,6 +335,7 @@ footer a{color:var(--muted)}
 <footer>
 <p>Quellen: Pirelli, formula1.com, FIA Doc 58 (USA GP 2026), Open-Meteo (Stand 28.10.2026), tv.orf.at, PITWALL, F1technical. Vorheriges Rennen: <a href="archiv/2026-18-usa-austin.html">USA GP 2026, Austin</a></p>
 <p id="stand">Stand: 31.10.2026 09:47 Wien</p>
+<p class="legal"><a href="impressum.html">Impressum</a></p>
 </footer>
 </main>
 <script>
