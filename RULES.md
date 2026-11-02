@@ -15,8 +15,10 @@ Gepflegt von PushPush. Änderungen nur auf Hechis Wunsch. Zuletzt geändert: 02.
 - Nichts erfinden, nicht schätzen, wenn es nicht als Schätzung gekennzeichnet ist. Fehlende Daten klar benennen.
 
 ## 2. Fahrer
-- Startnummern immer zum Fahrer auflösen und als Kürzel + Nummer schreiben, z. B. „RUS #63“ statt „Auto 63“ oder „Car 63“. Zuordnung aus der aktuellen Startliste prüfen, nicht raten.
-- Sonst Fahrer mit ihrem dreistelligen Kürzel (VER, ANT, RUS …).
+- Startnummern immer zum Fahrer auflösen, nie „Auto 63“ oder „Car 63“. Zuordnung aus der aktuellen Startliste prüfen, nicht raten.
+- FIA-Docs (Nachrichten an Hechi und die FIA-Liste auf der Webseite): Kürzel + Nummer, z. B. „RUS #63“.
+- Auf der Webseite in Tabellen und Texten (alles außer der FIA-Liste): Nachname ausgeschrieben, z. B. „Russell“, „Hülkenberg“, „Pérez“, ohne Nummer.
+- In allen anderen Chat-Nachrichten an Hechi: Nachname ausgeschrieben (z. B. „Russell“), kein Kürzel.
 
 ## 3. FIA-Dokumente
 - Format jeder Zeile:
@@ -32,13 +34,19 @@ Gepflegt von PushPush. Änderungen nur auf Hechis Wunsch. Zuletzt geändert: 02.
 - Die Webseite ist die einzige Briefing-Ablage. Keine Page/Canvas anlegen oder bearbeiten.
 - Nur Inhalte eintragen, die die jeweilige Routine laut Auftrag einträgt. Neue Arten von Inhalten nur nach Hechis Freigabe.
 - Seitentext Deutsch; Commit-Messages, README und Code-Kommentare Englisch.
-- Design (seit 29.10.2026): dunkles Infografik-Design, Barlow/Barlow Condensed aus site/fonts/. Bestehendes Markup und vorhandene Klassen der Nachbarzeilen verwenden, nie das alte helle Design zurückbringen. Reifen in „Strecke und Reifen“ als farbige Ringe (H weiß, M gelb, S rot). Rennen-Zeile in der Session-Tabelle nur rot eingefärbt, sonst gleicher Stil. Section „Power Unit“ heißt genau so.
+- Design (seit 29.10.2026): dunkles Infografik-Design, Barlow/Barlow Condensed aus site/fonts/. Bestehendes Markup und vorhandene Klassen der Nachbarzeilen verwenden, nie das alte helle Design zurückbringen. Reifen in „Strecke und Reifen“ als farbige Ringe (H weiß, M gelb, S rot). Rennen-Zeile in der Session-Tabelle nur rot eingefärbt, sonst gleicher Stil. Section „Power Unit“ heißt genau so; Quelle nur als „FIA Doc N“ rechts neben der Überschrift, kein Erklärungstext und kein PDF-Link im Abschnitt.
 - Countdown (seit 28.10.2026): Karte behalten; Sessions stehen nur im JSON-Block `<script type="application/json" id="cd-sessions">` (name, short, start als ISO mit Wiener Offset, minutes).
 - Stil: Fließtext vermeiden, lieber Tabellen, Listen oder sehr kurze Sätze. Nur echte Daten.
 - FIA-Doc- oder Quellangaben bei Abschnitten immer klein und hellgrau rechts neben der Überschrift, nie in Klammer.
+- Rundenzahl nicht in der Session-Tabelle, sondern in „Strecke und Reifen“ (erste Liste nach „Länge“): „Runden“ ohne Sprint, bei Sprint-Wochenenden „Runden (Sprint)“ und „Runden (Rennen)“.
+- Section „Historie“ steht zwischen „Sessions“ und „Strecke und Reifen“: pro Jahr der letzten drei Jahre „Pole X (Zeit), Sieg Y vor Z und W“, neuestes zuerst, dazu der Rundenrekord.
+- Section „Strafen“: Spalten Fahrer, Element / Vergehen, Strafe (keine Spalte „Nr. / erlaubt“).
+- Favicon (seit 02.11.2026): favicon.svg, favicon.ico und apple-touch-icon.png im Hauptverzeichnis nicht löschen; die drei `<link rel="icon"…>`/`apple-touch-icon`-Zeilen im `<head>` von index.html beim Neuaufbau übernehmen.
+- Countdown-Card nach dem Rennen ausgeblendet (passiert automatisch im Script, nicht wieder einbauen).
+- Überschrift h1 ohne „Briefing“ (steht schon darüber); Stand-Zeile `<p id="stand">` direkt unter dem Absatz `.summary`, nicht im Footer.
 - Trainings-Ergebnisse im FP1/FP2/FP3-Umschalter; FP3-Ergebnisse immer mit eintragen.
 - Die Tipps-Tabelle unter der Startaufstellung bleibt.
-- Nach jeder Änderung die Stand-Zeile aktualisieren, dann /workspace/f1-pages/publish.sh ausführen.
+- Nach jeder Änderung die Stand-Zeile aktualisieren, dann `/workspace/f1-pages/publish.sh "<kurze Beschreibung>"` ausführen. Die Beschreibung ist Pflicht, auf Englisch und sehr kurz, z. B. "FP1 results", "FIA docs 36-42", "Quali weather". Die Commit-Message lautet dann „Update page JJJJ-MM-TT HH:MM Vienna time: FP1 results“.
 - Impressum (seit 31.10.2026): site/impressum.html nicht ändern oder löschen. Im Footer jeder Seite steht direkt nach `<p id="stand">` die eigene Zeile `<p class="legal"><a href="/impressum.html">Impressum</a></p>`, samt CSS `footer .legal`. Beim Neuaufbau von index.html beides übernehmen.
 - Interne Links und Pfade (seit 02.11.2026) immer root-absolut: `/impressum.html`, `/archiv/…html`, `/fonts/…woff2`, Startseite `/`. So bleiben Archivkopien ohne Anpassung gültig; Archivkopien werden unverändert kopiert.
 - Vor dem Umbau für ein neues Rennen das alte index.html nach site/archiv/JJJJ-RR-land-ort.html archivieren (macht das Mittwoch-Briefing).

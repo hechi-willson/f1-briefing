@@ -6,6 +6,9 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#0b0c10">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <title>Mexiko GP 2026 – Mexiko-Stadt Briefing</title>
 <style>
 @font-face{font-family:'Barlow';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/barlow-400.woff2) format('woff2')}
@@ -26,6 +29,7 @@ a{color:var(--accent)}
 h1{font-family:var(--cond);font-weight:800;font-size:2.6rem;line-height:1.02;letter-spacing:.01em;text-transform:uppercase;margin:0;padding:0 0 14px;border-bottom:4px solid var(--red)}
 h1::before{content:"Formel 1 · Briefing";display:block;font-weight:600;font-size:.95rem;letter-spacing:.35em;color:var(--muted);margin-bottom:6px}
 .summary{color:var(--soft);font-size:1.05rem;font-weight:500;margin:14px 0 24px}
+.summary+#stand{color:var(--soft);font-size:1.05rem;font-weight:500;margin:-18px 0 24px}
 h2{display:flex;align-items:center;gap:10px;font-family:var(--cond);font-weight:700;font-size:1.3rem;line-height:1.2;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);margin:0}
 h2::before{content:"";flex:none;width:5px;height:1.05em;background:var(--accent);border-radius:2px}
 section{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px 20px;margin:0 0 16px}
@@ -99,8 +103,6 @@ ol.links .gap::before{content:counter(n);font-family:var(--cond);font-weight:800
 footer{border-top:1px solid var(--border);margin-top:24px;padding-top:14px;color:#6f7580;font-size:.85rem}
 footer a{color:var(--muted)}
 /* Impressum link sits next to p#stand but outside it, so the Stand sed in README.md never removes it. Keep it. */
-footer #stand,footer .legal{display:inline-block}
-footer .legal::before{content:"·";margin:0 8px}
 footer .legal a{color:#6f7580;text-decoration:none}
 footer .legal a:hover{color:var(--muted);text-decoration:underline}
 @media (max-width:560px){
@@ -121,8 +123,9 @@ footer .legal a:hover{color:var(--muted);text-decoration:underline}
 </head>
 <body>
 <main>
-<h1>Mexiko GP 2026 – Mexiko-Stadt Briefing</h1>
+<h1>Mexiko GP 2026 – Mexiko-Stadt</h1>
 <p class="summary">Runde 19 im Autódromo Hermanos Rodríguez, 30. Oktober bis 1. November, ohne Sprint. Verstappen gewinnt, Antonelli ist Weltmeister.</p>
+<p id="stand">Stand: 02.11.2026 15:02 Wien</p>
 
 <!-- Session countdown: the schedule lives in the JSON block #cd-sessions below.
      Replace it for each new race weekend (ISO timestamps with UTC offset, duration in minutes). -->
@@ -169,17 +172,17 @@ footer .legal a:hover{color:var(--muted);text-decoration:underline}
 </tbody>
 </table>
 <ul>
-<li>LEC #16 übernimmt am Start die Führung, bekommt aber 5 Sekunden (Kurve 4, Runde 1, Vorteil durch Verlassen der Strecke gegen HAM #44).</li>
-<li>10-Sekunden-Strafe für RUS #63 nach Kollision mit HAD #6 in Kurve 6, Runde 1.</li>
-<li>Doppelausfall Aston Martin nach fünf Runden (Druckproblem an der PU), VSC Runde 7–8 nach dem Stopp von STR #18.</li>
-<li>VER #3 übernimmt die Führung beim Boxenstopp in Runde 27, als LEC seine Strafe absitzt.</li>
-<li>Rote Flagge in Runde 45 (22:06 Wien): BOT #77 nach Bruch der Aufhängung vorne links in Kurve 1 in der Mauer, unverletzt. Stehender Restart um 22:45 Wien.</li>
-<li>HAM wechselt kurz vor dem Abbruch unter Safety Car und fällt hinter ANT #12 zurück; ANT überholt nach dem Restart LEC.</li>
-<li>Nach dem Restart: 10 Sekunden für HUL #27 (Kollision mit BEA #87, Kurve 4), BEA fällt in Runde 47 aus.</li>
-<li>Safety Car Runde 59–62 nach Kollision PIA #81 mit LIN #41 in Kurve 2, LIN fällt aus. PIA bekommt nach dem Rennen 10 Sekunden.</li>
-<li>Nach dem Rennen: GAS #10 Stop-and-Go (als 30 s), COL #43 10 Sekunden, beide wegen Gelber Flaggen.</li>
+<li>Leclerc übernimmt am Start die Führung, bekommt aber 5 Sekunden (Kurve 4, Runde 1, Vorteil durch Verlassen der Strecke gegen Hamilton).</li>
+<li>10-Sekunden-Strafe für Russell nach Kollision mit Hadjar in Kurve 6, Runde 1.</li>
+<li>Doppelausfall Aston Martin nach fünf Runden (Druckproblem an der PU), VSC Runde 7–8 nach dem Stopp von Stroll.</li>
+<li>Verstappen übernimmt die Führung beim Boxenstopp in Runde 27, als Leclerc seine Strafe absitzt.</li>
+<li>Rote Flagge in Runde 45 (22:06 Wien): Bottas nach Bruch der Aufhängung vorne links in Kurve 1 in der Mauer, unverletzt. Stehender Restart um 22:45 Wien.</li>
+<li>Hamilton wechselt kurz vor dem Abbruch unter Safety Car und fällt hinter Antonelli zurück; Antonelli überholt nach dem Restart Leclerc.</li>
+<li>Nach dem Restart: 10 Sekunden für Hülkenberg (Kollision mit Bearman, Kurve 4), Bearman fällt in Runde 47 aus.</li>
+<li>Safety Car Runde 59–62 nach Kollision Piastri mit Lindblad in Kurve 2, Lindblad fällt aus. Piastri bekommt nach dem Rennen 10 Sekunden.</li>
+<li>Nach dem Rennen: Gasly Stop-and-Go (als 30 s), Colapinto 10 Sekunden, beide wegen Gelber Flaggen.</li>
 <li>Schnellste Runde: Hamilton 1:19.268 (Runde 50).</li>
-<li>Mercedes zahlt 5.000 €, weil RUS die Medientermine nach dem Rennen ausließ.</li>
+<li>Mercedes zahlt 5.000 €, weil Russell die Medientermine nach dem Rennen ausließ.</li>
 </ul>
 </section>
 
@@ -193,16 +196,21 @@ footer .legal a:hover{color:var(--muted);text-decoration:underline}
 <tr><td>FP2</td><td data-wien="Fr 23:00" data-mexiko="Fr 16:00">Fr 23:00</td><td>ORF 1 live ab 22:50</td></tr>
 <tr><td>FP3</td><td data-wien="Sa 18:30" data-mexiko="Sa 11:30">Sa 18:30</td><td>ORF 1 live ab 18:20</td></tr>
 <tr><td>Qualifying</td><td data-wien="Sa 22:00" data-mexiko="Sa 15:00">Sa 22:00</td><td>ORF 2 live ab 21:55</td></tr>
-<tr class="em"><td>Rennen (71 Rd.)</td><td data-wien="So 21:00" data-mexiko="So 14:00">So 21:00</td><td>ORF 1 live ab 20:25, Vorbericht 20:10</td></tr>
+<tr class="em"><td>Rennen</td><td data-wien="So 21:00" data-mexiko="So 14:00">So 21:00</td><td>ORF 1 live ab 20:25, Vorbericht 20:10</td></tr>
 </tbody>
 </table>
 <p>Abstand zu Mexiko an allen Tagen 7 h. ServusTV ist dieses Wochenende nicht live. Kommentar Ernst Hausleitner und Alexander Wurz.</p>
 </section>
 
+<section id="historie">
+<div class="head"><h2>Historie</h2></div>
+<dl><dt>2025</dt><dd>Pole Norris (1:15.586), Sieg Norris vor Leclerc und Verstappen</dd><dt>2024</dt><dd>Pole Sainz (1:15.946), Sieg Sainz vor Norris und Leclerc</dd><dt>2023</dt><dd>Pole Leclerc (1:17.166), Sieg Verstappen vor Hamilton und Leclerc</dd><dt>Rundenrekord</dt><dd>Bottas 1:17.774 (2021)</dd></dl>
+</section>
+
 <section id="strecke">
 <div class="head"><h2>Strecke und Reifen</h2></div>
 <div class="grid">
-<dl><dt>Länge</dt><dd>4,304 km, 17 Kurven</dd><dt>Seehöhe</dt><dd>ca. 2.240 m</dd><dt>Boxenverlust</dt><dd>ca. 22 s bei Grün</dd><dt>SC-Chance</dt><dd>ca. 45 % (PITWALL-Modell)</dd></dl>
+<dl><dt>Länge</dt><dd>4,304 km, 17 Kurven</dd><dt>Runden</dt><dd>71</dd><dt>Seehöhe</dt><dd>ca. 2.240 m</dd><dt>Boxenverlust</dt><dd>ca. 22 s bei Grün</dd><dt>SC-Chance</dt><dd>ca. 45 % (PITWALL-Modell)</dd></dl>
 <dl><dt class="tyre"><span class="ring hard" aria-hidden="true">H</span>Hard</dt><dd>C3 (eine Stufe weicher als 2025)</dd><dt class="tyre"><span class="ring medium" aria-hidden="true">M</span>Medium</dt><dd>C4</dd><dt class="tyre"><span class="ring soft" aria-hidden="true">S</span>Soft</dt><dd>C5</dd><dt>Zuteilung</dt><dd>2 Hard, 3 Medium, 8 Soft</dd></dl>
 </div>
 <p>Dünne Luft: wenig Abtrieb trotz maximalem Flügel, hohe Topspeeds, Kühlung und Bremsen am Limit.</p>
@@ -229,7 +237,6 @@ footer .legal a:hover{color:var(--muted);text-decoration:underline}
 <div class="bar"><span>Streckenlänge</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="v">4304 m</span></div>
 <div class="bar em"><span>Power Limited</span><div class="track"><div class="fill" style="width:48.8%"></div></div><span class="v">2101 m</span></div>
 </div>
-<p>Recharge: max. Rückgewinnung pro Runde (Art. C5.2.10). Streckenlänge: Centreline laut FIA Doc 6. <a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_power_unit_information.pdf">PDF Doc 6</a></p>
 </section>
 
 <section id="wetter">
@@ -265,7 +272,7 @@ footer .legal a:hover{color:var(--muted);text-decoration:underline}
 <tr><td>10</td><td>Hülkenberg</td><td>Audi</td><td>keine Q3-Zeit</td><td>–</td></tr>
 </tbody>
 </table>
-<p>LAW #30 aus dem Qualifying disqualifiziert (MGU-K, Doc 57), dadurch rückt HUL #27 auf P10.</p>
+<p>Lawson aus dem Qualifying disqualifiziert (MGU-K, Doc 57), dadurch rückt Hülkenberg auf P10.</p>
 <div class="head sub"><h3>Startaufstellung</h3><span class="cap">endgültig, FIA Doc 67</span></div>
 <table>
 <thead><tr><th>Startplatz</th><th>Fahrer</th><th>Startplatz</th><th>Fahrer</th></tr></thead>
@@ -332,7 +339,7 @@ footer .legal a:hover{color:var(--muted);text-decoration:underline}
 </tbody>
 </table>
 </div>
-<p>FP1 mit Ersatzfahrern: VES #72 bei Mercedes, IWA #36 bei Red Bull.</p>
+<p>FP1 mit Ersatzfahrern: Vesti bei Mercedes, Iwasa bei Red Bull.</p>
 </section>
 
 <section id="longruns">
@@ -361,12 +368,12 @@ footer .legal a:hover{color:var(--muted);text-decoration:underline}
 <thead><tr><th>Fahrer</th><th>Team</th><th>Reifen</th><th>Runden</th><th>Alter Ø</th><th>Pace Ø</th><th>Median</th></tr></thead>
 <tbody>
 <tr><td>Leclerc</td><td>Ferrari</td><td>Soft</td><td>9/9</td><td>12</td><td>1:21.605</td><td>1:21.578</td></tr>
-<tr><td>FOR</td><td>McLaren</td><td>Soft</td><td>4/5</td><td>9</td><td>1:21.755</td><td>1:21.535</td></tr>
+<tr><td>Fornaroli</td><td>McLaren</td><td>Soft</td><td>4/5</td><td>9</td><td>1:21.755</td><td>1:21.535</td></tr>
 <tr><td>Antonelli</td><td>Mercedes</td><td>Soft</td><td>7/8</td><td>11</td><td>1:21.874</td><td>1:21.911</td></tr>
-<tr><td>FOR</td><td>McLaren</td><td>Hard</td><td>3/5</td><td>7</td><td>1:22.206</td><td>1:22.072</td></tr>
+<tr><td>Fornaroli</td><td>McLaren</td><td>Hard</td><td>3/5</td><td>7</td><td>1:22.206</td><td>1:22.072</td></tr>
 <tr><td>Bearman</td><td>Haas</td><td>Hard</td><td>5/6</td><td>14</td><td>1:22.340</td><td>1:22.235</td></tr>
-<tr><td>BRO</td><td>Williams</td><td>Medium</td><td>6/8</td><td>13</td><td>1:22.430</td><td>1:22.382</td></tr>
-<tr><td>HIR</td><td>Haas</td><td>Medium</td><td>7/8</td><td>13</td><td>1:22.670</td><td>1:22.563</td></tr>
+<tr><td>Browning</td><td>Williams</td><td>Medium</td><td>6/8</td><td>13</td><td>1:22.430</td><td>1:22.382</td></tr>
+<tr><td>Hirakawa</td><td>Haas</td><td>Medium</td><td>7/8</td><td>13</td><td>1:22.670</td><td>1:22.563</td></tr>
 <tr><td>Gasly</td><td>Alpine</td><td>Soft</td><td>9/9</td><td>12</td><td>1:22.994</td><td>1:23.066</td></tr>
 <tr><td>Lindblad</td><td>Racing Bulls</td><td>Medium</td><td>5/5</td><td>15</td><td>1:23.248</td><td>1:22.943</td></tr>
 <tr><td>Pérez</td><td>Cadillac</td><td>Medium</td><td>4/5</td><td>10</td><td>1:23.690</td><td>1:23.689</td></tr>
@@ -446,43 +453,39 @@ footer .legal a:hover{color:var(--muted);text-decoration:underline}
 <section id="motortausch">
 <div class="head"><h2>Strafen</h2><span class="cap">FIA Docs 14–85, Auswahl</span></div>
 <table>
-<thead><tr><th>Fahrer</th><th>Element / Vergehen</th><th>Nr. / erlaubt</th><th>Strafe</th></tr></thead>
+<thead><tr><th>Fahrer</th><th>Element / Vergehen</th><th>Strafe</th></tr></thead>
 <tbody>
-<tr><td>BOT #77</td><td>ICE</td><td>5. / 4</td><td>50 Plätze zurück (gesamt)</td></tr>
-<tr><td>BOT #77</td><td>Turbolader (TC)</td><td>5. / 4</td><td>inkl.</td></tr>
-<tr><td>BOT #77</td><td>MGU-K</td><td>4. / 3</td><td>inkl.</td></tr>
-<tr><td>BOT #77</td><td>Energiespeicher (ES)</td><td>4. / 3</td><td>inkl.</td></tr>
-<tr><td>BOT #77</td><td>Steuerelektronik (PU-CE)</td><td>4. / 3</td><td>inkl.</td></tr>
-<tr><td>VER #3</td><td>FP2, Manöver mit LAW in Kurve 12–14</td><td>–</td><td>1 Platz zurück, 1 Strafpunkt (gesamt 1)</td></tr>
-<tr><td>LAW #30</td><td>FP2, Manöver mit VER in Kurve 12–14</td><td>–</td><td>1 Platz zurück, 1 Strafpunkt (gesamt 4), durch Boxengassenstart hinfällig</td></tr>
-<tr><td>HAD #6</td><td>Fehlverhalten im Paddock (FP1)</td><td>–</td><td>Verwarnung (formal warning)</td></tr>
-<tr><td>SLA #98</td><td>FP1, Unsafe Release (Kühlgebläse am Auto)</td><td>–</td><td>Audi 7.500 €</td></tr>
-<tr><td>BOR #5</td><td>FP2, Abdeckung von Bauteilen</td><td>–</td><td>Audi 5.000 €</td></tr>
-<tr><td>ALO #14</td><td>Pitlane-Speeding FP1 (80,2) und FP2 (80,1 km/h)</td><td>–</td><td>Aston Martin 2 × 100 €</td></tr>
-<tr><td>BOT #77</td><td>Pitlane-Speeding FP3 (80,9 km/h)</td><td>–</td><td>Cadillac 100 €</td></tr>
-<tr><td>ALO #14</td><td>Quali, Lenkrad nach dem Aussteigen nicht eingesetzt (Doc 45)</td><td>–</td><td>Verwarnung (1. Reprimand Fahrverhalten)</td></tr>
-<tr><td>SAI #55</td><td>Quali, Anweisung der Rennleitung in Kurve 11 missachtet (Doc 51)</td><td>–</td><td>Verwarnung (warning)</td></tr>
-<tr><td>HAD #6</td><td>Quali, weiße Linie an der Boxeneinfahrt überfahren (Doc 52)</td><td>–</td><td>Verwarnung (1. Reprimand Fahrverhalten)</td></tr>
-<tr><td>LAW #30</td><td>Quali, MGU-K-Verstoß in Q2 (Doc 57)</td><td>–</td><td>Disqualifikation aus dem Qualifying, Start erlaubt (Doc 58)</td></tr>
-<tr><td>LAW #30</td><td>Setup-Änderung im Parc fermé, 5. ICE/TC/EXH, 7. PU-ANC (Doc 65)</td><td>–</td><td>Start aus der Boxengasse</td></tr>
-<tr><td>SAI #55</td><td>Pitlane-Speeding Installationsrunde (90,9 km/h, Doc 68)</td><td>–</td><td>Williams 1.000 €</td></tr>
-<tr><td>LEC #16</td><td>Rennen, Kurve 4, Vorteil durch Verlassen der Strecke (Doc 69)</td><td>–</td><td>5 Sekunden</td></tr>
-<tr><td>RUS #63</td><td>Rennen, Kollision mit HAD in Kurve 6 (Doc 70)</td><td>–</td><td>10 Sekunden</td></tr>
-<tr><td>PER #11</td><td>Rennen, Pitlane-Speeding (80,2 km/h, Doc 71)</td><td>–</td><td>5 Sekunden</td></tr>
-<tr><td>HUL #27</td><td>Rennen, Kollision mit BEA in Kurve 4 nach Restart (Doc 74)</td><td>–</td><td>10 Sekunden</td></tr>
-<tr><td>PIA #81</td><td>Rennen, Kollision mit LIN in Kurve 2 (Doc 79)</td><td>–</td><td>10 Sekunden nach dem Rennen</td></tr>
-<tr><td>GAS #10</td><td>Rennen, Doppel-Gelb nicht beachtet (Doc 84)</td><td>–</td><td>Stop-and-Go als 30 s, 2 Strafpunkte (gesamt 2)</td></tr>
-<tr><td>COL #43</td><td>Rennen, Gelbe Flagge nicht beachtet (Doc 85)</td><td>–</td><td>10 Sekunden, 1 Strafpunkt (gesamt 5)</td></tr>
-<tr><td>RUS #63</td><td>Medientermine nach dem Rennen ausgelassen (Doc 83)</td><td>–</td><td>Mercedes 5.000 €</td></tr>
+<tr><td>Bottas</td><td>ICE</td><td>50 Plätze zurück (gesamt)</td></tr>
+<tr><td>Bottas</td><td>Turbolader (TC)</td><td>inkl.</td></tr>
+<tr><td>Bottas</td><td>MGU-K</td><td>inkl.</td></tr>
+<tr><td>Bottas</td><td>Energiespeicher (ES)</td><td>inkl.</td></tr>
+<tr><td>Bottas</td><td>Steuerelektronik (PU-CE)</td><td>inkl.</td></tr>
+<tr><td>Verstappen</td><td>FP2, Manöver mit Lawson in Kurve 12–14</td><td>1 Platz zurück, 1 Strafpunkt (gesamt 1)</td></tr>
+<tr><td>Lawson</td><td>FP2, Manöver mit Verstappen in Kurve 12–14</td><td>1 Platz zurück, 1 Strafpunkt (gesamt 4), durch Boxengassenstart hinfällig</td></tr>
+<tr><td>Hadjar</td><td>Fehlverhalten im Paddock (FP1)</td><td>Verwarnung (formal warning)</td></tr>
+<tr><td>Slater</td><td>FP1, Unsafe Release (Kühlgebläse am Auto)</td><td>Audi 7.500 €</td></tr>
+<tr><td>Bortoleto</td><td>FP2, Abdeckung von Bauteilen</td><td>Audi 5.000 €</td></tr>
+<tr><td>Alonso</td><td>Pitlane-Speeding FP1 (80,2) und FP2 (80,1 km/h)</td><td>Aston Martin 2 × 100 €</td></tr>
+<tr><td>Bottas</td><td>Pitlane-Speeding FP3 (80,9 km/h)</td><td>Cadillac 100 €</td></tr>
+<tr><td>Alonso</td><td>Quali, Lenkrad nach dem Aussteigen nicht eingesetzt (Doc 45)</td><td>Verwarnung (1. Reprimand Fahrverhalten)</td></tr>
+<tr><td>Sainz</td><td>Quali, Anweisung der Rennleitung in Kurve 11 missachtet (Doc 51)</td><td>Verwarnung (warning)</td></tr>
+<tr><td>Hadjar</td><td>Quali, weiße Linie an der Boxeneinfahrt überfahren (Doc 52)</td><td>Verwarnung (1. Reprimand Fahrverhalten)</td></tr>
+<tr><td>Lawson</td><td>Quali, MGU-K-Verstoß in Q2 (Doc 57)</td><td>Disqualifikation aus dem Qualifying, Start erlaubt (Doc 58)</td></tr>
+<tr><td>Lawson</td><td>Setup-Änderung im Parc fermé, 5. ICE/TC/EXH, 7. PU-ANC (Doc 65)</td><td>Start aus der Boxengasse</td></tr>
+<tr><td>Sainz</td><td>Pitlane-Speeding Installationsrunde (90,9 km/h, Doc 68)</td><td>Williams 1.000 €</td></tr>
+<tr><td>Leclerc</td><td>Rennen, Kurve 4, Vorteil durch Verlassen der Strecke (Doc 69)</td><td>5 Sekunden</td></tr>
+<tr><td>Russell</td><td>Rennen, Kollision mit Hadjar in Kurve 6 (Doc 70)</td><td>10 Sekunden</td></tr>
+<tr><td>Pérez</td><td>Rennen, Pitlane-Speeding (80,2 km/h, Doc 71)</td><td>5 Sekunden</td></tr>
+<tr><td>Hülkenberg</td><td>Rennen, Kollision mit Bearman in Kurve 4 nach Restart (Doc 74)</td><td>10 Sekunden</td></tr>
+<tr><td>Piastri</td><td>Rennen, Kollision mit Lindblad in Kurve 2 (Doc 79)</td><td>10 Sekunden nach dem Rennen</td></tr>
+<tr><td>Gasly</td><td>Rennen, Doppel-Gelb nicht beachtet (Doc 84)</td><td>Stop-and-Go als 30 s, 2 Strafpunkte (gesamt 2)</td></tr>
+<tr><td>Colapinto</td><td>Rennen, Gelbe Flagge nicht beachtet (Doc 85)</td><td>10 Sekunden, 1 Strafpunkt (gesamt 5)</td></tr>
+<tr><td>Russell</td><td>Medientermine nach dem Rennen ausgelassen (Doc 83)</td><td>Mercedes 5.000 €</td></tr>
 </tbody>
 </table>
-<p>BOT startete von P21, LAW aus der Boxengasse, VER durch seine Strafe von P5. Keine Strafe für GAS nach dem Restart in Kurve 1 (Doc 76). Russell plant den nächsten Motortausch mit Rückversetzung erst für Las Vegas.</p>
+<p>Bottas startete von P21, Lawson aus der Boxengasse, Verstappen durch seine Strafe von P5. Keine Strafe für Gasly nach dem Restart in Kurve 1 (Doc 76). Russell plant den nächsten Motortausch mit Rückversetzung erst für Las Vegas.</p>
 </section>
 
-<section id="historie">
-<div class="head"><h2>Historie</h2></div>
-<dl><dt>2025</dt><dd>Pole und Sieg Norris (1:15.586), vor Leclerc und Verstappen</dd><dt>Rundenrekord</dt><dd>Bottas 1:17.774 (2021)</dd></dl>
-</section>
 
 <section id="fia">
 <div class="head"><h2>FIA-Dokumente</h2><span class="cap">Mexico City GP 2026</span></div>
@@ -579,7 +582,6 @@ footer .legal a:hover{color:var(--muted);text-decoration:underline}
 
 <footer>
 <p>Quellen: Pirelli, formula1.com, FIA Docs Mexico City GP 2026 (bis Doc 87), OpenF1, Open-Meteo (Stand 28.10.2026), tv.orf.at, PITWALL, F1technical. Vorheriges Rennen: <a href="/archiv/2026-18-usa-austin.html">USA GP 2026, Austin</a></p>
-<p id="stand">Stand: 02.11.2026 09:32 Wien</p>
 <p class="legal"><a href="/impressum.html">Impressum</a></p>
 </footer>
 </main>
@@ -619,7 +621,7 @@ function tick(){
     $('cd-lbl').textContent='Nächste Session';$('cd-nm').textContent=next.name;$('cd-when').textContent=fmt(next.t);
     $('cd-d').textContent=Math.floor(r/86400);$('cd-h').textContent=pad(Math.floor(r%86400/3600));$('cd-m').textContent=pad(Math.floor(r%3600/60));$('cd-s').textContent=pad(r%60);
   }else{
-    box.classList.add('done');$('cd-lbl').textContent='Rennwochenende';$('cd-nm').textContent='Wochenende beendet';$('cd-when').textContent='Rennen am '+fmt(list[list.length-1].t);
+    box.hidden=true;return;
   }
   box.hidden=false;
 }
