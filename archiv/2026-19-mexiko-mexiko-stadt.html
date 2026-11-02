@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0b0c10">
+<title>Mexiko GP 2026 – Mexiko-Stadt Briefing</title>
+<style>
+@font-face{font-family:'Barlow';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/barlow-400.woff2) format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/barlow-500.woff2) format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/barlow-600.woff2) format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/barlow-700.woff2) format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/barlow-condensed-600.woff2) format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/barlow-condensed-700.woff2) format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:800;font-display:swap;src:url(/fonts/barlow-condensed-800.woff2) format('woff2')}
+/* Design follows the Wednesday briefing infographic: dark background, F1 red, Barlow / Barlow Condensed */
+:root{--bg:#0b0c10;--fg:#f2f2f2;--soft:#d8d8d8;--muted:#9aa0aa;--line:#23262e;--border:#262a33;--card:#15171d;--card2:#1d2027;--red:#e10600;--accent:#ff2a1f;--bar:#3a3e48;--bar-em:#e10600;--cond:'Barlow Condensed','Arial Narrow',sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;color:var(--fg);font:17px/1.55 'Barlow',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+ background:radial-gradient(ellipse 900px 600px at 100% 0%,rgba(225,6,0,.24),transparent 70%) no-repeat,var(--bg);min-height:100vh}
+main{max-width:760px;margin:0 auto;padding:34px 18px 44px}
+a{color:var(--accent)}
+h1{font-family:var(--cond);font-weight:800;font-size:2.6rem;line-height:1.02;letter-spacing:.01em;text-transform:uppercase;margin:0;padding:0 0 14px;border-bottom:4px solid var(--red)}
+h1::before{content:"Formel 1 · Briefing";display:block;font-weight:600;font-size:.95rem;letter-spacing:.35em;color:var(--muted);margin-bottom:6px}
+.summary{color:var(--soft);font-size:1.05rem;font-weight:500;margin:14px 0 24px}
+h2{display:flex;align-items:center;gap:10px;font-family:var(--cond);font-weight:700;font-size:1.3rem;line-height:1.2;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);margin:0}
+h2::before{content:"";flex:none;width:5px;height:1.05em;background:var(--accent);border-radius:2px}
+section{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px 20px;margin:0 0 16px}
+.head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.cap{color:var(--muted);font-size:.82rem}
+h3{font-family:var(--cond);font-weight:700;font-size:1.1rem;letter-spacing:.05em;text-transform:uppercase;color:var(--soft);margin:18px 0 8px}
+.head.sub{margin:18px 0 8px}
+.head.sub h3{margin:0}
+.fp[hidden]{display:none}
+.tools{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-left:auto}
+p{margin:12px 0 0}
+section p{color:var(--soft);font-size:.95rem}
+.callout{background:linear-gradient(90deg,#e10600,#9b0400);color:#fff;padding:16px 20px;border-radius:16px;margin-bottom:16px;line-height:1.45}
+.callout b{display:block;font-family:var(--cond);font-weight:800;font-size:1.45rem;letter-spacing:.06em;text-transform:uppercase;line-height:1.1;margin:0 0 4px}
+table{width:100%;border-collapse:collapse;font-size:.97rem}
+th,td{text-align:left;padding:8px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+th{font-family:var(--cond);color:var(--muted);font-weight:600;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;border-bottom-color:var(--border)}
+td:first-child{font-weight:600}
+td[data-wien]{font-family:var(--cond);font-weight:800;font-size:1.15rem;white-space:nowrap;font-variant-numeric:tabular-nums}
+tr.em td{color:var(--accent)}
+.seg{display:inline-flex;background:var(--card2);border:1px solid var(--border);border-radius:9px;overflow:hidden;padding:2px;gap:2px}
+.seg button{border:0;border-radius:7px;background:transparent;color:var(--muted);padding:5px 14px;font-family:var(--cond);font-weight:700;font-size:.95rem;letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
+.seg button:hover{color:var(--fg)}
+.seg button[aria-pressed="true"]{background:var(--red);color:#fff}
+.seg button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:560px){.grid{grid-template-columns:1fr}}
+dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:7px 14px}
+dt{font-family:var(--cond);font-weight:600;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;font-size:.95rem;line-height:1.6}
+dd{margin:0;font-weight:500}
+dt.tyre{display:flex;align-items:center;gap:9px;color:var(--fg);font-weight:700;font-size:1.05rem}
+dt.tyre+dd{align-self:center}
+.ring{flex:none;width:30px;height:30px;border-radius:50%;border:4px solid;background:#222;display:inline-flex;align-items:center;justify-content:center;font-family:var(--cond);font-weight:800;font-size:.9rem;line-height:1;color:var(--fg);letter-spacing:0}
+.ring.hard{border-color:#eee}.ring.medium{border-color:#ffd200}.ring.soft{border-color:#e10600}
+.rows{display:flex;flex-direction:column;gap:10px}
+.row{background:var(--card2);border:1px solid var(--border);border-left:4px solid var(--red);border-radius:10px;padding:10px 14px}
+.row .lead{font-family:var(--cond);font-size:.9rem;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.1em}
+.row .t{font-weight:700;font-size:1.05rem}.row .d{color:var(--muted);font-size:.93rem}
+.bars{display:flex;flex-direction:column;gap:9px}
+.bar{display:grid;grid-template-columns:100px 1fr 46px;align-items:center;gap:12px;font-size:.97rem;font-weight:500}
+.bar .track{height:8px;border-radius:4px;background:var(--card2)}
+.bar .fill{height:100%;border-radius:4px;background:var(--bar)}
+.bar.em .fill{background:var(--bar-em)}.bar.em{font-weight:700}
+.bar .v{text-align:right;font-family:var(--cond);font-weight:800;font-size:1.2rem;font-variant-numeric:tabular-nums}
+.bars.wide .bar{grid-template-columns:140px 1fr 64px}
+ol.links{margin:0;padding:0;list-style:none;counter-reset:n;display:flex;flex-direction:column;gap:8px}
+ol.links li{counter-increment:n}
+ol.links a{display:flex;gap:12px;align-items:baseline;background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;color:var(--fg);text-decoration:none;font-weight:500}
+ol.links a:hover{border-color:var(--red)}
+ol.links a::before{content:counter(n);font-family:var(--cond);color:var(--accent);font-weight:800;font-size:1.1rem;min-width:1.2em}
+ol.links .meta{color:var(--muted);font-size:.8rem;font-weight:400;margin-left:auto;white-space:nowrap}
+ol.links .gap{display:flex;gap:12px;align-items:baseline;border:1px dashed var(--border);border-radius:10px;padding:6px 14px;color:var(--muted);font-size:.85rem}
+ol.links .gap::before{content:counter(n);font-family:var(--cond);font-weight:800;min-width:1.2em}
+.cd{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px 20px;margin:0 0 16px;display:flex;align-items:center;justify-content:space-between;gap:12px 18px;flex-wrap:wrap}
+.cd[hidden]{display:none}
+.cd .lbl{display:flex;align-items:center;gap:8px;font-family:var(--cond);color:var(--accent);font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em}
+.cd .lbl::before{content:"";width:4px;height:.95em;background:var(--accent);border-radius:2px}
+.cd .nm{font-family:var(--cond);font-weight:800;font-size:1.7rem;line-height:1.15;text-transform:uppercase;letter-spacing:.01em}
+.cd .when{color:var(--muted);font-size:.92rem}
+.cd .clock{display:flex;gap:6px}
+.cd .u{min-width:60px;text-align:center;border:1px solid var(--border);border-radius:10px;padding:6px 6px 4px;background:var(--card2)}
+.cd .u b{display:block;font-family:var(--cond);font-weight:800;font-size:2rem;line-height:1.05;font-variant-numeric:tabular-nums}
+.cd .u span{font-family:var(--cond);color:var(--muted);font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.cd.live{background:linear-gradient(90deg,rgba(225,6,0,.22),rgba(225,6,0,.06)),var(--card);border:2px solid var(--red)}
+.cd.live .lbl::before{width:.6em;height:.6em;border-radius:50%;animation:cdpulse 1.2s ease-in-out infinite}
+@keyframes cdpulse{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){.cd.live .lbl::before{animation:none}}
+.cd.done .nm{color:var(--soft)}
+.cd.live .clock,.cd.done .clock{display:none}
+footer{border-top:1px solid var(--border);margin-top:24px;padding-top:14px;color:#6f7580;font-size:.85rem}
+footer a{color:var(--muted)}
+/* Impressum link sits next to p#stand but outside it, so the Stand sed in README.md never removes it. Keep it. */
+footer #stand,footer .legal{display:inline-block}
+footer .legal::before{content:"·";margin:0 8px}
+footer .legal a{color:#6f7580;text-decoration:none}
+footer .legal a:hover{color:var(--muted);text-decoration:underline}
+@media (max-width:560px){
+ body{font-size:16px}
+ main{padding:22px 12px 36px}
+ h1{font-size:2.05rem}
+ h1::before{font-size:.8rem;letter-spacing:.28em}
+ section{padding:15px 14px;border-radius:14px}
+ .cd{padding:14px}
+ .cd .clock{width:100%}.cd .u{flex:1;min-width:0}
+ th,td{padding:7px 5px}
+ td[data-wien]{font-size:1.05rem}
+ .bar{grid-template-columns:86px 1fr 40px;gap:10px}
+ ol.links a{display:grid;grid-template-columns:1.2em 1fr;column-gap:12px;row-gap:2px}
+ ol.links .meta{grid-column:2;margin-left:0}
+}
+</style>
+</head>
+<body>
+<main>
+<h1>Mexiko GP 2026 – Mexiko-Stadt Briefing</h1>
+<p class="summary">Runde 19 im Autódromo Hermanos Rodríguez, 30. Oktober bis 1. November, ohne Sprint. Verstappen gewinnt, Antonelli ist Weltmeister.</p>
+
+<!-- Session countdown: the schedule lives in the JSON block #cd-sessions below.
+     Replace it for each new race weekend (ISO timestamps with UTC offset, duration in minutes). -->
+<div class="cd" id="countdown" hidden aria-live="polite">
+<div><div class="lbl" id="cd-lbl">Nächste Session</div><div class="nm" id="cd-nm"></div><div class="when" id="cd-when"></div></div>
+<div class="clock" id="cd-clock"><div class="u"><b id="cd-d">0</b><span>Tage</span></div><div class="u"><b id="cd-h">00</b><span>Std</span></div><div class="u"><b id="cd-m">00</b><span>Min</span></div><div class="u"><b id="cd-s">00</b><span>Sek</span></div></div>
+</div>
+<script type="application/json" id="cd-sessions">
+[
+  {"name": "1. Freies Training", "short": "FP1", "start": "2026-10-30T19:30:00+01:00", "minutes": 60},
+  {"name": "2. Freies Training", "short": "FP2", "start": "2026-10-30T23:00:00+01:00", "minutes": 60},
+  {"name": "3. Freies Training", "short": "FP3", "start": "2026-10-31T18:30:00+01:00", "minutes": 60},
+  {"name": "Qualifying", "short": "Qualifying", "start": "2026-10-31T22:00:00+01:00", "minutes": 60},
+  {"name": "Rennen", "short": "Rennen", "start": "2026-11-01T21:00:00+01:00", "minutes": 120}
+]
+</script>
+
+<div class="callout"><b>Antonelli ist Weltmeister</b>Mit P3 in Mexiko hat Antonelli 380 Punkte, 119 mehr als Verstappen. In den vier Rennen ohne Sprint sind nur noch 100 Punkte zu holen, der Titel ist also rechnerisch entschieden. Mit 20 Jahren ist er der jüngste Weltmeister der F1-Geschichte und der erste Italiener seit Ascari 1953.</div>
+
+<section id="rennergebnis">
+<div class="head"><h2>Rennergebnis</h2><span class="cap">endgültig, FIA Doc 86</span></div>
+<table>
+<thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Runden</th><th>Abstand</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Verstappen</td><td>Red Bull</td><td>71</td><td>Sieger</td></tr>
+<tr><td>2</td><td>Hamilton</td><td>Ferrari</td><td>71</td><td>+0.799</td></tr>
+<tr><td>3</td><td>Antonelli</td><td>Mercedes</td><td>71</td><td>+4.006</td></tr>
+<tr><td>4</td><td>Leclerc</td><td>Ferrari</td><td>71</td><td>+10.707</td></tr>
+<tr><td>5</td><td>Norris</td><td>McLaren</td><td>71</td><td>+11.778</td></tr>
+<tr><td>6</td><td>Russell</td><td>Mercedes</td><td>71</td><td>+12.263</td></tr>
+<tr><td>7</td><td>Lawson</td><td>Racing Bulls</td><td>71</td><td>+20.899</td></tr>
+<tr><td>8</td><td>Bortoleto</td><td>Audi</td><td>71</td><td>+22.041</td></tr>
+<tr><td>9</td><td>Hadjar</td><td>Red Bull</td><td>71</td><td>+22.503</td></tr>
+<tr><td>10</td><td>Hirakawa</td><td>Haas</td><td>71</td><td>+25.373</td></tr>
+</tbody>
+</table>
+<div class="head sub"><h3>Strategien Top 3</h3><span class="cap">OpenF1</span></div>
+<table>
+<thead><tr><th>Fahrer</th><th>Stopps</th><th>Stints</th></tr></thead>
+<tbody>
+<tr><td>Verstappen</td><td>1 + Rot</td><td>Medium R1–27, Soft R28–45, Soft R46–71</td></tr>
+<tr><td>Hamilton</td><td>2 + Rot</td><td>Soft R1–28, Medium R29–44, Soft R45–71</td></tr>
+<tr><td>Antonelli</td><td>1 + Rot</td><td>Soft R1–43, Medium R44–45, Soft R46–71</td></tr>
+</tbody>
+</table>
+<ul>
+<li>LEC #16 übernimmt am Start die Führung, bekommt aber 5 Sekunden (Kurve 4, Runde 1, Vorteil durch Verlassen der Strecke gegen HAM #44).</li>
+<li>10-Sekunden-Strafe für RUS #63 nach Kollision mit HAD #6 in Kurve 6, Runde 1.</li>
+<li>Doppelausfall Aston Martin nach fünf Runden (Druckproblem an der PU), VSC Runde 7–8 nach dem Stopp von STR #18.</li>
+<li>VER #3 übernimmt die Führung beim Boxenstopp in Runde 27, als LEC seine Strafe absitzt.</li>
+<li>Rote Flagge in Runde 45 (22:06 Wien): BOT #77 nach Bruch der Aufhängung vorne links in Kurve 1 in der Mauer, unverletzt. Stehender Restart um 22:45 Wien.</li>
+<li>HAM wechselt kurz vor dem Abbruch unter Safety Car und fällt hinter ANT #12 zurück; ANT überholt nach dem Restart LEC.</li>
+<li>Nach dem Restart: 10 Sekunden für HUL #27 (Kollision mit BEA #87, Kurve 4), BEA fällt in Runde 47 aus.</li>
+<li>Safety Car Runde 59–62 nach Kollision PIA #81 mit LIN #41 in Kurve 2, LIN fällt aus. PIA bekommt nach dem Rennen 10 Sekunden.</li>
+<li>Nach dem Rennen: GAS #10 Stop-and-Go (als 30 s), COL #43 10 Sekunden, beide wegen Gelber Flaggen.</li>
+<li>Schnellste Runde: Hamilton 1:19.268 (Runde 50).</li>
+<li>Mercedes zahlt 5.000 €, weil RUS die Medientermine nach dem Rennen ausließ.</li>
+</ul>
+</section>
+
+<section id="sessions">
+<div class="head"><h2>Sessions</h2>
+<div class="seg" role="group" aria-label="Zeitzone"><button type="button" data-zone="wien" aria-pressed="true">Wien</button><button type="button" data-zone="mexiko" aria-pressed="false">Mexiko</button></div></div>
+<table>
+<thead><tr><th>Session</th><th>Zeit</th><th>Free-TV</th></tr></thead>
+<tbody>
+<tr><td>FP1</td><td data-wien="Fr 19:30" data-mexiko="Fr 12:30">Fr 19:30</td><td>ORF 1 live ab 19:20</td></tr>
+<tr><td>FP2</td><td data-wien="Fr 23:00" data-mexiko="Fr 16:00">Fr 23:00</td><td>ORF 1 live ab 22:50</td></tr>
+<tr><td>FP3</td><td data-wien="Sa 18:30" data-mexiko="Sa 11:30">Sa 18:30</td><td>ORF 1 live ab 18:20</td></tr>
+<tr><td>Qualifying</td><td data-wien="Sa 22:00" data-mexiko="Sa 15:00">Sa 22:00</td><td>ORF 2 live ab 21:55</td></tr>
+<tr class="em"><td>Rennen (71 Rd.)</td><td data-wien="So 21:00" data-mexiko="So 14:00">So 21:00</td><td>ORF 1 live ab 20:25, Vorbericht 20:10</td></tr>
+</tbody>
+</table>
+<p>Abstand zu Mexiko an allen Tagen 7 h. ServusTV ist dieses Wochenende nicht live. Kommentar Ernst Hausleitner und Alexander Wurz.</p>
+</section>
+
+<section id="strecke">
+<div class="head"><h2>Strecke und Reifen</h2></div>
+<div class="grid">
+<dl><dt>Länge</dt><dd>4,304 km, 17 Kurven</dd><dt>Seehöhe</dt><dd>ca. 2.240 m</dd><dt>Boxenverlust</dt><dd>ca. 22 s bei Grün</dd><dt>SC-Chance</dt><dd>ca. 45 % (PITWALL-Modell)</dd></dl>
+<dl><dt class="tyre"><span class="ring hard" aria-hidden="true">H</span>Hard</dt><dd>C3 (eine Stufe weicher als 2025)</dd><dt class="tyre"><span class="ring medium" aria-hidden="true">M</span>Medium</dt><dd>C4</dd><dt class="tyre"><span class="ring soft" aria-hidden="true">S</span>Soft</dt><dd>C5</dd><dt>Zuteilung</dt><dd>2 Hard, 3 Medium, 8 Soft</dd></dl>
+</div>
+<p>Dünne Luft: wenig Abtrieb trotz maximalem Flügel, hohe Topspeeds, Kühlung und Bremsen am Limit.</p>
+</section>
+
+<section id="strategie">
+<div class="head"><h2>Strategie</h2></div>
+<div class="rows">
+<div class="row"><div class="lead">Plan A</div><div class="t">Ein Stopp, Medium auf Hard</div><div class="d">2024 und 2025 gewann jeweils ein Stopp.</div></div>
+<div class="row"><div class="lead">Plan B</div><div class="t">Zwei Stopps mit Soft</div><div class="d">Wenn der C5 stark abbaut oder der Undercut viel bringt.</div></div>
+<div class="row"><div class="lead">Joker</div><div class="t">Stopp unter SC oder VSC</div><div class="d">SC/VSC gab es fast in jeder der letzten Ausgaben.</div></div>
+</div>
+<p>2025: meist Medium und Soft, Hard (damals C2) kaum genutzt.</p>
+</section>
+
+<section id="energie">
+<div class="head"><h2>Power Unit</h2><span class="cap">FIA Doc 6</span></div>
+<div class="grid">
+<dl><dt>Rennen</dt><dd>8,5 MJ/Runde</dd><dt>Rennen mit Overtake</dt><dd>9,0 MJ/Runde</dd><dt>Qualifying</dt><dd>8,5 MJ/Runde</dd></dl>
+<dl><dt>Freies Training</dt><dd>9,0 MJ/Runde</dd><dt>Out-Laps (außer Rennen)</dt><dd>9,0 MJ/Runde</dd><dt>Ratenlimit</dt><dd>100 kW/s</dd></dl>
+</div>
+<p>Power Limited Distance: 48,8 % der Runde</p>
+<div class="bars wide">
+<div class="bar"><span>Streckenlänge</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="v">4304 m</span></div>
+<div class="bar em"><span>Power Limited</span><div class="track"><div class="fill" style="width:48.8%"></div></div><span class="v">2101 m</span></div>
+</div>
+<p>Recharge: max. Rückgewinnung pro Runde (Art. C5.2.10). Streckenlänge: Centreline laut FIA Doc 6. <a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_power_unit_information.pdf">PDF Doc 6</a></p>
+</section>
+
+<section id="wetter">
+<div class="head"><h2>Wetter</h2><span class="cap">Open-Meteo, Stand 31.10.2026 21:40</span></div>
+<table>
+<thead><tr><th>Session</th><th>Temperatur</th><th>Regen</th><th>Wind</th></tr></thead>
+<tbody>
+<tr><td>FP1</td><td>25 °C</td><td>0 %</td><td>2–4 km/h aus NW bis W, Böen bis 23</td></tr>
+<tr><td>FP2</td><td>25–26 °C</td><td>7–13 %</td><td>6–9 km/h aus W bis NW, Böen bis 25</td></tr>
+<tr><td>FP3</td><td>22–24 °C</td><td>0 %</td><td>5–6 km/h aus N, Böen bis 21</td></tr>
+<tr><td>Qualifying</td><td>27 °C</td><td>0 %</td><td>9–10 km/h aus NNW bis N, Böen bis 28</td></tr>
+<tr><td>Rennen</td><td>27 °C</td><td>0 %</td><td>4–7 km/h aus N, Böen bis 22</td></tr>
+</tbody>
+</table>
+<p>Durchgehend trocken. FP3 und Qualifying stark bewölkt.</p>
+</section>
+
+<section id="ergebnisse">
+<div class="head"><h2>Ergebnisse</h2><span class="cap">FIA Docs 26, 43, 59, 67, formula1.com</span></div>
+<div class="head sub"><h3>Qualifying</h3><span class="cap">endgültig, FIA Doc 59</span></div>
+<table>
+<thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Q3-Zeit</th><th>Abstand</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Hamilton</td><td>Ferrari</td><td>1:16.514</td><td>–</td></tr>
+<tr><td>2</td><td>Russell</td><td>Mercedes</td><td>1:16.523</td><td>+0.009</td></tr>
+<tr><td>3</td><td>Leclerc</td><td>Ferrari</td><td>1:16.633</td><td>+0.119</td></tr>
+<tr><td>4</td><td>Verstappen</td><td>Red Bull</td><td>1:16.692</td><td>+0.178</td></tr>
+<tr><td>5</td><td>Antonelli</td><td>Mercedes</td><td>1:16.707</td><td>+0.193</td></tr>
+<tr><td>6</td><td>Norris</td><td>McLaren</td><td>1:16.824</td><td>+0.310</td></tr>
+<tr><td>7</td><td>Hadjar</td><td>Red Bull</td><td>1:16.900</td><td>+0.386</td></tr>
+<tr><td>8</td><td>Lindblad</td><td>Racing Bulls</td><td>1:17.117</td><td>+0.603</td></tr>
+<tr><td>9</td><td>Gasly</td><td>Alpine</td><td>1:17.153</td><td>+0.639</td></tr>
+<tr><td>10</td><td>Hülkenberg</td><td>Audi</td><td>keine Q3-Zeit</td><td>–</td></tr>
+</tbody>
+</table>
+<p>LAW #30 aus dem Qualifying disqualifiziert (MGU-K, Doc 57), dadurch rückt HUL #27 auf P10.</p>
+<div class="head sub"><h3>Startaufstellung</h3><span class="cap">endgültig, FIA Doc 67</span></div>
+<table>
+<thead><tr><th>Startplatz</th><th>Fahrer</th><th>Startplatz</th><th>Fahrer</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Hamilton</td><td>2</td><td>Russell</td></tr>
+<tr><td>3</td><td>Leclerc</td><td>4</td><td>Antonelli</td></tr>
+<tr><td>5</td><td>Verstappen (Strafe)</td><td>6</td><td>Norris</td></tr>
+<tr><td>7</td><td>Hadjar</td><td>8</td><td>Lindblad</td></tr>
+<tr><td>9</td><td>Gasly</td><td>10</td><td>Hülkenberg</td></tr>
+<tr><td>11</td><td>Colapinto</td><td>12</td><td>Piastri</td></tr>
+<tr><td>13</td><td>Bortoleto</td><td>14</td><td>Bearman</td></tr>
+<tr><td>15</td><td>Sainz</td><td>16</td><td>Albon</td></tr>
+<tr><td>17</td><td>Alonso</td><td>18</td><td>Hirakawa</td></tr>
+<tr><td>19</td><td>Stroll</td><td>20</td><td>Perez</td></tr>
+<tr><td>21</td><td>Bottas (Strafe)</td><td>Box</td><td>Lawson (Boxengasse)</td></tr>
+</tbody>
+</table>
+<div class="head sub"><h3>Tipps</h3><span class="cap">Quali-Tipp 31.10. 21:38 Wien, Renntipp entfallen</span></div>
+<table>
+<thead><tr><th>Pos.</th><th>Quali-Tipp</th><th>Quali echt</th><th>Renntipp</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Leclerc</td><td>Hamilton</td><td>entfallen (technische Probleme)</td></tr>
+<tr><td>2</td><td>Norris</td><td>Russell</td><td>–</td></tr>
+<tr><td>3</td><td>Russell</td><td>Leclerc</td><td>–</td></tr>
+<tr><td>4</td><td>Antonelli</td><td>Verstappen</td><td>–</td></tr>
+</tbody>
+</table>
+<p>Kein Treffer auf der exakten Position. Russell und Leclerc landen wie getippt in den Top 4, Antonelli wird Fünfter, Norris Sechster.</p>
+<div class="head sub"><h3>Freies Training</h3><div class="tools"><span class="cap" id="fp-cap">FIA Doc 43</span>
+<div class="seg" role="group" aria-label="Training"><button type="button" data-fp="fp1" data-cap="formula1.com" aria-pressed="false">FP1</button><button type="button" data-fp="fp2" data-cap="FIA Doc 26" aria-pressed="false">FP2</button><button type="button" data-fp="fp3" data-cap="FIA Doc 43" aria-pressed="true">FP3</button></div></div></div>
+<div class="fp" id="fp1" hidden>
+<table>
+<thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Zeit</th><th>Abstand</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Leclerc</td><td>Ferrari</td><td>1:18.128</td><td>–</td></tr>
+<tr><td>2</td><td>Antonelli</td><td>Mercedes</td><td>1:18.787</td><td>+0.659</td></tr>
+<tr><td>3</td><td>Vesti</td><td>Mercedes</td><td>1:18.861</td><td>+0.733</td></tr>
+<tr><td>4</td><td>Hamilton</td><td>Ferrari</td><td>1:18.866</td><td>+0.738</td></tr>
+<tr><td>5</td><td>Iwasa</td><td>Red Bull</td><td>1:19.113</td><td>+0.985</td></tr>
+</tbody>
+</table>
+</div>
+<div class="fp" id="fp2" hidden>
+<table>
+<thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Zeit</th><th>Abstand</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Leclerc</td><td>Ferrari</td><td>1:17.827</td><td>–</td></tr>
+<tr><td>2</td><td>Norris</td><td>McLaren</td><td>1:17.930</td><td>+0.103</td></tr>
+<tr><td>3</td><td>Russell</td><td>Mercedes</td><td>1:17.933</td><td>+0.106</td></tr>
+<tr><td>4</td><td>Antonelli</td><td>Mercedes</td><td>1:18.044</td><td>+0.217</td></tr>
+<tr><td>5</td><td>Verstappen</td><td>Red Bull</td><td>1:18.138</td><td>+0.311</td></tr>
+</tbody>
+</table>
+</div>
+<div class="fp" id="fp3">
+<table>
+<thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Zeit</th><th>Abstand</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Norris</td><td>McLaren</td><td>1:17.600</td><td>–</td></tr>
+<tr><td>2</td><td>Antonelli</td><td>Mercedes</td><td>1:17.601</td><td>+0.001</td></tr>
+<tr><td>3</td><td>Leclerc</td><td>Ferrari</td><td>1:17.717</td><td>+0.117</td></tr>
+<tr><td>4</td><td>Piastri</td><td>McLaren</td><td>1:17.795</td><td>+0.195</td></tr>
+<tr><td>5</td><td>Verstappen</td><td>Red Bull</td><td>1:17.951</td><td>+0.351</td></tr>
+</tbody>
+</table>
+</div>
+<p>FP1 mit Ersatzfahrern: VES #72 bei Mercedes, IWA #36 bei Red Bull.</p>
+</section>
+
+<section id="longruns">
+<div class="head"><h2>Long Runs</h2><span class="cap">FastF1, FIA-Rennleitung</span></div>
+<div class="head sub"><h3>Teams, FP2</h3><span class="cap">bester Fahrer je Team</span></div>
+<table>
+<thead><tr><th>Rang</th><th>Team</th><th>Fahrer</th><th>Pace Ø</th><th>Abstand</th><th>Reifen</th><th>Runden</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Ferrari</td><td>Leclerc</td><td>1:21.028</td><td>–</td><td>Medium</td><td>5</td></tr>
+<tr><td>2</td><td>McLaren</td><td>Norris</td><td>1:21.228</td><td>+0.200</td><td>Soft</td><td>8</td></tr>
+<tr><td>3</td><td>Red Bull</td><td>Hadjar</td><td>1:21.369</td><td>+0.341</td><td>Soft</td><td>5</td></tr>
+<tr><td>4</td><td>Mercedes</td><td>Russell</td><td>1:21.442</td><td>+0.414</td><td>Soft</td><td>9</td></tr>
+<tr><td>5</td><td>Alpine</td><td>Gasly</td><td>1:21.743</td><td>+0.715</td><td>Medium</td><td>7</td></tr>
+<tr><td>6</td><td>Racing Bulls</td><td>Lawson</td><td>1:22.023</td><td>+0.995</td><td>Soft</td><td>12</td></tr>
+<tr><td>7</td><td>Haas</td><td>Bearman</td><td>1:22.034</td><td>+1.006</td><td>Soft</td><td>10</td></tr>
+<tr><td>8</td><td>Audi</td><td>Hülkenberg</td><td>1:22.296</td><td>+1.268</td><td>Soft</td><td>6</td></tr>
+<tr><td>9</td><td>Aston Martin</td><td>Alonso</td><td>1:22.477</td><td>+1.449</td><td>Soft</td><td>10</td></tr>
+<tr><td>10</td><td>Williams</td><td>Albon</td><td>1:22.572</td><td>+1.544</td><td>Soft</td><td>6</td></tr>
+<tr><td>11</td><td>Cadillac</td><td>Pérez</td><td>1:23.223</td><td>+2.195</td><td>Soft</td><td>13</td></tr>
+</tbody>
+</table>
+<div class="head sub"><h3>Fahrer</h3><div class="tools"><span class="cap" id="lr-cap">FP2, Hauptdaten</span>
+<div class="seg" role="group" aria-label="Long Runs Training"><button type="button" data-lr="lr-fp1" data-cap="FP1, grüne Strecke" aria-pressed="false">FP1</button><button type="button" data-lr="lr-fp2" data-cap="FP2, Hauptdaten" aria-pressed="true">FP2</button><button type="button" data-lr="lr-fp3" data-cap="FP3, wenige Long Runs" aria-pressed="false">FP3</button></div></div></div>
+<div class="lr" id="lr-fp1" hidden>
+<table>
+<thead><tr><th>Fahrer</th><th>Team</th><th>Reifen</th><th>Runden</th><th>Alter Ø</th><th>Pace Ø</th><th>Median</th></tr></thead>
+<tbody>
+<tr><td>Leclerc</td><td>Ferrari</td><td>Soft</td><td>9/9</td><td>12</td><td>1:21.605</td><td>1:21.578</td></tr>
+<tr><td>FOR</td><td>McLaren</td><td>Soft</td><td>4/5</td><td>9</td><td>1:21.755</td><td>1:21.535</td></tr>
+<tr><td>Antonelli</td><td>Mercedes</td><td>Soft</td><td>7/8</td><td>11</td><td>1:21.874</td><td>1:21.911</td></tr>
+<tr><td>FOR</td><td>McLaren</td><td>Hard</td><td>3/5</td><td>7</td><td>1:22.206</td><td>1:22.072</td></tr>
+<tr><td>Bearman</td><td>Haas</td><td>Hard</td><td>5/6</td><td>14</td><td>1:22.340</td><td>1:22.235</td></tr>
+<tr><td>BRO</td><td>Williams</td><td>Medium</td><td>6/8</td><td>13</td><td>1:22.430</td><td>1:22.382</td></tr>
+<tr><td>HIR</td><td>Haas</td><td>Medium</td><td>7/8</td><td>13</td><td>1:22.670</td><td>1:22.563</td></tr>
+<tr><td>Gasly</td><td>Alpine</td><td>Soft</td><td>9/9</td><td>12</td><td>1:22.994</td><td>1:23.066</td></tr>
+<tr><td>Lindblad</td><td>Racing Bulls</td><td>Medium</td><td>5/5</td><td>15</td><td>1:23.248</td><td>1:22.943</td></tr>
+<tr><td>Pérez</td><td>Cadillac</td><td>Medium</td><td>4/5</td><td>10</td><td>1:23.690</td><td>1:23.689</td></tr>
+<tr><td>Herta</td><td>Cadillac</td><td>Medium</td><td>7/7</td><td>13</td><td>1:24.698</td><td>1:24.829</td></tr>
+</tbody>
+</table>
+</div>
+<div class="lr" id="lr-fp2">
+<table>
+<thead><tr><th>Fahrer</th><th>Team</th><th>Reifen</th><th>Runden</th><th>Alter Ø</th><th>Pace Ø</th><th>Median</th></tr></thead>
+<tbody>
+<tr><td>Leclerc</td><td>Ferrari</td><td>Medium</td><td>5/5</td><td>11</td><td>1:21.028</td><td>1:20.910</td></tr>
+<tr><td>Norris</td><td>McLaren</td><td>Soft</td><td>8/8</td><td>16</td><td>1:21.228</td><td>1:21.170</td></tr>
+<tr><td>Hadjar</td><td>Red Bull</td><td>Soft</td><td>5/5</td><td>8</td><td>1:21.369</td><td>1:21.299</td></tr>
+<tr><td>Russell</td><td>Mercedes</td><td>Soft</td><td>9/11</td><td>12</td><td>1:21.442</td><td>1:21.486</td></tr>
+<tr><td>Verstappen</td><td>Red Bull</td><td>Soft</td><td>7/8</td><td>7</td><td>1:21.490</td><td>1:21.276</td></tr>
+<tr><td>Antonelli</td><td>Mercedes</td><td>Medium</td><td>8/8</td><td>18</td><td>1:21.650</td><td>1:21.791</td></tr>
+<tr><td>Leclerc</td><td>Ferrari</td><td>Medium</td><td>6/7</td><td>18</td><td>1:21.736</td><td>1:21.421</td></tr>
+<tr><td>Piastri</td><td>McLaren</td><td>Soft</td><td>9/9</td><td>13</td><td>1:21.737</td><td>1:21.924</td></tr>
+<tr><td>Gasly</td><td>Alpine</td><td>Medium</td><td>7/7</td><td>16</td><td>1:21.743</td><td>1:21.779</td></tr>
+<tr><td>Lawson</td><td>Racing Bulls</td><td>Soft</td><td>12/12</td><td>16</td><td>1:22.023</td><td>1:22.023</td></tr>
+<tr><td>Bearman</td><td>Haas</td><td>Soft</td><td>10/10</td><td>12</td><td>1:22.034</td><td>1:21.934</td></tr>
+<tr><td>Lindblad</td><td>Racing Bulls</td><td>Soft</td><td>13/13</td><td>16</td><td>1:22.092</td><td>1:22.088</td></tr>
+<tr><td>Hülkenberg</td><td>Audi</td><td>Soft</td><td>6/7</td><td>10</td><td>1:22.296</td><td>1:22.329</td></tr>
+<tr><td>Colapinto</td><td>Alpine</td><td>Soft</td><td>8/9</td><td>12</td><td>1:22.418</td><td>1:22.119</td></tr>
+<tr><td>Alonso</td><td>Aston Martin</td><td>Soft</td><td>10/10</td><td>12</td><td>1:22.477</td><td>1:22.339</td></tr>
+<tr><td>Albon</td><td>Williams</td><td>Soft</td><td>6/6</td><td>12</td><td>1:22.572</td><td>1:22.632</td></tr>
+<tr><td>Ocon</td><td>Haas</td><td>Medium</td><td>5/6</td><td>19</td><td>1:22.940</td><td>1:23.082</td></tr>
+<tr><td>Sainz</td><td>Williams</td><td>Soft</td><td>7/8</td><td>11</td><td>1:22.978</td><td>1:23.009</td></tr>
+<tr><td>Pérez</td><td>Cadillac</td><td>Soft</td><td>13/14</td><td>15</td><td>1:23.223</td><td>1:23.161</td></tr>
+<tr><td>Bottas</td><td>Cadillac</td><td>Medium</td><td>10/12</td><td>18</td><td>1:23.930</td><td>1:23.877</td></tr>
+</tbody>
+</table>
+</div>
+<div class="lr" id="lr-fp3" hidden>
+<table>
+<thead><tr><th>Fahrer</th><th>Team</th><th>Reifen</th><th>Runden</th><th>Alter Ø</th><th>Pace Ø</th><th>Median</th></tr></thead>
+<tbody>
+<tr><td>Lawson</td><td>Racing Bulls</td><td>Medium</td><td>6/6</td><td>14</td><td>1:20.896</td><td>1:20.881</td></tr>
+<tr><td>Hülkenberg</td><td>Audi</td><td>Soft</td><td>8/9</td><td>15</td><td>1:21.106</td><td>1:21.222</td></tr>
+<tr><td>Lindblad</td><td>Racing Bulls</td><td>Medium</td><td>6/6</td><td>16</td><td>1:21.282</td><td>1:21.200</td></tr>
+<tr><td>Gasly</td><td>Alpine</td><td>Medium</td><td>5/6</td><td>14</td><td>1:21.520</td><td>1:21.516</td></tr>
+<tr><td>Bottas</td><td>Cadillac</td><td>Soft</td><td>8/8</td><td>12</td><td>1:23.295</td><td>1:23.293</td></tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>Long Run: mind. 5 Runden am Stück auf einem Reifen, jede innerhalb 107 % der schnellsten Stintrunde. Ohne Out-, In- und gestrichene Runden; Ausreißer über Median +1,5 s raus (Verkehr). Gewertet ab 3 gültigen Runden, Team-Rang = schnellster Lauf des besten Fahrers.</li>
+<li>Runden = gewertet/gesamt im Lauf. Keine Gelb- oder SC-Phasen in den Läufen. Kleine Stichprobe aus drei Trainings. Sprit unbekannt, keine Benzinkorrektur; Soft ist im Schnitt schneller als Medium und Hard.</li>
+</ul>
+</section>
+
+<section id="fahrer-wm">
+<div class="head"><h2>Fahrer-WM</h2><span class="cap">nach Mexiko, FIA Doc 87</span></div>
+<div class="bars" data-max="380">
+<div class="bar em"><span>Antonelli</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="v">380</span></div>
+<div class="bar"><span>Verstappen</span><div class="track"><div class="fill" style="width:68.7%"></div></div><span class="v">261</span></div>
+<div class="bar"><span>Hamilton</span><div class="track"><div class="fill" style="width:68.2%"></div></div><span class="v">259</span></div>
+<div class="bar"><span>Russell</span><div class="track"><div class="fill" style="width:65.8%"></div></div><span class="v">250</span></div>
+<div class="bar"><span>Leclerc</span><div class="track"><div class="fill" style="width:64.5%"></div></div><span class="v">245</span></div>
+<div class="bar"><span>Norris</span><div class="track"><div class="fill" style="width:58.2%"></div></div><span class="v">221</span></div>
+</div>
+<p>Antonelli ist Weltmeister: 119 Punkte vor Verstappen, nur noch 100 Punkte in vier Rennen ohne Sprint. Um P2 kämpfen Verstappen, Hamilton und Russell, getrennt durch 11 Punkte.</p>
+</section>
+
+<section id="konstrukteure">
+<div class="head"><h2>Konstrukteure</h2><span class="cap">nach Mexiko, FIA Doc 87</span></div>
+<div class="bars">
+<div class="bar"><span>Mercedes</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="v">630</span></div>
+<div class="bar"><span>Ferrari</span><div class="track"><div class="fill" style="width:80%"></div></div><span class="v">504</span></div>
+<div class="bar em"><span>Red Bull</span><div class="track"><div class="fill" style="width:60.6%"></div></div><span class="v">382</span></div>
+<div class="bar"><span>McLaren</span><div class="track"><div class="fill" style="width:57.9%"></div></div><span class="v">365</span></div>
+</div>
+<p>Mercedes führt mit 126 Punkten vor Ferrari, bei noch 172 möglichen Punkten ist der Titel rechnerisch offen. Kampf um P3: Red Bull jetzt 17 Punkte vor McLaren.</p>
+</section>
+
+<section id="motortausch">
+<div class="head"><h2>Strafen</h2><span class="cap">FIA Docs 14–85, Auswahl</span></div>
+<table>
+<thead><tr><th>Fahrer</th><th>Element / Vergehen</th><th>Nr. / erlaubt</th><th>Strafe</th></tr></thead>
+<tbody>
+<tr><td>BOT #77</td><td>ICE</td><td>5. / 4</td><td>50 Plätze zurück (gesamt)</td></tr>
+<tr><td>BOT #77</td><td>Turbolader (TC)</td><td>5. / 4</td><td>inkl.</td></tr>
+<tr><td>BOT #77</td><td>MGU-K</td><td>4. / 3</td><td>inkl.</td></tr>
+<tr><td>BOT #77</td><td>Energiespeicher (ES)</td><td>4. / 3</td><td>inkl.</td></tr>
+<tr><td>BOT #77</td><td>Steuerelektronik (PU-CE)</td><td>4. / 3</td><td>inkl.</td></tr>
+<tr><td>VER #3</td><td>FP2, Manöver mit LAW in Kurve 12–14</td><td>–</td><td>1 Platz zurück, 1 Strafpunkt (gesamt 1)</td></tr>
+<tr><td>LAW #30</td><td>FP2, Manöver mit VER in Kurve 12–14</td><td>–</td><td>1 Platz zurück, 1 Strafpunkt (gesamt 4), durch Boxengassenstart hinfällig</td></tr>
+<tr><td>HAD #6</td><td>Fehlverhalten im Paddock (FP1)</td><td>–</td><td>Verwarnung (formal warning)</td></tr>
+<tr><td>SLA #98</td><td>FP1, Unsafe Release (Kühlgebläse am Auto)</td><td>–</td><td>Audi 7.500 €</td></tr>
+<tr><td>BOR #5</td><td>FP2, Abdeckung von Bauteilen</td><td>–</td><td>Audi 5.000 €</td></tr>
+<tr><td>ALO #14</td><td>Pitlane-Speeding FP1 (80,2) und FP2 (80,1 km/h)</td><td>–</td><td>Aston Martin 2 × 100 €</td></tr>
+<tr><td>BOT #77</td><td>Pitlane-Speeding FP3 (80,9 km/h)</td><td>–</td><td>Cadillac 100 €</td></tr>
+<tr><td>ALO #14</td><td>Quali, Lenkrad nach dem Aussteigen nicht eingesetzt (Doc 45)</td><td>–</td><td>Verwarnung (1. Reprimand Fahrverhalten)</td></tr>
+<tr><td>SAI #55</td><td>Quali, Anweisung der Rennleitung in Kurve 11 missachtet (Doc 51)</td><td>–</td><td>Verwarnung (warning)</td></tr>
+<tr><td>HAD #6</td><td>Quali, weiße Linie an der Boxeneinfahrt überfahren (Doc 52)</td><td>–</td><td>Verwarnung (1. Reprimand Fahrverhalten)</td></tr>
+<tr><td>LAW #30</td><td>Quali, MGU-K-Verstoß in Q2 (Doc 57)</td><td>–</td><td>Disqualifikation aus dem Qualifying, Start erlaubt (Doc 58)</td></tr>
+<tr><td>LAW #30</td><td>Setup-Änderung im Parc fermé, 5. ICE/TC/EXH, 7. PU-ANC (Doc 65)</td><td>–</td><td>Start aus der Boxengasse</td></tr>
+<tr><td>SAI #55</td><td>Pitlane-Speeding Installationsrunde (90,9 km/h, Doc 68)</td><td>–</td><td>Williams 1.000 €</td></tr>
+<tr><td>LEC #16</td><td>Rennen, Kurve 4, Vorteil durch Verlassen der Strecke (Doc 69)</td><td>–</td><td>5 Sekunden</td></tr>
+<tr><td>RUS #63</td><td>Rennen, Kollision mit HAD in Kurve 6 (Doc 70)</td><td>–</td><td>10 Sekunden</td></tr>
+<tr><td>PER #11</td><td>Rennen, Pitlane-Speeding (80,2 km/h, Doc 71)</td><td>–</td><td>5 Sekunden</td></tr>
+<tr><td>HUL #27</td><td>Rennen, Kollision mit BEA in Kurve 4 nach Restart (Doc 74)</td><td>–</td><td>10 Sekunden</td></tr>
+<tr><td>PIA #81</td><td>Rennen, Kollision mit LIN in Kurve 2 (Doc 79)</td><td>–</td><td>10 Sekunden nach dem Rennen</td></tr>
+<tr><td>GAS #10</td><td>Rennen, Doppel-Gelb nicht beachtet (Doc 84)</td><td>–</td><td>Stop-and-Go als 30 s, 2 Strafpunkte (gesamt 2)</td></tr>
+<tr><td>COL #43</td><td>Rennen, Gelbe Flagge nicht beachtet (Doc 85)</td><td>–</td><td>10 Sekunden, 1 Strafpunkt (gesamt 5)</td></tr>
+<tr><td>RUS #63</td><td>Medientermine nach dem Rennen ausgelassen (Doc 83)</td><td>–</td><td>Mercedes 5.000 €</td></tr>
+</tbody>
+</table>
+<p>BOT startete von P21, LAW aus der Boxengasse, VER durch seine Strafe von P5. Keine Strafe für GAS nach dem Restart in Kurve 1 (Doc 76). Russell plant den nächsten Motortausch mit Rückversetzung erst für Las Vegas.</p>
+</section>
+
+<section id="historie">
+<div class="head"><h2>Historie</h2></div>
+<dl><dt>2025</dt><dd>Pole und Sieg Norris (1:15.586), vor Leclerc und Verstappen</dd><dt>Rundenrekord</dt><dd>Bottas 1:17.774 (2021)</dd></dl>
+</section>
+
+<section id="fia">
+<div class="head"><h2>FIA-Dokumente</h2><span class="cap">Mexico City GP 2026</span></div>
+<ol class="links">
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_competition_visa.pdf">Doc 1 – Competition Visa<span class="meta">fia.com · 28.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_competition_notes_-_pirelli_preview.pdf">Doc 2 – Pirelli Preview<span class="meta">fia.com · 28.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_post-race_inspections_on_car_number_63_2026_united_states_gp.pdf">Doc 3 – Post-Race Inspections RUS #63, Austin<span class="meta">fia.com · 28.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_timetable_v2.pdf">Doc 4 – Timetable V2<span class="meta">fia.com · 29.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_car_display_procedure.pdf">Doc 5 – Car Display Procedure<span class="meta">fia.com · 29.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_power_unit_information.pdf">Doc 6 – Power Unit Information<span class="meta">fia.com · 29.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_competition_notes_-_circuit_map_pit_lane_drawing_and_emergency_exits_map.pdf">Doc 7 – Streckenkarte, Boxengasse, Notausgänge<span class="meta">fia.com · 29.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_race_directors_competition_notes.pdf">Doc 8 – Race Director's Competition Notes<span class="meta">fia.com · 29.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_pu_elements_used_per_driver_up_to_now.pdf">Doc 9 – PU-Elemente je Fahrer bisher<span class="meta">fia.com · 30.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_self_scrutineering.pdf">Doc 10 – Self Scrutineering<span class="meta">fia.com · 30.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_entry_list.pdf">Doc 11 – Entry List<span class="meta">fia.com · 30.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_car_presentation_submissions.pdf">Doc 12 – Car Presentation (Updates)<span class="meta">fia.com · 30.10.26</span></a></li>
+<li><span class="gap">Doc 13 – Neue PU-Elemente, zurückgezogen<span class="meta">30.10.26</span></span></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_new_pu_elements_for_this_competition.pdf">Doc 14 – Neue PU-Elemente (BOT über Limit)<span class="meta">fia.com · 30.10.26</span></a></li>
+<li><span class="gap">Doc 15 – nicht veröffentlicht<span class="meta">–</span></span></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_summons_-_audi_-_alleged_release_of_car_98_in_an_unsafe_condition.pdf">Doc 16 – Vorladung Audi, Unsafe Release SLA #98<span class="meta">fia.com · 30.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_car_77_-_pu_elements.pdf">Doc 17 – Strafe BOT #77, PU-Elemente<span class="meta">fia.com · 30.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringment_-_car_14_-_pit_lane_speeding.pdf">Doc 18 – Strafe ALO #14, Pitlane-Speeding FP1<span class="meta">fia.com · 30.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_free_practice_1_classification.pdf">Doc 19 – FP1 Klassement<span class="meta">fia.com · 30.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_free_practice_1_deleted_lap_times.pdf">Doc 20 – FP1 gestrichene Runden, Track Limits<span class="meta">fia.com · 30.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_free_practice_1_deleted_lap_times_-_double_yellow.pdf">Doc 21 – FP1 gestrichene Runden, Doppel-Gelb<span class="meta">fia.com · 30.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_car_98_-_released_in_an_unsafe_condition.pdf">Doc 22 – Strafe Audi, Unsafe Release SLA #98<span class="meta">fia.com · 30.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_summons_-_car_3_-_turn_14_incident_with_car_30.pdf">Doc 23 – Vorladung VER #3, Kurve 14 mit LAW #30<span class="meta">fia.com · 30.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_summons_-_car_30_-_turn_14_incident_with_car_3.pdf">Doc 24 – Vorladung LAW #30, Kurve 14 mit VER #3<span class="meta">fia.com · 30.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringment_-_car_14_-_pit_lane_speeding_0.pdf">Doc 25 – Strafe ALO #14, Pitlane-Speeding FP2<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_free_practice_2_classification.pdf">Doc 26 – FP2 Klassement<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_free_practice_2_deleted_lap_times.pdf">Doc 27 – FP2 gestrichene Runden, Track Limits<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_race_director_notes_-_sc2_-_sc1_times.pdf">Doc 28 – Race Director: Mindestzeit SC2–SC1 1:38.0<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_covering_of_components_on_car_05_during_fp2.pdf">Doc 29 – TD-Bericht: Abdeckung an BOR #5 in FP2<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_summons_-_audi_-_car_5_covering_of_components.pdf">Doc 30 – Vorladung Audi, Abdeckung BOR #5<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_fp1_and_fp2_scrutineering.pdf">Doc 31 – Scrutineering FP1 und FP2<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_car_5_-_covering_components.pdf">Doc 32 – Strafe Audi, Abdeckung BOR #5<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_car_3_-_turn_14_incident_with_car_30_.pdf">Doc 33 – Strafe VER #3, Kurve 14 mit LAW #30<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_car_30_-_turn_14_incident_with_car_3_.pdf">Doc 34 – Strafe LAW #30, Kurve 14 mit VER #3<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_summons_-_car_6_-_alleged_misconduct.pdf">Doc 35 – Vorladung HAD #6, Fehlverhalten im Paddock<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_decision_-_driver_change_tgr_haas_f1_team.pdf">Doc 36 – Fahrerwechsel Haas: HIR #50 ersetzt OCO #31<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_revised_entry_list.pdf">Doc 37 – Überarbeitete Startliste (HIR #50 für Haas)<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_curfew.pdf">Doc 38 – Curfew: Ausnahmen für Ferrari und Aston Martin, keine Strafe<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_post-qualifying_procedure.pdf">Doc 39 – Ablauf nach dem Qualifying<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_self_scrutineering_after_survival_cell_change.pdf">Doc 40 – Selbstabnahme STR #18 nach Chassiswechsel<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_car_6_-_misconduct.pdf">Doc 41 – Entscheidung HAD #6, Fehlverhalten: Verwarnung<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringment_-_car_77_-_pit_lane_speeding.pdf">Doc 42 – Strafe BOT #77, Pitlane-Speeding FP3<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_free_practice_3_classification.pdf">Doc 43 – FP3 Ergebnis<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_free_practice_3_deleted_lap_times.pdf">Doc 44 – FP3 gestrichene Runden<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_car_14_-_failed_to_replace_the_steering_wheel_after_leaving_the_car.pdf">Doc 45 – Strafe ALO #14, Lenkrad nicht eingesetzt: Verwarnung<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_provisional_qualifying_classification.pdf">Doc 46 – Qualifying Ergebnis provisorisch<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_covers-on_time.pdf">Doc 47 – Covers-on-Zeit nach dem Qualifying<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_qualifying_deleted_lap_times.pdf">Doc 48 – Qualifying gestrichene Runden<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_qualifying_deleted_lap_times_-_double_yellow.pdf">Doc 49 – Qualifying gestrichene Runden, Doppel-Gelb<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_decision_-_qualifying_sc2-sc1_times.pdf">Doc 50 – Qualifying SC2–SC1-Zeiten, keine Strafe<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_car_55_-_failed_to_follow_race_directors_instructions_-_turn_11.pdf">Doc 51 – Strafe SAI #55, Anweisung Kurve 11 missachtet: Verwarnung<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_car_6_-_crossing_the_white_line_at_pit_entry.pdf">Doc 52 – Strafe HAD #6, Linie Boxeneinfahrt: Verwarnung<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_mgu-k_infringement_car_30.pdf">Doc 53 – TD-Bericht LAW #30, MGU-K in Q2<span class="meta">fia.com · 31.10.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_communication_from_the_stewards.pdf">Doc 54 – Stewards-Hinweis Start und Restarts, Kurve 1–6<span class="meta">fia.com · 01.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_summons_-_car_30_-_alleged_mgu-k_infringement.pdf">Doc 55 – Vorladung LAW #30, MGU-K<span class="meta">fia.com · 01.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_p3_and_qualifying_scrutineering.pdf">Doc 56 – Technische Abnahme FP3 und Qualifying<span class="meta">fia.com · 01.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_car_30_-_technical_nonconformity.pdf">Doc 57 – Strafe LAW #30, Disqualifikation Qualifying<span class="meta">fia.com · 01.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_decision_-_car_30_-_permission_to_start.pdf">Doc 58 – LAW #30 darf starten<span class="meta">fia.com · 01.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_final_qualifying_classification.pdf">Doc 59 – Qualifying Ergebnis endgültig<span class="meta">fia.com · 01.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_provisional_starting_grid.pdf">Doc 60 – Startaufstellung provisorisch<span class="meta">fia.com · 01.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_pre-race_procedure.pdf">Doc 61 – Ablauf vor dem Rennen<span class="meta">fia.com · 01.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_post-race_procedure.pdf">Doc 62 – Ablauf nach dem Rennen<span class="meta">fia.com · 01.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_race_directors_competition_notes_v2.pdf">Doc 63 – Competition Notes V2 der Rennleitung<span class="meta">fia.com · 01.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_parc_ferme_issues.pdf">Doc 64 – Parc-fermé-Bericht LAW #30, neue PU-Elemente<span class="meta">fia.com · 01.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_car_30_-_changes_made_during_parc_ferme.pdf">Doc 65 – Strafe LAW #30, Start aus der Boxengasse<span class="meta">fia.com · 01.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_parts_and_parameters_been_replaced_and_or_changed_during_parc_ferme.pdf">Doc 66 – Teiletausch im Parc fermé<span class="meta">fia.com · 01.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_final_starting_grid.pdf">Doc 67 – Startaufstellung endgültig<span class="meta">fia.com · 01.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_car_55_-_pit_lane_speeding.pdf">Doc 68 – Strafe SAI #55, Pitlane-Speeding: Williams 1.000 €<span class="meta">fia.com · 01.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_car_16_-_left_the_track_and_gained_a_lasting_advantage.pdf">Doc 69 – Strafe LEC #16, 5 s, Strecke verlassen<span class="meta">fia.com · 01.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_car_63_-_causing_a_collision.pdf">Doc 70 – Strafe RUS #63, 10 s, Kollision mit HAD #6<span class="meta">fia.com · 01.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_car_11_-_pit_lane_speeding.pdf">Doc 71 – Strafe PER #11, 5 s, Pitlane-Speeding<span class="meta">fia.com · 01.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_summons_-_car_81_-_t2_incident_with_car_41.pdf">Doc 72 – Vorladung PIA #81, Kurve 2<span class="meta">fia.com · 01.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_summons_-_car_41_-_t2_incident_with_car_81.pdf">Doc 73 – Vorladung LIN #41, Kurve 2<span class="meta">fia.com · 01.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_car_27_-_causing_a_collision.pdf">Doc 74 – Strafe HUL #27, 10 s, Kollision mit BEA #87<span class="meta">fia.com · 01.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_provisional_race_classification.pdf">Doc 75 – Rennergebnis provisorisch<span class="meta">fia.com · 01.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_decision_-_car_10_-_alleged_leaving_the_track_and_gaining_an_advantage.pdf">Doc 76 – GAS #10 Kurve 1 nach Restart, keine Strafe<span class="meta">fia.com · 02.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_summons_-_car_10_-_alleged_failure_to_slow_for_yellow_flags.pdf">Doc 77 – Vorladung GAS #10, Gelbe Flaggen<span class="meta">fia.com · 02.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_summons_-_car_43_-_alleged_failure_to_slow_for_yellow_flags.pdf">Doc 78 – Vorladung COL #43, Gelbe Flagge<span class="meta">fia.com · 02.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_car_81_-_causing_a_collision.pdf">Doc 79 – Strafe PIA #81, 10 s, Kollision mit LIN #41<span class="meta">fia.com · 02.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_race_deleted_lap_times.pdf">Doc 80 – Rennen gestrichene Runden<span class="meta">fia.com · 02.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_race_scrutineering.pdf">Doc 81 – Technische Abnahme Rennen<span class="meta">fia.com · 02.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_summons_-_car_63_-_alleged_failure_to_attend_mandatory_post-race_commitments.pdf">Doc 82 – Vorladung RUS #63, Medientermine<span class="meta">fia.com · 02.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_car_63_-_failure_to_attend_mandatory_post-race_commitments.pdf">Doc 83 – Strafe Mercedes 5.000 €, Medientermine RUS #63<span class="meta">fia.com · 02.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_car_10_-_failing_to_slow_under_yellow_flags.pdf">Doc 84 – Strafe GAS #10, Stop-and-Go (30 s), Doppel-Gelb<span class="meta">fia.com · 02.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_infringement_-_car_43_-_failing_to_slow_under_yellow_flags.pdf">Doc 85 – Strafe COL #43, 10 s, Gelbe Flagge<span class="meta">fia.com · 02.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_final_race_classification.pdf">Doc 86 – Rennergebnis endgültig<span class="meta">fia.com · 02.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_mexico_city_grand_prix_-_championship_points.pdf">Doc 87 – WM-Stand nach dem Rennen<span class="meta">fia.com · 02.11.26</span></a></li>
+</ol>
+</section>
+
+<footer>
+<p>Quellen: Pirelli, formula1.com, FIA Docs Mexico City GP 2026 (bis Doc 87), OpenF1, Open-Meteo (Stand 28.10.2026), tv.orf.at, PITWALL, F1technical. Vorheriges Rennen: <a href="/archiv/2026-18-usa-austin.html">USA GP 2026, Austin</a></p>
+<p id="stand">Stand: 02.11.2026 09:32 Wien</p>
+<p class="legal"><a href="/impressum.html">Impressum</a></p>
+</footer>
+</main>
+<script>
+(function(){document.querySelectorAll('.seg').forEach(function(g){var b=g.querySelectorAll('button');b.forEach(function(x){x.addEventListener('click',function(){b.forEach(function(y){y.setAttribute('aria-pressed',y===x?'true':'false')});var z=x.getAttribute('data-zone');if(z){document.querySelectorAll('td[data-wien]').forEach(function(td){td.textContent=td.getAttribute('data-'+z)})}var f=x.getAttribute('data-fp');if(f){document.querySelectorAll('.fp').forEach(function(d){d.hidden=d.id!==f});var c=document.getElementById('fp-cap');if(c)c.textContent=x.getAttribute('data-cap')}var l=x.getAttribute('data-lr');if(l){document.querySelectorAll('.lr').forEach(function(d){d.hidden=d.id!==l});var lc=document.getElementById('lr-cap');if(lc)lc.textContent=x.getAttribute('data-cap')}})})})})();
+</script>
+<script>
+// Session countdown: reads #cd-sessions, shows next session, LIVE state or weekend end.
+(function(){
+var box=document.getElementById('countdown'),src=document.getElementById('cd-sessions');
+if(!box||!src)return;
+var list;try{list=JSON.parse(src.textContent)}catch(e){return}
+list=list.map(function(x){var t=Date.parse(x.start);return{name:x.name,short:x.short||x.name,t:t,end:t+(x.minutes||60)*60000}}).filter(function(x){return !isNaN(x.t)}).sort(function(a,b){return a.t-b.t});
+if(!list.length)return;
+function fmt(t){
+  // Always display Vienna time, independent of the visitor's timezone.
+  try{
+    var d=new Date(t);
+    var wd=d.toLocaleDateString('de-AT',{timeZone:'Europe/Vienna',weekday:'short'}).replace('.','');
+    var dt=d.toLocaleDateString('de-AT',{timeZone:'Europe/Vienna',day:'2-digit',month:'2-digit'});
+    var hm=d.toLocaleTimeString('de-AT',{timeZone:'Europe/Vienna',hour:'2-digit',minute:'2-digit',hour12:false});
+    var tz='MEZ';try{var p=new Intl.DateTimeFormat('de-DE',{timeZone:'Europe/Vienna',timeZoneName:'short'}).formatToParts(d);p.forEach(function(q){if(q.type==='timeZoneName')tz=q.value})}catch(e){}
+    if(!/^MES?Z$/.test(tz))tz='Wien';
+    return wd+' '+dt.replace(/\.?$/,'.')+' '+hm+' '+tz;
+  }catch(e){return new Date(t).toLocaleString()}
+}
+function pad(n){return(n<10?'0':'')+n}
+var $=function(id){return document.getElementById(id)};
+function tick(){
+  var now=Date.now(),live=null,next=null;
+  for(var i=0;i<list.length;i++){var x=list[i];if(now>=x.t&&now<x.end){live=x;break}if(now<x.t){next=x;break}}
+  box.classList.remove('live','done');
+  if(live){
+    box.classList.add('live');$('cd-lbl').textContent='Live';$('cd-nm').textContent='LIVE: '+live.name;$('cd-when').textContent='seit '+fmt(live.t);
+  }else if(next){
+    var r=Math.floor((next.t-now)/1000);
+    $('cd-lbl').textContent='Nächste Session';$('cd-nm').textContent=next.name;$('cd-when').textContent=fmt(next.t);
+    $('cd-d').textContent=Math.floor(r/86400);$('cd-h').textContent=pad(Math.floor(r%86400/3600));$('cd-m').textContent=pad(Math.floor(r%3600/60));$('cd-s').textContent=pad(r%60);
+  }else{
+    box.classList.add('done');$('cd-lbl').textContent='Rennwochenende';$('cd-nm').textContent='Wochenende beendet';$('cd-when').textContent='Rennen am '+fmt(list[list.length-1].t);
+  }
+  box.hidden=false;
+}
+tick();setInterval(tick,1000);
+})();
+</script>
+</body>
+</html>
