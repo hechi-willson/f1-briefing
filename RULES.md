@@ -58,7 +58,6 @@ Gepflegt von PushPush. Änderungen nur auf Hechis Wunsch. Zuletzt geändert: 04.
 ## 5. Routinen-Lebenszyklus
 - Nach dem Rennwochenende Routinen nur pausieren, nie löschen. Das Mittwoch-Briefing aktiviert sie wieder und setzt Zeiten neu.
 - FIA F1 Docs Watch und F1 SC/VSC Alarm bleiben immer aktiv.
-- Jede Änderung an Routinen (reaktivieren, Zeiten, Prompt) kurz an den Bot Watchdog melden, nicht dringend.
 
 ## 6. Sicherheit
 - Nie Tokens, Passwörter oder Keys ausgeben: F1_WATCHER_WEBHOOK_KEY, HA_TOKEN, gh-Token, F1_USERNAME, F1_PASSWORD, FastF1-Token, Inhalte von .env.
