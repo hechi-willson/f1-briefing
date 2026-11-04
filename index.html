@@ -119,10 +119,142 @@ footer .legal a:hover{color:var(--muted);text-decoration:underline}
  ol.links a{display:grid;grid-template-columns:1.2em 1fr;column-gap:12px;row-gap:2px}
  ol.links .meta{grid-column:2;margin-left:0}
 }
+/* Personalisieren (idea #14): button, edit mode, hidden sections. Keep when rebuilding index.html. */
+main{position:relative}
+.pz-btn{position:absolute;top:32px;right:18px;font-family:var(--cond);font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;line-height:1;color:var(--muted);background:transparent;border:1px solid var(--border);border-radius:7px;padding:3px 8px;cursor:pointer}
+.pz-btn:hover,.pz-btn[aria-expanded="true"]{color:var(--fg);border-color:var(--red)}
+.pz-btn[hidden]{display:none}
+.pz-btn:focus-visible,.pz-ctl button:focus-visible,.pz-bar button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+html.pz-wait main>section{visibility:hidden}
+main>section.pz-off{display:none}
+.pz-edit main>section{padding-top:10px;padding-bottom:10px;margin-bottom:8px}
+.pz-edit main>section.pz-off{display:block;opacity:.45}
+.pz-edit main>section>:not(:first-child),.pz-edit main>section>.head:first-child>:not(h2):not(.pz-ctl){display:none}
+.pz-edit main>section>.head:first-child{margin:0;flex-wrap:nowrap}
+.pz-edit main>section.pz-dragging,.pz-edit main>section.pz-flash{position:relative;z-index:5;background:linear-gradient(rgba(225,6,0,.28),rgba(225,6,0,.28)),var(--card);border-color:var(--red);box-shadow:0 0 0 1px var(--red),0 10px 28px rgba(0,0,0,.6);transform:scale(1.02);transition:transform .12s,box-shadow .12s}
+.pz-edit main>section.pz-flash{animation:pz-flash .7s ease-out forwards}
+@keyframes pz-flash{0%,45%{transform:scale(1.02)}100%{transform:scale(1);box-shadow:none;background:var(--card);border-color:var(--border)}}
+@media (prefers-reduced-motion:reduce){.pz-edit main>section.pz-flash{animation-duration:.01s;animation-delay:.6s}}
+.pz-edit main>section.pz-dragging .pz-drag{cursor:grabbing;border-color:var(--red);color:var(--fg)}
+.pz-ctl{display:flex;gap:6px;margin-left:auto;flex:none}
+.pz-ctl button{width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;padding:0;font:700 1.05rem/1 var(--cond);color:var(--soft);background:var(--card2);border:1px solid var(--border);border-radius:8px;cursor:pointer}
+.pz-ctl button:hover{color:var(--fg);border-color:var(--red)}
+.pz-ctl button:disabled{opacity:.35;cursor:default;border-color:var(--border)}
+.pz-ctl .pz-drag{cursor:grab;touch-action:none}
+.pz-ctl .pz-eye[aria-pressed="false"]{color:var(--muted)}
+.pz-ctl svg{width:18px;height:18px}
+.pz-edit body{padding-bottom:84px}
+.pz-bar{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:10;display:flex;gap:8px;align-items:center;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:8px;box-shadow:0 6px 24px rgba(0,0,0,.5);max-width:calc(100% - 24px)}
+.pz-bar button{font-family:var(--cond);font-weight:700;font-size:.95rem;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:7px 12px;cursor:pointer;white-space:nowrap}
+.pz-bar button:hover{color:var(--fg);border-color:var(--red)}
+.pz-bar .pz-done{background:var(--red);border-color:var(--red);color:#fff}
+.pz-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (max-width:560px){
+ .pz-btn{top:20px;right:12px;font-size:.72rem;letter-spacing:.1em;padding:2px 7px}
+ .pz-ctl{gap:4px}
+ .pz-ctl button{width:32px;height:32px}
+ .pz-edit main>section>.head:first-child h2{font-size:1.1rem;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+}
 </style>
+<script>
+// Personalisieren (idea #14): per-browser section order and visibility, stored only in localStorage.
+// Section ids (main > section[id]) are stable across races. Archive copies (/archiv/) always show the default view.
+(function(){
+'use strict';
+if(location.pathname.indexOf('/archiv/')===0)return;
+var KEY='pushpush.ansicht.v1',root=document.documentElement,main=null,DEF=[],started=false;
+function clean(a){return Array.isArray(a)?a.filter(function(x){return typeof x==='string'}):[]}
+function load(){try{var r=localStorage.getItem(KEY);if(!r)return null;var c=JSON.parse(r);if(!c||typeof c!=='object')return null;return{order:clean(c.order),hidden:clean(c.hidden)}}catch(e){return null}}
+var cfg=load();
+if(cfg)root.classList.add('pz-wait');
+function secs(){var o=[];if(!main)return o;for(var n=main.firstElementChild;n;n=n.nextElementSibling){if(n.tagName==='SECTION'&&n.id)o.push(n)}return o}
+function apply(c){
+  var list=secs();if(!list.length)return;
+  var by={},res=[],seen={};list.forEach(function(s){by[s.id]=s});
+  c.order.forEach(function(id){if(by[id]&&!seen[id]){seen[id]=1;res.push(id)}});
+  // Sections missing from the stored order go right after their HTML predecessor (top if first).
+  DEF.forEach(function(id,i){if(seen[id])return;seen[id]=1;var p=-1;for(var j=i-1;j>=0;j--){var k=res.indexOf(DEF[j]);if(k>=0){p=k;break}}res.splice(p+1,0,id)});
+  var anchor=list[list.length-1].nextSibling;
+  res.forEach(function(id){main.insertBefore(by[id],anchor)});
+  list.forEach(function(s){s.classList.toggle('pz-off',c.hidden.indexOf(s.id)>=0)});
+}
+function save(){
+  var list=secs(),order=list.map(function(s){return s.id}),hidden=list.filter(function(s){return s.classList.contains('pz-off')}).map(function(s){return s.id});
+  var same=order.join('|')===DEF.join('|');
+  try{if(same&&!hidden.length)localStorage.removeItem(KEY);else localStorage.setItem(KEY,JSON.stringify({order:same?[]:order,hidden:hidden}))}catch(e){}
+}
+var EYE='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>';
+var EYE_OFF='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7c2 0 3.8.7 5.2 1.6M22 12s-3.6 7-10 7c-2 0-3.8-.7-5.2-1.6"/><path d="M3 3l18 18"/></svg>';
+var btn,bar,live,editing=false;
+function name(s){var h=s.querySelector('h2');return h?h.textContent.trim():s.id}
+function say(t){if(live)live.textContent=t}
+function mk(cls,label,html){var b=document.createElement('button');b.type='button';b.className=cls;b.setAttribute('aria-label',label);b.innerHTML=html;return b}
+function refresh(){
+  var list=secs();
+  list.forEach(function(s,i){var c=s.querySelector(':scope>.head>.pz-ctl');if(!c)return;var n=name(s),off=s.classList.contains('pz-off');
+    c.querySelector('.pz-up').disabled=i===0;c.querySelector('.pz-down').disabled=i===list.length-1;
+    var e=c.querySelector('.pz-eye');e.setAttribute('aria-pressed',off?'false':'true');e.setAttribute('aria-label',n+(off?' ist ausgeblendet, einblenden':' ist sichtbar, ausblenden'));e.innerHTML=off?EYE_OFF:EYE});
+}
+function pos(s){return secs().indexOf(s)+1}
+function flash(s){s.classList.remove('pz-flash');void s.offsetWidth;s.classList.add('pz-flash');clearTimeout(s._pzT);s._pzT=setTimeout(function(){s.classList.remove('pz-flash')},750)}
+function move(s,dir){var list=secs(),i=list.indexOf(s),t=list[i+dir];if(!t)return;if(dir<0)main.insertBefore(s,t);else main.insertBefore(t,s);save();refresh();flash(s);say(name(s)+' auf Position '+pos(s)+' von '+list.length)}
+function drag(s,h){
+  h.addEventListener('pointerdown',function(e){
+    if(e.button!==0)return;e.preventDefault();
+    s.classList.add('pz-dragging');var start=pos(s);
+    function mv(ev){var y=ev.clientY,p,n;
+      if(y<50)window.scrollBy(0,-12);else if(y>window.innerHeight-110)window.scrollBy(0,12);
+      while((p=s.previousElementSibling)&&p.tagName==='SECTION'&&p.id&&y<p.getBoundingClientRect().top+p.offsetHeight/2)main.insertBefore(p,s.nextSibling);
+      while((n=s.nextElementSibling)&&n.tagName==='SECTION'&&n.id&&y>n.getBoundingClientRect().top+n.offsetHeight/2)main.insertBefore(n,s);
+    }
+    function up(){document.removeEventListener('pointermove',mv);document.removeEventListener('pointerup',up);document.removeEventListener('pointercancel',up);s.classList.remove('pz-dragging');if(pos(s)!==start){save();refresh();flash(s);say(name(s)+' auf Position '+pos(s)+' von '+secs().length)}}
+    document.addEventListener('pointermove',mv);document.addEventListener('pointerup',up);document.addEventListener('pointercancel',up);
+  });
+  h.addEventListener('keydown',function(e){if(e.key==='ArrowUp'||e.key==='ArrowDown'){e.preventDefault();move(s,e.key==='ArrowUp'?-1:1);h.focus()}});
+}
+function enter(){
+  if(editing)return;editing=true;root.classList.add('pz-edit');btn.setAttribute('aria-expanded','true');
+  secs().forEach(function(s){var head=s.querySelector(':scope>.head');if(!head)return;var n=name(s),c=document.createElement('span');c.className='pz-ctl';
+    var d=mk('pz-drag',n+' verschieben: ziehen oder Pfeiltasten','⠿'),u=mk('pz-up',n+' nach oben','↑'),w=mk('pz-down',n+' nach unten','↓'),e=mk('pz-eye','',EYE);
+    u.addEventListener('click',function(){move(s,-1)});w.addEventListener('click',function(){move(s,1)});
+    e.addEventListener('click',function(){var off=s.classList.toggle('pz-off');save();refresh();say(n+(off?' ausgeblendet':' eingeblendet'))});
+    drag(s,d);c.appendChild(d);c.appendChild(u);c.appendChild(w);c.appendChild(e);head.appendChild(c)});
+  bar=document.createElement('div');bar.className='pz-bar';bar.setAttribute('role','toolbar');bar.setAttribute('aria-label','Ansicht anpassen');
+  var r=document.createElement('button');r.type='button';r.className='pz-reset';r.textContent='Standard wiederherstellen';
+  var f=document.createElement('button');f.type='button';f.className='pz-done';f.textContent='Fertig';
+  live=document.createElement('span');live.className='pz-sr';live.setAttribute('aria-live','polite');
+  r.addEventListener('click',function(){try{localStorage.removeItem(KEY)}catch(e){}apply({order:[],hidden:[]});refresh();say('Standardansicht wiederhergestellt')});
+  f.addEventListener('click',exit);
+  bar.appendChild(r);bar.appendChild(f);bar.appendChild(live);document.body.appendChild(bar);
+  refresh();
+}
+function exit(){
+  if(!editing)return;editing=false;root.classList.remove('pz-edit');btn.setAttribute('aria-expanded','false');
+  Array.prototype.forEach.call(document.querySelectorAll('.pz-ctl'),function(c){c.remove()});
+  if(bar){bar.remove();bar=live=null}
+  btn.focus();
+}
+function init(){
+  if(started)return;started=true;
+  try{
+    main=document.querySelector('main');if(!main)return;
+    DEF=secs().map(function(s){return s.id});
+    if(cfg)apply(cfg);
+    btn=document.getElementById('pz-btn');
+    if(btn&&DEF.length){btn.hidden=false;btn.addEventListener('click',function(){editing?exit():enter()})}
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&editing)exit()});
+  }catch(e){}finally{root.classList.remove('pz-wait')}
+}
+// Apply as soon as the footer is parsed (all sections exist), before first paint.
+var mo=null;
+try{mo=new MutationObserver(function(){if(document.querySelector('main>footer')){mo.disconnect();init()}});mo.observe(root,{childList:true,subtree:true})}catch(e){}
+document.addEventListener('DOMContentLoaded',function(){if(mo)mo.disconnect();init()});
+})();
+</script>
 </head>
 <body>
 <main>
+<button type="button" class="pz-btn" id="pz-btn" hidden aria-expanded="false" aria-label="Ansicht personalisieren: Abschnitte ein- und ausblenden, Reihenfolge ändern">Personalisieren</button>
 <h1>Mexiko GP 2026 – Mexiko-Stadt</h1>
 <p class="summary">Runde 19 im Autódromo Hermanos Rodríguez, 30. Oktober bis 1. November, ohne Sprint. Verstappen gewinnt, Antonelli ist Weltmeister.</p>
 <p id="stand">Stand: 02.11.2026 15:02 Wien</p>
