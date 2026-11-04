@@ -2,7 +2,7 @@
 
 Diese Datei ist die einzige Quelle für gemeinsame Regeln. Jede F1-Routine liest sie zu Beginn jedes Laufs und befolgt sie.
 Bei Widerspruch zwischen dieser Datei und dem Routine-Prompt gilt diese Datei, außer der Prompt nennt ausdrücklich eine Ausnahme.
-Gepflegt von PushPush. Änderungen nur auf Hechis Wunsch. Zuletzt geändert: 02.11.2026.
+Gepflegt von PushPush. Änderungen nur auf Hechis Wunsch. Zuletzt geändert: 04.11.2026.
 
 ## 1. Kommunikation mit Hechi
 - Deutsch, knapp und sachlich, im Funk-Stil eines Renningenieurs. Keine Emojis.
@@ -50,6 +50,7 @@ Gepflegt von PushPush. Änderungen nur auf Hechis Wunsch. Zuletzt geändert: 02.
 - Impressum (seit 31.10.2026, Datenschutz-Abschnitt seit 02.11.2026): site/impressum.html nicht ändern oder löschen. Kommt localStorage (Idee #14) oder ein neuer externer Dienst dazu, muss der Datenschutz-Abschnitt mit Hechis Freigabe ergänzt werden. Im Footer jeder Seite steht direkt nach `<p id="stand">` die eigene Zeile `<p class="legal"><a href="/impressum.html">Impressum</a></p>`, samt CSS `footer .legal`. Beim Neuaufbau von index.html beides übernehmen.
 - Interne Links und Pfade (seit 02.11.2026) immer root-absolut: `/impressum.html`, `/archiv/…html`, `/fonts/…woff2`, Startseite `/`. So bleiben Archivkopien ohne Anpassung gültig; Archivkopien werden unverändert kopiert.
 - Vor dem Umbau für ein neues Rennen das alte index.html nach site/archiv/JJJJ-RR-land-ort.html archivieren (macht das Mittwoch-Briefing).
+- Archiv-Übersicht (seit 04.11.2026): site/archiv/index.html listet alle Archivkopien als Tabelle (Runde, Grand Prix, Strecke / Ort, kein Datum), neuestes zuerst. Jede neue Archivkopie bekommt dort im selben Lauf oben eine eigene Zeile mit root-absolutem Link; Angaben nur aus der Archivkopie (h1, `.summary`). Die Footer-Zeile in index.html lautet `<p class="legal"><a href="/archiv/">Archiv</a> · <a href="/impressum.html">Impressum</a></p>`; beim Neuaufbau übernehmen.
 - Größere Design- oder Strukturänderungen: auf einem eigenen Branch, Screenshots an Hechi, erst nach seinem Ja mergen.
 
 ## 5. Routinen-Lebenszyklus
