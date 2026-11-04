@@ -155,6 +155,7 @@ main>section.pz-off{display:none}
  .pz-ctl button{width:32px;height:32px}
  .pz-edit main>section>.head:first-child h2{font-size:1.1rem;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 }
+.wk-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}@media(min-width:700px){.wk-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(min-width:1000px){.wk-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}.wk{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:12px;min-width:0}.wk-s{font-family:var(--cond);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}.wk-t{color:var(--muted);font-size:.82rem}.wk-temp{font-family:var(--cond);font-weight:800;font-size:2rem;line-height:1.1;margin:6px 0;font-variant-numeric:tabular-nums}.wk-r{display:flex;justify-content:space-between;font-size:.85rem;color:var(--muted)}.wk-r b{color:var(--fg)}.wk.em .wk-r b{color:var(--accent)}.wk-bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin:4px 0 8px}.wk-bar i{display:block;height:100%;background:var(--bar)}.wk.em .wk-bar i{background:var(--bar-em)}.wk-w{font-size:.85rem;color:var(--muted)}.wk-w b{color:var(--fg);font-weight:600}.wk-h{font-size:.85rem;color:var(--soft);margin-top:4px}
 </style>
 <script>
 // Personalisieren (idea #14): per-browser section order and visibility, stored only in localStorage.
@@ -327,18 +328,14 @@ document.addEventListener('DOMContentLoaded',function(){if(mo)mo.disconnect();in
 </section>
 
 <section id="wetter">
-<div class="head"><h2>Wetter</h2><span class="cap">Open-Meteo Interlagos, Stand 04.11.2026</span></div>
-<table>
-<thead><tr><th>Session</th><th>Temperatur</th><th>Regen</th><th>Hinweis</th></tr></thead>
-<tbody>
-<tr><td>FP1</td><td>~25 °C</td><td>~10 %</td><td>Freitag max. 25,5 / min. 17,2 °C, Regen 0,5 mm, max. Regenwahrscheinlichkeit 67 %</td></tr>
-<tr><td>FP2</td><td>~22 °C</td><td>~10 %</td><td>eher trocken bis bewölkt</td></tr>
-<tr><td>FP3</td><td>~28 °C</td><td>steigend</td><td>Samstag max. 29,2 / min. 18,8 °C, 6,9 mm, 88 %</td></tr>
-<tr><td>Qualifying</td><td>kühl bis warm</td><td>~88 %</td><td>Gewitterrisiko (Code 95)</td></tr>
-<tr><td>Rennen</td><td>~16 °C</td><td>~60 %</td><td>Sonntag max. 18,8 / min. 13,9 °C, 9,9 mm, 76 %; Nieselregen möglich</td></tr>
-</tbody>
-</table>
-<p>F1.com ergänzend: Freitag meist trocken, bewölkt 18–26 °C, 30 % Regen früh/spät; Samstag 50 % Regen nach 14:00 Ortszeit; Sonntag kühl 13–19 °C, 40 % starker Regen/Gewitter.</p>
+<div class="head"><h2>Wetter</h2><span class="cap">Open-Meteo Interlagos, Stand 04.11.2026 20:00</span></div>
+<div class="wk-grid">
+<div class="wk" data-session="fp1"><div class="wk-s">FP1</div><div class="wk-t">Fr 16:30</div><div class="wk-temp" data-temp>26 °C</div><div class="wk-r"><span>Regen</span><b data-rain>10 %</b></div><div class="wk-bar"><i style="width:10%"></i></div><div class="wk-w">Wind <b data-wind>2 km/h</b></div><div class="wk-h" data-hint>eher trocken</div></div>
+<div class="wk" data-session="fp2"><div class="wk-s">FP2</div><div class="wk-t">Fr 20:00</div><div class="wk-temp" data-temp>23 °C</div><div class="wk-r"><span>Regen</span><b data-rain>12 %</b></div><div class="wk-bar"><i style="width:12%"></i></div><div class="wk-w">Wind <b data-wind>12 km/h</b></div><div class="wk-h" data-hint>eher trocken</div></div>
+<div class="wk" data-session="fp3"><div class="wk-s">FP3</div><div class="wk-t">Sa 15:30</div><div class="wk-temp" data-temp>29 °C</div><div class="wk-r"><span>Regen</span><b data-rain>13 %</b></div><div class="wk-bar"><i style="width:13%"></i></div><div class="wk-w">Wind <b data-wind>23 km/h</b></div><div class="wk-h" data-hint>warm, windig</div></div>
+<div class="wk em" data-session="quali"><div class="wk-s">Qualifying</div><div class="wk-t">Sa 19:00</div><div class="wk-temp" data-temp>27 °C</div><div class="wk-r"><span>Regen</span><b data-rain>88 %</b></div><div class="wk-bar"><i style="width:88%"></i></div><div class="wk-w">Wind <b data-wind>19 km/h</b></div><div class="wk-h" data-hint>Gewitter möglich</div></div>
+<div class="wk em" data-session="rennen"><div class="wk-s">Rennen</div><div class="wk-t">So 18:00</div><div class="wk-temp" data-temp>16 °C</div><div class="wk-r"><span>Regen</span><b data-rain>63 %</b></div><div class="wk-bar"><i style="width:63%"></i></div><div class="wk-w">Wind <b data-wind>17 km/h</b></div><div class="wk-h" data-hint>Regen möglich</div></div>
+</div>
 </section>
 
 <section id="ergebnisse">
