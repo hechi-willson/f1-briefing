@@ -258,7 +258,7 @@ document.addEventListener('DOMContentLoaded',function(){if(mo)mo.disconnect();in
 <button type="button" class="pz-btn" id="pz-btn" hidden aria-expanded="false" aria-label="Ansicht personalisieren: Abschnitte ein- und ausblenden, Reihenfolge ändern">Personalisieren</button>
 <h1>São Paulo GP 2026 – São Paulo</h1>
 <p class="summary">Runde 20 im Autódromo José Carlos Pace (Interlagos), 6. bis 8. November, ohne Sprint. Antonelli ist Weltmeister.</p>
-<p id="stand">Stand: 06.11.2026 16:08 Wien</p>
+<p id="stand">Stand: 06.11.2026 19:37 Wien</p>
 
 <!-- Session countdown: the schedule lives in the JSON block #cd-sessions below.
      Replace it for each new race weekend (ISO timestamps with UTC offset, duration in minutes). -->
@@ -336,18 +336,18 @@ document.addEventListener('DOMContentLoaded',function(){if(mo)mo.disconnect();in
 </section>
 
 <section id="wetter">
-<div class="head"><h2>Wetter</h2><span class="cap">Open-Meteo Interlagos, Stand 06.11.2026 16:08</span></div>
+<div class="head"><h2>Wetter</h2><span class="cap">Open-Meteo Interlagos, Stand 06.11.2026 19:37</span></div>
 <div class="wk-grid">
 <div class="wk" data-session="fp1"><div class="wk-s">FP1</div><div class="wk-t">Fr 16:30</div><div class="wk-temp" data-temp>25 °C</div><div class="wk-r"><span>Regen</span><b data-rain>30 %</b></div><div class="wk-bar"><i style="width:30%"></i></div><div class="wk-w">Wind <b data-wind>3 km/h</b></div><div class="wk-h" data-hint>leichter Niesel</div></div>
-<div class="wk em" data-session="fp2"><div class="wk-s">FP2</div><div class="wk-t">Fr 20:00</div><div class="wk-temp" data-temp>23 °C</div><div class="wk-r"><span>Regen</span><b data-rain>59 %</b></div><div class="wk-bar"><i style="width:59%"></i></div><div class="wk-w">Wind <b data-wind>11 km/h</b></div><div class="wk-h" data-hint>Regen möglich</div></div>
-<div class="wk" data-session="fp3"><div class="wk-s">FP3</div><div class="wk-t">Sa 15:30</div><div class="wk-temp" data-temp>28 °C</div><div class="wk-r"><span>Regen</span><b data-rain>32 %</b></div><div class="wk-bar"><i style="width:32%"></i></div><div class="wk-w">Wind <b data-wind>20 km/h</b></div><div class="wk-h" data-hint>warm, windig</div></div>
+<div class="wk em" data-session="fp2"><div class="wk-s">FP2</div><div class="wk-t">Fr 20:00</div><div class="wk-temp" data-temp>23 °C</div><div class="wk-r"><span>Regen</span><b data-rain>74 %</b></div><div class="wk-bar"><i style="width:74%"></i></div><div class="wk-w">Wind <b data-wind>11 km/h</b></div><div class="wk-h" data-hint>leichter Niesel</div></div>
+<div class="wk" data-session="fp3"><div class="wk-s">FP3</div><div class="wk-t">Sa 15:30</div><div class="wk-temp" data-temp>28 °C</div><div class="wk-r"><span>Regen</span><b data-rain>28 %</b></div><div class="wk-bar"><i style="width:28%"></i></div><div class="wk-w">Wind <b data-wind>20 km/h</b></div><div class="wk-h" data-hint>warm, windig</div></div>
 <div class="wk em" data-session="quali"><div class="wk-s">Qualifying</div><div class="wk-t">Sa 19:00</div><div class="wk-temp" data-temp>26 °C</div><div class="wk-r"><span>Regen</span><b data-rain>76 %</b></div><div class="wk-bar"><i style="width:76%"></i></div><div class="wk-w">Wind <b data-wind>16 km/h</b></div><div class="wk-h" data-hint>Regen wahrscheinlich</div></div>
-<div class="wk em" data-session="rennen"><div class="wk-s">Rennen</div><div class="wk-t">So 18:00</div><div class="wk-temp" data-temp>16 °C</div><div class="wk-r"><span>Regen</span><b data-rain>95 %</b></div><div class="wk-bar"><i style="width:95%"></i></div><div class="wk-w">Wind <b data-wind>18 km/h</b></div><div class="wk-h" data-hint>hohes Regenrisiko</div></div>
+<div class="wk em" data-session="rennen"><div class="wk-s">Rennen</div><div class="wk-t">So 18:00</div><div class="wk-temp" data-temp>17 °C</div><div class="wk-r"><span>Regen</span><b data-rain>92 %</b></div><div class="wk-bar"><i style="width:92%"></i></div><div class="wk-w">Wind <b data-wind>18 km/h</b></div><div class="wk-h" data-hint>hohes Regenrisiko</div></div>
 </div>
 </section>
 
 <section id="ergebnisse">
-<div class="head"><h2>Ergebnisse</h2><span class="cap">noch keine Daten</span></div>
+<div class="head"><h2>Ergebnisse</h2><span class="cap">FP1</span></div>
 <div class="head sub"><h3>Qualifying</h3><span class="cap">noch keine Daten</span></div>
 <p>Qualifying Samstag 19:00 Wien.</p>
 <div class="head sub"><h3>Startaufstellung</h3><span class="cap">noch keine Daten</span></div>
@@ -362,10 +362,19 @@ document.addEventListener('DOMContentLoaded',function(){if(mo)mo.disconnect();in
 <tr><td>4</td><td>–</td><td>–</td><td>–</td></tr>
 </tbody>
 </table>
-<div class="head sub"><h3>Freies Training</h3><div class="tools"><span class="cap" id="fp-cap">noch keine Daten</span>
-<div class="seg" role="group" aria-label="Training"><button type="button" data-fp="fp1" data-cap="noch keine Daten" aria-pressed="true">FP1</button><button type="button" data-fp="fp2" data-cap="noch keine Daten" aria-pressed="false">FP2</button><button type="button" data-fp="fp3" data-cap="noch keine Daten" aria-pressed="false">FP3</button></div></div></div>
+<div class="head sub"><h3>Freies Training</h3><div class="tools"><span class="cap" id="fp-cap">FIA Doc 17</span>
+<div class="seg" role="group" aria-label="Training"><button type="button" data-fp="fp1" data-cap="FIA Doc 17" aria-pressed="true">FP1</button><button type="button" data-fp="fp2" data-cap="noch keine Daten" aria-pressed="false">FP2</button><button type="button" data-fp="fp3" data-cap="noch keine Daten" aria-pressed="false">FP3</button></div></div></div>
 <div class="fp" id="fp1">
-<p>noch keine Daten</p>
+<table>
+<thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Zeit</th><th>Abstand</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Norris</td><td>McLaren</td><td>1:11.717</td><td>–</td></tr>
+<tr><td>2</td><td>Antonelli</td><td>Mercedes</td><td>1:11.799</td><td>+0.082</td></tr>
+<tr><td>3</td><td>Verstappen</td><td>Red Bull</td><td>1:11.953</td><td>+0.236</td></tr>
+<tr><td>4</td><td>Hamilton</td><td>Ferrari</td><td>1:12.041</td><td>+0.324</td></tr>
+<tr><td>5</td><td>Russell</td><td>Mercedes</td><td>1:12.103</td><td>+0.386</td></tr>
+</tbody>
+</table>
 </div>
 <div class="fp" id="fp2" hidden>
 <p>noch keine Daten</p>
