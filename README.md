@@ -23,6 +23,8 @@ On race weekends the page is updated automatically several times a day, and it i
 
 A single `index.html` with no external dependencies (HTML, CSS, and a bit of vanilla JS for the time zone toggle and the session countdown). Dark design matching the Wednesday briefing infographic (F1 red accents, Barlow and Barlow Condensed). The fonts are self-hosted in `fonts/` (SIL Open Font License, see `fonts/OFL.txt`), so no requests go to Google Fonts.
 
+Installed Home Screen copies (iOS `navigator.standalone`, or the standard `display-mode: standalone`) check the published homepage on first open and when the app returns to the foreground. They reload only when the `Stand` timestamp in `#stand` is newer. Ordinary browser tabs, the impressum, and every archive page do not check or reload. The check does not use a service worker and does not read or write `localStorage`.
+
 ## Notifications
 
 On every push to `main`, a GitHub Action calls a webhook (JSON with commit ID, commit message, timestamp and page link). New commits are also available as a feed: https://github.com/hechi-willson/f1-briefing/commits/main.atom

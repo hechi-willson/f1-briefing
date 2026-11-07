@@ -252,6 +252,93 @@ try{mo=new MutationObserver(function(){if(document.querySelector('main>footer'))
 document.addEventListener('DOMContentLoaded',function(){if(mo)mo.disconnect();init()});
 })();
 </script>
+<script id="pp-standalone-refresh">
+// Standalone refresh: installed Home Screen only (iOS navigator.standalone or display-mode standalone).
+// On first open and when returning to the foreground, compare #stand with the published homepage.
+// Reload only when that Stand timestamp is newer. Keep this block when rebuilding index.html.
+// Archive paths, the impressum, and normal browser tabs do not check or reload.
+// Does not read or write browser storage (the personalization key stays untouched). No service worker.
+(function(){
+'use strict';
+var GAP_MS=1000;
+var path=location.pathname;
+if(path!=='/'&&path!=='/index.html')return;
+function standalone(){
+  try{
+    var nav=window.navigator;
+    if(nav&&nav.standalone===true)return true;
+    if(typeof window.matchMedia==='function'&&window.matchMedia('(display-mode: standalone)').matches)return true;
+  }catch(e){}
+  return false;
+}
+if(!standalone())return;
+function norm(s){return String(s||'').replace(/\u00a0/g,' ').replace(/\s+/g,' ').trim()}
+function standKey(text){
+  var m=/^Stand:\s*(\d{2})\.(\d{2})\.(\d{4})\s+(\d{2}):(\d{2})\b/.exec(norm(text));
+  if(!m)return '';
+  if(+m[4]>23||+m[5]>59)return '';
+  return m[3]+m[2]+m[1]+m[4]+m[5];
+}
+function localKey(){
+  var el=document.getElementById('stand');
+  return standKey(el?el.textContent:'');
+}
+function remoteKey(html){
+  var id='st'+'and';
+  var re=new RegExp('<p\\b[^>]*\\bid=(["\'])'+id+'\\1[^>]*>([\\s\\S]*?)<\\/p>','i');
+  var m=re.exec(String(html));
+  if(!m)return '';
+  var text=m[2].replace(/<[^>]+>/g,'').replace(/&nbsp;/gi,' ').replace(/&amp;/gi,'&').replace(/&lt;/gi,'<').replace(/&gt;/gi,'>').replace(/&quot;/gi,'"').replace(/&#39;|&apos;/gi,"'");
+  return standKey(text);
+}
+function currentRev(){
+  var q=location.search.charAt(0)==='?'?location.search.slice(1):location.search;
+  if(!q)return '';
+  var parts=q.split('&'),i,kv;
+  for(i=0;i<parts.length;i++){
+    kv=parts[i].split('=');
+    if(kv[0]==='pp-rev'){
+      try{return decodeURIComponent(kv.slice(1).join('='))}catch(e){return ''}
+    }
+  }
+  return '';
+}
+var last=0,inflight=false;
+function check(){
+  if(document.visibilityState==='hidden')return Promise.resolve();
+  var local=localKey();
+  if(!local)return Promise.resolve();
+  var url=location.origin+'/?pp-bust='+Date.now();
+  return fetch(url,{cache:'no-store',credentials:'same-origin',headers:{'Accept':'text/html'}}).then(function(res){
+    if(!res||!res.ok)return '';
+    try{if(res.url&&new URL(res.url).origin!==location.origin)return ''}catch(e){return ''}
+    return res.text();
+  }).then(function(html){
+    if(typeof html!=='string'||!html)return;
+    if(document.visibilityState==='hidden')return;
+    var remote=remoteKey(html);
+    if(!remote||remote<=local)return;
+    if(currentRev()===remote)return;
+    var next='/?pp-rev='+remote+'&pp-bust='+Date.now()+(location.hash||'');
+    location.replace(next);
+  }).catch(function(){});
+}
+function schedule(){
+  if(document.visibilityState==='hidden')return;
+  if(inflight)return;
+  var now=Date.now();
+  if(now-last<GAP_MS)return;
+  last=now;
+  inflight=true;
+  Promise.resolve().then(check).catch(function(){}).then(function(){inflight=false});
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',schedule);
+else schedule();
+document.addEventListener('visibilitychange',function(){if(document.visibilityState==='visible')schedule()});
+window.addEventListener('pageshow',schedule);
+document.addEventListener('resume',schedule);
+})();
+</script>
 </head>
 <body>
 <main>
