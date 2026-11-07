@@ -73,13 +73,42 @@ function texts(board) {
   return board.children.map((button) => button.textContent);
 }
 
+const POOL = [
+  'McLaren slow stop',
+  'Ferrari strategy fumble',
+  'Audi finishes P11',
+  'Stroll DNF',
+  '"Superclipping"',
+  'Rain expected in X minutes',
+  'Max complains about downshifts',
+  'FIA software bug',
+  '"Wollt grad fragen"',
+  'Gröbl erzählt aus den 50ern',
+  'Safety Car',
+  'Virtual Safety Car',
+  'Red flag',
+  '10-second time penalty',
+  '5-second time penalty',
+  'Collision between teammates',
+  'Kimi track limits warning',
+];
+
 test('page shell matches the briefing constraints', () => {
   assert.match(bingoHtml, /<meta name="robots" content="noindex, nofollow">/);
   assert.match(bingoHtml, /pushpush\.bingo\.v1/);
   assert.doesNotMatch(bingoHtml, /pushpush\.ansicht\.v1/);
   assert.doesNotMatch(bingoHtml, /serviceWorker/);
   assert.match(bingoHtml, /grid-template-columns:repeat\(4,minmax\(0,1fr\)\)/);
+  assert.match(bingoHtml, /#karte\{max-width:34rem/);
+  assert.match(bingoHtml, /@media \(min-width:561px\)\{\.board button\{aspect-ratio:1/);
+  assert.match(bingoHtml, /display:flex;align-items:center;justify-content:center/);
+  assert.match(bingoHtml, /text-align:center/);
+  assert.match(bingoHtml, /aria-pressed/);
+  assert.doesNotMatch(bingoHtml, /✓|class="summary"/);
+  assert.doesNotMatch(bingoHtml, /\bORF\b|<select/);
   assert.match(bingoHtml, /overflow-wrap:anywhere/);
+  assert.equal(POOL.length, 17);
+  POOL.forEach((entry) => assert.ok(bingoHtml.includes(entry), entry));
   assert.match(bingoHtml, /prefers-reduced-motion:reduce/);
   assert.match(bingoHtml, /<p class="legal"><a href="\/impressum\.html">Impressum<\/a><\/p>/);
   assert.equal((bingoHtml.match(/<footer>[\s\S]*?<\/footer>/) || [''])[0].match(/<a /g).length, 1);
@@ -89,12 +118,13 @@ test('page shell matches the briefing constraints', () => {
   assert.equal(fs.readFileSync(path.join(root, 'CNAME'), 'utf8').trim(), 'pushpush.live');
 });
 
-test('first visit deals 16 distinct placeholder cells and persists them', () => {
+test('first visit deals 16 distinct entries from the 17-line pool', () => {
   const game = boot();
   const labels = texts(game.board);
   assert.equal(labels.length, 16);
   assert.equal(new Set(labels).size, 16);
-  labels.forEach((label) => assert.match(label, /^Platzhalter: /));
+  labels.forEach((label) => assert.ok(POOL.includes(label), label));
+  assert.equal(POOL.filter((entry) => !labels.includes(entry)).length, 1);
   const stored = JSON.parse(game.saved['pushpush.bingo.v1']);
   assert.deepEqual(stored.cells, labels);
   assert.deepEqual(stored.marks, Array(16).fill(false));
@@ -141,6 +171,28 @@ test('column and both diagonals win, Neu clears marks and the message', () => {
   assert.equal(other.win.hidden, true);
   assert.equal(other.fx.children.length, 0);
   other.board.children.forEach((button) => assert.equal(button.attrs['aria-pressed'], 'false'));
+});
+
+test('placeholder cards reset and a valid saved card stays', () => {
+  const staleCells = Array.from({ length: 16 }, (_, i) => `Platzhalter: ${i}`);
+  const stale = boot({
+    saved: { 'pushpush.bingo.v1': JSON.stringify({ cells: staleCells, marks: Array(16).fill(true) }) },
+  });
+  const dealt = texts(stale.board);
+  assert.equal(dealt.length, 16);
+  assert.equal(dealt.some((label) => label.startsWith('Platzhalter')), false);
+  dealt.forEach((label) => assert.ok(POOL.includes(label)));
+  stale.board.children.forEach((button) => assert.equal(button.attrs['aria-pressed'], 'false'));
+
+  const keptCells = POOL.slice(0, 16);
+  const keptMarks = Array(16).fill(false);
+  keptMarks[4] = true;
+  const kept = boot({
+    saved: { 'pushpush.bingo.v1': JSON.stringify({ cells: keptCells, marks: keptMarks }) },
+  });
+  assert.deepEqual(texts(kept.board), keptCells);
+  assert.equal(kept.board.children[4].attrs['aria-pressed'], 'true');
+  assert.equal(kept.board.children[0].attrs['aria-pressed'], 'false');
 });
 
 test('corrupt or blocked storage still deals a playable card', () => {
