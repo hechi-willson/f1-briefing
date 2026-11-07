@@ -345,7 +345,7 @@ document.addEventListener('resume',schedule);
 <button type="button" class="pz-btn" id="pz-btn" hidden aria-expanded="false" aria-label="Ansicht personalisieren: Abschnitte ein- und ausblenden, Reihenfolge ändern">Personalisieren</button>
 <h1>São Paulo GP 2026 – São Paulo</h1>
 <p class="summary">Runde 20 im Autódromo José Carlos Pace (Interlagos), 6. bis 8. November, ohne Sprint. Antonelli ist Weltmeister.</p>
-<p id="stand">Stand: 07.11.2026 15:41 Wien</p>
+<p id="stand">Stand: 07.11.2026 17:27 Wien</p>
 
 <!-- Session countdown: the schedule lives in the JSON block #cd-sessions below.
      Replace it for each new race weekend (ISO timestamps with UTC offset, duration in minutes). -->
@@ -481,20 +481,91 @@ document.addEventListener('resume',schedule);
 </section>
 
 <section id="longruns">
-<div class="head"><h2>Long Runs</h2><span class="cap">noch keine Daten</span></div>
+<div class="head"><h2>Long Runs</h2><span class="cap">FastF1, FIA-Rennleitung</span></div>
 <div class="head sub"><h3>Teams, FP2</h3><span class="cap">bester Fahrer je Team</span></div>
-<p>noch keine Daten. Long-Run-Analyse folgt nach FP2/FP3.</p>
-<div class="head sub"><h3>Fahrer</h3><div class="tools"><span class="cap" id="lr-cap">noch keine Daten</span>
-<div class="seg" role="group" aria-label="Long Runs Training"><button type="button" data-lr="lr-fp1" data-cap="noch keine Daten" aria-pressed="false">FP1</button><button type="button" data-lr="lr-fp2" data-cap="noch keine Daten" aria-pressed="true">FP2</button><button type="button" data-lr="lr-fp3" data-cap="noch keine Daten" aria-pressed="false">FP3</button></div></div></div>
+<table>
+<thead><tr><th>Rang</th><th>Team</th><th>Fahrer</th><th>Pace Ø</th><th>Abstand</th><th>Reifen</th><th>Runden</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Mercedes</td><td>Antonelli</td><td>1:15.144</td><td>–</td><td>Soft</td><td>10</td></tr>
+<tr><td>2</td><td>Ferrari</td><td>Hamilton</td><td>1:15.245</td><td>+0.101</td><td>Soft</td><td>5</td></tr>
+<tr><td>3</td><td>McLaren</td><td>Norris</td><td>1:15.497</td><td>+0.353</td><td>Hard</td><td>8</td></tr>
+<tr><td>4</td><td>Red Bull</td><td>Verstappen</td><td>1:15.501</td><td>+0.357</td><td>Medium</td><td>10</td></tr>
+<tr><td>5</td><td>Racing Bulls</td><td>Lawson</td><td>1:15.744</td><td>+0.600</td><td>Soft</td><td>5</td></tr>
+<tr><td>6</td><td>Alpine</td><td>Gasly</td><td>1:16.015</td><td>+0.871</td><td>Soft</td><td>10</td></tr>
+<tr><td>7</td><td>Audi</td><td>Bortoleto</td><td>1:16.015</td><td>+0.871</td><td>Soft</td><td>12</td></tr>
+<tr><td>8</td><td>Haas</td><td>Bearman</td><td>1:16.257</td><td>+1.113</td><td>Soft</td><td>10</td></tr>
+<tr><td>9</td><td>Williams</td><td>Albon</td><td>1:16.595</td><td>+1.451</td><td>Soft</td><td>6</td></tr>
+<tr><td>10</td><td>Cadillac</td><td>Bottas</td><td>1:16.638</td><td>+1.494</td><td>Soft</td><td>5</td></tr>
+<tr><td>11</td><td>Aston Martin</td><td>Stroll</td><td>1:17.207</td><td>+2.063</td><td>Hard</td><td>6</td></tr>
+</tbody>
+</table>
+<div class="head sub"><h3>Fahrer</h3><div class="tools"><span class="cap" id="lr-cap">FP2, Hauptdaten</span>
+<div class="seg" role="group" aria-label="Long Runs Training"><button type="button" data-lr="lr-fp1" data-cap="FP1, grüne Strecke" aria-pressed="false">FP1</button><button type="button" data-lr="lr-fp2" data-cap="FP2, Hauptdaten" aria-pressed="true">FP2</button><button type="button" data-lr="lr-fp3" data-cap="FP3, wenige Long Runs" aria-pressed="false">FP3</button></div></div></div>
 <div class="lr" id="lr-fp1" hidden>
-<p>noch keine Daten</p>
+<table>
+<thead><tr><th>Fahrer</th><th>Team</th><th>Reifen</th><th>Runden</th><th>Alter Ø</th><th>Pace Ø</th><th>Median</th></tr></thead>
+<tbody>
+<tr><td>Norris</td><td>McLaren</td><td>Soft</td><td>12/13</td><td>10</td><td>1:14.851</td><td>1:14.717</td></tr>
+<tr><td>Russell</td><td>Mercedes</td><td>Soft</td><td>6/8</td><td>8</td><td>1:15.725</td><td>1:15.755</td></tr>
+<tr><td>Verstappen</td><td>Red Bull</td><td>Soft</td><td>8/10</td><td>10</td><td>1:16.016</td><td>1:15.963</td></tr>
+<tr><td>Hamilton</td><td>Ferrari</td><td>Soft</td><td>9/12</td><td>8</td><td>1:16.024</td><td>1:16.081</td></tr>
+<tr><td>Antonelli</td><td>Mercedes</td><td>Medium</td><td>5/7</td><td>15</td><td>1:16.091</td><td>1:15.881</td></tr>
+<tr><td>Bortoleto</td><td>Audi</td><td>Soft</td><td>7/8</td><td>10</td><td>1:16.454</td><td>1:16.348</td></tr>
+<tr><td>Camara</td><td>Haas</td><td>Medium</td><td>4/5</td><td>4</td><td>1:16.505</td><td>1:16.410</td></tr>
+<tr><td>Lawson</td><td>Racing Bulls</td><td>Soft</td><td>6/7</td><td>12</td><td>1:16.743</td><td>1:16.678</td></tr>
+<tr><td>Bearman</td><td>Haas</td><td>Soft</td><td>7/8</td><td>8</td><td>1:17.331</td><td>1:17.470</td></tr>
+<tr><td>Colapinto</td><td>Alpine</td><td>Soft</td><td>9/10</td><td>14</td><td>1:17.371</td><td>1:17.537</td></tr>
+<tr><td>Lindblad</td><td>Racing Bulls</td><td>Hard</td><td>6/6</td><td>18</td><td>1:17.798</td><td>1:17.911</td></tr>
+<tr><td>Camara</td><td>Haas</td><td>Medium</td><td>6/7</td><td>20</td><td>1:18.412</td><td>1:18.469</td></tr>
+<tr><td>Herta</td><td>Cadillac</td><td>Soft</td><td>7/8</td><td>13</td><td>1:18.612</td><td>1:18.681</td></tr>
+</tbody>
+</table>
 </div>
 <div class="lr" id="lr-fp2">
-<p>noch keine Daten</p>
+<table>
+<thead><tr><th>Fahrer</th><th>Team</th><th>Reifen</th><th>Runden</th><th>Alter Ø</th><th>Pace Ø</th><th>Median</th></tr></thead>
+<tbody>
+<tr><td>Antonelli</td><td>Mercedes</td><td>Soft</td><td>10/11</td><td>9</td><td>1:15.144</td><td>1:15.154</td></tr>
+<tr><td>Hamilton</td><td>Ferrari</td><td>Soft</td><td>5/5</td><td>8</td><td>1:15.245</td><td>1:15.265</td></tr>
+<tr><td>Norris</td><td>McLaren</td><td>Hard</td><td>8/8</td><td>4</td><td>1:15.497</td><td>1:15.437</td></tr>
+<tr><td>Verstappen</td><td>Red Bull</td><td>Medium</td><td>10/10</td><td>14</td><td>1:15.501</td><td>1:15.651</td></tr>
+<tr><td>Piastri</td><td>McLaren</td><td>Soft</td><td>10/11</td><td>12</td><td>1:15.520</td><td>1:15.540</td></tr>
+<tr><td>Hadjar</td><td>Red Bull</td><td>Soft</td><td>9/9</td><td>5</td><td>1:15.569</td><td>1:15.611</td></tr>
+<tr><td>Russell</td><td>Mercedes</td><td>Soft</td><td>15/15</td><td>12</td><td>1:15.733</td><td>1:15.838</td></tr>
+<tr><td>Lawson</td><td>Racing Bulls</td><td>Soft</td><td>5/5</td><td>8</td><td>1:15.744</td><td>1:15.759</td></tr>
+<tr><td>Leclerc</td><td>Ferrari</td><td>Soft</td><td>8/9</td><td>12</td><td>1:15.897</td><td>1:15.905</td></tr>
+<tr><td>Gasly</td><td>Alpine</td><td>Soft</td><td>10/10</td><td>14</td><td>1:16.015</td><td>1:15.961</td></tr>
+<tr><td>Bortoleto</td><td>Audi</td><td>Soft</td><td>12/12</td><td>12</td><td>1:16.015</td><td>1:16.132</td></tr>
+<tr><td>Bearman</td><td>Haas</td><td>Soft</td><td>10/10</td><td>12</td><td>1:16.257</td><td>1:16.139</td></tr>
+<tr><td>Lindblad</td><td>Racing Bulls</td><td>Soft</td><td>14/14</td><td>14</td><td>1:16.279</td><td>1:16.377</td></tr>
+<tr><td>Hamilton</td><td>Ferrari</td><td>Medium</td><td>8/8</td><td>14</td><td>1:16.284</td><td>1:16.112</td></tr>
+<tr><td>Lawson</td><td>Racing Bulls</td><td>Soft</td><td>8/8</td><td>16</td><td>1:16.369</td><td>1:16.280</td></tr>
+<tr><td>Colapinto</td><td>Alpine</td><td>Hard</td><td>9/9</td><td>14</td><td>1:16.535</td><td>1:16.491</td></tr>
+<tr><td>Albon</td><td>Williams</td><td>Soft</td><td>6/6</td><td>8</td><td>1:16.595</td><td>1:16.574</td></tr>
+<tr><td>Bottas</td><td>Cadillac</td><td>Soft</td><td>5/5</td><td>9</td><td>1:16.638</td><td>1:16.303</td></tr>
+<tr><td>Sainz</td><td>Williams</td><td>Soft</td><td>9/9</td><td>10</td><td>1:16.656</td><td>1:16.769</td></tr>
+<tr><td>Albon</td><td>Williams</td><td>Soft</td><td>6/7</td><td>15</td><td>1:17.011</td><td>1:17.072</td></tr>
+<tr><td>Pérez</td><td>Cadillac</td><td>Soft</td><td>14/14</td><td>14</td><td>1:17.110</td><td>1:17.112</td></tr>
+<tr><td>Stroll</td><td>Aston Martin</td><td>Hard</td><td>6/7</td><td>12</td><td>1:17.207</td><td>1:17.070</td></tr>
+<tr><td>Bottas</td><td>Cadillac</td><td>Medium</td><td>7/7</td><td>13</td><td>1:17.248</td><td>1:17.368</td></tr>
+<tr><td>Camara</td><td>Haas</td><td>Soft</td><td>6/6</td><td>4</td><td>1:17.264</td><td>1:17.191</td></tr>
+<tr><td>Alonso</td><td>Aston Martin</td><td>Soft</td><td>11/11</td><td>14</td><td>1:17.349</td><td>1:17.335</td></tr>
+</tbody>
+</table>
 </div>
 <div class="lr" id="lr-fp3" hidden>
-<p>noch keine Daten</p>
+<table>
+<thead><tr><th>Fahrer</th><th>Team</th><th>Reifen</th><th>Runden</th><th>Alter Ø</th><th>Pace Ø</th><th>Median</th></tr></thead>
+<tbody>
+<tr><td>Hülkenberg</td><td>Audi</td><td>Medium</td><td>5/6</td><td>13</td><td>1:16.561</td><td>1:16.533</td></tr>
+<tr><td>Pérez</td><td>Cadillac</td><td>Medium</td><td>7/7</td><td>19</td><td>1:19.732</td><td>1:19.731</td></tr>
+</tbody>
+</table>
 </div>
+<ul>
+<li>Long Run: mind. 5 Runden am Stück auf einem Reifen, jede innerhalb 107 % der schnellsten Stintrunde. Ohne Out-, In- und gestrichene Runden; Ausreißer über Median +1,5 s raus (Verkehr). Gewertet ab 3 gültigen Runden, Team-Rang = schnellster Lauf des besten Fahrers.</li>
+<li>Runden = gewertet/gesamt im Lauf. Keine Gelb- oder SC-Phasen in den Läufen. Sprit unbekannt, keine Benzinkorrektur; Soft ist im Schnitt schneller als Medium und Hard.</li>
+</ul>
 </section>
 
 <section id="fahrer-wm">
