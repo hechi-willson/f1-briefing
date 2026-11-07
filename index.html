@@ -345,7 +345,7 @@ document.addEventListener('resume',schedule);
 <button type="button" class="pz-btn" id="pz-btn" hidden aria-expanded="false" aria-label="Ansicht personalisieren: Abschnitte ein- und ausblenden, Reihenfolge ändern">Personalisieren</button>
 <h1>São Paulo GP 2026 – São Paulo</h1>
 <p class="summary">Runde 20 im Autódromo José Carlos Pace (Interlagos), 6. bis 8. November, ohne Sprint. Antonelli ist Weltmeister.</p>
-<p id="stand">Stand: 07.11.2026 17:27 Wien</p>
+<p id="stand">Stand: 07.11.2026 18:44 Wien</p>
 
 <!-- Session countdown: the schedule lives in the JSON block #cd-sessions below.
      Replace it for each new race weekend (ISO timestamps with UTC offset, duration in minutes). -->
@@ -423,18 +423,18 @@ document.addEventListener('resume',schedule);
 </section>
 
 <section id="wetter">
-<div class="head"><h2>Wetter</h2><span class="cap">Open-Meteo Interlagos, Stand 07.11.2026 15:04</span></div>
+<div class="head"><h2>Wetter</h2><span class="cap">Open-Meteo Interlagos, Stand 07.11.2026 18:44</span></div>
 <div class="wk-grid">
 <div class="wk" data-session="fp1"><div class="wk-s">FP1</div><div class="wk-t">Fr 16:30</div><div class="wk-temp" data-temp>25 °C</div><div class="wk-r"><span>Regen</span><b data-rain>30 %</b></div><div class="wk-bar"><i style="width:30%"></i></div><div class="wk-w">Wind <b data-wind>3 km/h</b></div><div class="wk-h" data-hint>leichter Niesel</div></div>
 <div class="wk em" data-session="fp2"><div class="wk-s">FP2</div><div class="wk-t">Fr 20:00</div><div class="wk-temp" data-temp>23 °C</div><div class="wk-r"><span>Regen</span><b data-rain>74 %</b></div><div class="wk-bar"><i style="width:74%"></i></div><div class="wk-w">Wind <b data-wind>11 km/h</b></div><div class="wk-h" data-hint>leichter Niesel</div></div>
 <div class="wk" data-session="fp3"><div class="wk-s">FP3</div><div class="wk-t">Sa 15:30</div><div class="wk-temp" data-temp>29 °C</div><div class="wk-r"><span>Regen</span><b data-rain>33 %</b></div><div class="wk-bar"><i style="width:33%"></i></div><div class="wk-w">Wind <b data-wind>17 km/h</b></div><div class="wk-h" data-hint>warm, leichter Niesel</div></div>
-<div class="wk em" data-session="quali"><div class="wk-s">Qualifying</div><div class="wk-t">Sa 19:00</div><div class="wk-temp" data-temp>24 °C</div><div class="wk-r"><span>Regen</span><b data-rain>82 %</b></div><div class="wk-bar"><i style="width:82%"></i></div><div class="wk-w">Wind <b data-wind>16 km/h</b></div><div class="wk-h" data-hint>Regen wahrscheinlich</div></div>
+<div class="wk em" data-session="quali"><div class="wk-s">Qualifying</div><div class="wk-t">Sa 19:00</div><div class="wk-temp" data-temp>24 °C</div><div class="wk-r"><span>Regen</span><b data-rain>80 %</b></div><div class="wk-bar"><i style="width:80%"></i></div><div class="wk-w">Wind <b data-wind>16 km/h</b></div><div class="wk-h" data-hint>dichter Niesel</div></div>
 <div class="wk em" data-session="rennen"><div class="wk-s">Rennen</div><div class="wk-t">So 18:00</div><div class="wk-temp" data-temp>16 °C</div><div class="wk-r"><span>Regen</span><b data-rain>95 %</b></div><div class="wk-bar"><i style="width:95%"></i></div><div class="wk-w">Wind <b data-wind>17 km/h</b></div><div class="wk-h" data-hint>Regen sehr wahrscheinlich</div></div>
 </div>
 </section>
 
 <section id="ergebnisse">
-<div class="head"><h2>Ergebnisse</h2><span class="cap">FP1–FP2</span></div>
+<div class="head"><h2>Ergebnisse</h2><span class="cap">FP1–FP3</span></div>
 <div class="head sub"><h3>Qualifying</h3><span class="cap">noch keine Daten</span></div>
 <p>Qualifying Samstag 19:00 Wien.</p>
 <div class="head sub"><h3>Startaufstellung</h3><span class="cap">noch keine Daten</span></div>
@@ -450,7 +450,7 @@ document.addEventListener('resume',schedule);
 </tbody>
 </table>
 <div class="head sub"><h3>Freies Training</h3><div class="tools"><span class="cap" id="fp-cap">FIA Doc 17</span>
-<div class="seg" role="group" aria-label="Training"><button type="button" data-fp="fp1" data-cap="FIA Doc 17" aria-pressed="true">FP1</button><button type="button" data-fp="fp2" data-cap="FIA Doc 22" aria-pressed="false">FP2</button><button type="button" data-fp="fp3" data-cap="noch keine Daten" aria-pressed="false">FP3</button></div></div></div>
+<div class="seg" role="group" aria-label="Training"><button type="button" data-fp="fp1" data-cap="FIA Doc 17" aria-pressed="true">FP1</button><button type="button" data-fp="fp2" data-cap="FIA Doc 22" aria-pressed="false">FP2</button><button type="button" data-fp="fp3" data-cap="FIA Doc 32" aria-pressed="false">FP3</button></div></div></div>
 <div class="fp" id="fp1">
 <table>
 <thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Zeit</th><th>Abstand</th></tr></thead>
@@ -476,7 +476,16 @@ document.addEventListener('resume',schedule);
 </table>
 </div>
 <div class="fp" id="fp3" hidden>
-<p>noch keine Daten</p>
+<table>
+<thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Zeit</th><th>Abstand</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Verstappen</td><td>Red Bull</td><td>1:11.622</td><td>–</td></tr>
+<tr><td>2</td><td>Antonelli</td><td>Mercedes</td><td>1:11.647</td><td>+0.025</td></tr>
+<tr><td>3</td><td>Norris</td><td>McLaren</td><td>1:11.753</td><td>+0.131</td></tr>
+<tr><td>4</td><td>Russell</td><td>Mercedes</td><td>1:11.806</td><td>+0.184</td></tr>
+<tr><td>5</td><td>Leclerc</td><td>Ferrari</td><td>1:11.896</td><td>+0.274</td></tr>
+</tbody>
+</table>
 </div>
 </section>
 
