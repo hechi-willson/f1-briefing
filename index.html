@@ -344,8 +344,8 @@ document.addEventListener('resume',schedule);
 <main>
 <button type="button" class="pz-btn" id="pz-btn" hidden aria-expanded="false" aria-label="Ansicht personalisieren: Abschnitte ein- und ausblenden, Reihenfolge ändern">Personalisieren</button>
 <h1>São Paulo GP 2026 – São Paulo</h1>
-<p class="summary">Runde 20 im Autódromo José Carlos Pace (Interlagos), 6. bis 8. November, ohne Sprint. Antonelli ist Weltmeister.</p>
-<p id="stand">Stand: 08.11.2026 19:46 Wien</p>
+<p class="summary">Runde 20 im Autódromo José Carlos Pace (Interlagos), 6. bis 8. November, ohne Sprint. Norris siegt, Mercedes ist Konstrukteursweltmeister.</p>
+<p id="stand">Stand: 08.11.2026 19:43 Wien</p>
 
 <!-- Session countdown: the schedule lives in the JSON block #cd-sessions below.
      Replace it for each new race weekend (ISO timestamps with UTC offset, duration in minutes). -->
@@ -363,11 +363,46 @@ document.addEventListener('resume',schedule);
 ]
 </script>
 
-<div class="callout"><b>Antonelli ist Weltmeister</b>Mit 380 Punkten führt Antonelli 119 vor Verstappen. In den vier verbleibenden Rennen ohne Sprint sind nur noch 100 Punkte zu holen. Bei den Konstrukteuren führt Mercedes mit 126 Punkten vor Ferrari; dort sind noch 172 Punkte offen, der Titel ist also noch nicht entschieden.</div>
+<div class="callout"><b>Mercedes ist Konstrukteursweltmeister</b>Nach dem vorläufigen Live-Timing führt Mercedes mit 652 Punkten, 140 vor Ferrari. In den drei verbleibenden Rennen ohne Sprint sind nur noch 129 Punkte zu holen, der Titel ist also rechnerisch entschieden. Antonelli bleibt Fahrerweltmeister (390 Punkte, 111 vor Verstappen).</div>
 
 <section id="rennergebnis">
-<div class="head"><h2>Rennergebnis</h2><span class="cap">noch keine Daten</span></div>
-<p>Das Rennen startet am Sonntag um 18:00 Wien.</p>
+<div class="head"><h2>Rennergebnis</h2><span class="cap">vorläufig, Live-Timing</span></div>
+<table>
+<thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Runden</th><th>Abstand</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Norris</td><td>McLaren</td><td>71</td><td>Sieger</td></tr>
+<tr><td>2</td><td>Verstappen</td><td>Red Bull</td><td>71</td><td>+14.602</td></tr>
+<tr><td>3</td><td>Hadjar</td><td>Red Bull</td><td>71</td><td>+24.485</td></tr>
+<tr><td>4</td><td>Russell</td><td>Mercedes</td><td>71</td><td>+33.991</td></tr>
+<tr><td>5</td><td>Antonelli</td><td>Mercedes</td><td>71</td><td>+36.017</td></tr>
+<tr><td>6</td><td>Piastri</td><td>McLaren</td><td>71</td><td>+56.475</td></tr>
+<tr><td>7</td><td>Leclerc</td><td>Ferrari</td><td>71</td><td>+73.586</td></tr>
+<tr><td>8</td><td>Lawson</td><td>Racing Bulls</td><td>71</td><td>+75.402</td></tr>
+<tr><td>9</td><td>Hamilton</td><td>Ferrari</td><td>70</td><td>1 Runde</td></tr>
+<tr><td>10</td><td>Hülkenberg</td><td>Audi</td><td>70</td><td>1 Runde</td></tr>
+</tbody>
+</table>
+<div class="head sub"><h3>Strategien Top 3</h3><span class="cap">Live-Timing</span></div>
+<table>
+<thead><tr><th>Fahrer</th><th>Stopps</th><th>Stints</th></tr></thead>
+<tbody>
+<tr><td>Norris</td><td>3</td><td>Zielreifen Intermediate (neu, 9 Runden)</td></tr>
+<tr><td>Verstappen</td><td>3</td><td>Zielreifen Intermediate (neu, 9 Runden)</td></tr>
+<tr><td>Hadjar</td><td>3</td><td>Zielreifen Intermediate (neu, 9 Runden)</td></tr>
+</tbody>
+</table>
+<ul>
+<li>Start 18:03 Wien bei Low Grip, Feld auf Intermediate. Kein Safety Car, kein VSC.</li>
+<li>Falschstart-Prüfungen gegen Albon und Verstappen ohne weitere Untersuchung; Hamilton Kurve 5 ohne weitere Maßnahme.</li>
+<li>Ab etwa 18:35 Wien Normal Grip und Überholen wieder erlaubt, Slick-Phase (Stroll später auf Soft ausgefallen).</li>
+<li>Albon 5 Sekunden (unsicheres Wiedereinordnen), im Rennen abgesessen.</li>
+<li>Hülkenberg 10 Sekunden (Verlassen der Strecke mit Vorteil, Kurve 1), im Rennen abgesessen.</li>
+<li>Schwarz-weiße Flagge für Camara (Track Limits).</li>
+<li>Ab etwa 19:24 Wien wieder Low Grip, Überholen deaktiviert, Feld zurück auf Intermediate.</li>
+<li>Ausfälle: Stroll (Runde 30), Bottas (keine gewertete Runde).</li>
+<li>Nach dem Rennen: Antonelli Unsafe Release unter Untersuchung; Kollision Leclerc/Lawson in Kurve 12 notiert.</li>
+<li>Zielflagge 19:38 Wien.</li>
+</ul>
 </section>
 
 <section id="sessions">
@@ -634,27 +669,27 @@ document.addEventListener('resume',schedule);
 </section>
 
 <section id="fahrer-wm">
-<div class="head"><h2>Fahrer-WM</h2><span class="cap">nach Mexiko, FIA Doc 87</span></div>
-<div class="bars" data-max="380">
-<div class="bar em"><span>Antonelli</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="v">380</span></div>
-<div class="bar"><span>Verstappen</span><div class="track"><div class="fill" style="width:68.7%"></div></div><span class="v">261</span></div>
-<div class="bar"><span>Hamilton</span><div class="track"><div class="fill" style="width:68.2%"></div></div><span class="v">259</span></div>
-<div class="bar"><span>Russell</span><div class="track"><div class="fill" style="width:65.8%"></div></div><span class="v">250</span></div>
-<div class="bar"><span>Leclerc</span><div class="track"><div class="fill" style="width:64.5%"></div></div><span class="v">245</span></div>
-<div class="bar"><span>Norris</span><div class="track"><div class="fill" style="width:58.2%"></div></div><span class="v">221</span></div>
+<div class="head"><h2>Fahrer-WM</h2><span class="cap">vorläufig, Live-Timing</span></div>
+<div class="bars" data-max="390">
+<div class="bar em"><span>Antonelli</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="v">390</span></div>
+<div class="bar"><span>Verstappen</span><div class="track"><div class="fill" style="width:71.5%"></div></div><span class="v">279</span></div>
+<div class="bar"><span>Russell</span><div class="track"><div class="fill" style="width:67.2%"></div></div><span class="v">262</span></div>
+<div class="bar"><span>Hamilton</span><div class="track"><div class="fill" style="width:66.9%"></div></div><span class="v">261</span></div>
+<div class="bar"><span>Leclerc</span><div class="track"><div class="fill" style="width:64.4%"></div></div><span class="v">251</span></div>
+<div class="bar"><span>Norris</span><div class="track"><div class="fill" style="width:63.1%"></div></div><span class="v">246</span></div>
 </div>
-<p>Antonelli ist Weltmeister: 119 Punkte vor Verstappen, nur noch 100 Punkte in vier Rennen ohne Sprint. Um P2 kämpfen Verstappen, Hamilton und Russell, getrennt durch 11 Punkte.</p>
+<p>Antonelli ist Weltmeister: 111 Punkte vor Verstappen, nur noch 75 Punkte in drei Rennen ohne Sprint. Um P2 kämpfen Verstappen, Russell und Hamilton.</p>
 </section>
 
 <section id="konstrukteure">
-<div class="head"><h2>Konstrukteure</h2><span class="cap">nach Mexiko, FIA Doc 87</span></div>
+<div class="head"><h2>Konstrukteure</h2><span class="cap">vorläufig, Live-Timing</span></div>
 <div class="bars">
-<div class="bar"><span>Mercedes</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="v">630</span></div>
-<div class="bar"><span>Ferrari</span><div class="track"><div class="fill" style="width:80%"></div></div><span class="v">504</span></div>
-<div class="bar em"><span>Red Bull</span><div class="track"><div class="fill" style="width:60.6%"></div></div><span class="v">382</span></div>
-<div class="bar"><span>McLaren</span><div class="track"><div class="fill" style="width:57.9%"></div></div><span class="v">365</span></div>
+<div class="bar em"><span>Mercedes</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="v">652</span></div>
+<div class="bar"><span>Ferrari</span><div class="track"><div class="fill" style="width:78.5%"></div></div><span class="v">512</span></div>
+<div class="bar"><span>Red Bull</span><div class="track"><div class="fill" style="width:63.7%"></div></div><span class="v">415</span></div>
+<div class="bar"><span>McLaren</span><div class="track"><div class="fill" style="width:61.0%"></div></div><span class="v">398</span></div>
 </div>
-<p>Mercedes führt mit 126 Punkten vor Ferrari, bei noch 172 möglichen Punkten ist der Titel rechnerisch offen. Kampf um P3: Red Bull jetzt 17 Punkte vor McLaren.</p>
+<p>Mercedes ist Konstrukteursweltmeister: 140 Punkte vor Ferrari, nur noch 129 Punkte in drei Rennen ohne Sprint. Kampf um P3: Red Bull 17 Punkte vor McLaren.</p>
 </section>
 
 <section id="motortausch">
