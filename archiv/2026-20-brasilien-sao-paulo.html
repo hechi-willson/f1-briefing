@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0b0c10">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>São Paulo GP 2026 – São Paulo Briefing</title>
+<style>
+@font-face{font-family:'Barlow';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/barlow-400.woff2) format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/barlow-500.woff2) format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/barlow-600.woff2) format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/barlow-700.woff2) format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/barlow-condensed-600.woff2) format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/barlow-condensed-700.woff2) format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:800;font-display:swap;src:url(/fonts/barlow-condensed-800.woff2) format('woff2')}
+/* Design follows the Wednesday briefing infographic: dark background, F1 red, Barlow / Barlow Condensed */
+:root{--bg:#0b0c10;--fg:#f2f2f2;--soft:#d8d8d8;--muted:#9aa0aa;--line:#23262e;--border:#262a33;--card:#15171d;--card2:#1d2027;--red:#e10600;--accent:#ff2a1f;--bar:#3a3e48;--bar-em:#e10600;--cond:'Barlow Condensed','Arial Narrow',sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;color:var(--fg);font:17px/1.55 'Barlow',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+ background:radial-gradient(ellipse 900px 600px at 100% 0%,rgba(225,6,0,.24),transparent 70%) no-repeat,var(--bg);min-height:100vh}
+main{max-width:760px;margin:0 auto;padding:34px 18px 44px}
+a{color:var(--accent)}
+h1{font-family:var(--cond);font-weight:800;font-size:2.6rem;line-height:1.02;letter-spacing:.01em;text-transform:uppercase;margin:0;padding:0 0 14px;border-bottom:4px solid var(--red)}
+h1::before{content:"Formel 1 · Briefing";display:block;font-weight:600;font-size:.95rem;letter-spacing:.35em;color:var(--muted);margin-bottom:6px}
+.summary{color:var(--soft);font-size:1.05rem;font-weight:500;margin:14px 0 24px}
+.summary+#stand{color:var(--soft);font-size:1.05rem;font-weight:500;margin:-18px 0 24px}
+h2{display:flex;align-items:center;gap:10px;font-family:var(--cond);font-weight:700;font-size:1.3rem;line-height:1.2;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);margin:0}
+h2::before{content:"";flex:none;width:5px;height:1.05em;background:var(--accent);border-radius:2px}
+section{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px 20px;margin:0 0 16px}
+.head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.cap{color:var(--muted);font-size:.82rem}
+h3{font-family:var(--cond);font-weight:700;font-size:1.1rem;letter-spacing:.05em;text-transform:uppercase;color:var(--soft);margin:18px 0 8px}
+.head.sub{margin:18px 0 8px}
+.head.sub h3{margin:0}
+.fp[hidden]{display:none}
+.tools{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-left:auto}
+p{margin:12px 0 0}
+section p{color:var(--soft);font-size:.95rem}
+.callout{background:linear-gradient(90deg,#e10600,#9b0400);color:#fff;padding:16px 20px;border-radius:16px;margin-bottom:16px;line-height:1.45}
+.callout b{display:block;font-family:var(--cond);font-weight:800;font-size:1.45rem;letter-spacing:.06em;text-transform:uppercase;line-height:1.1;margin:0 0 4px}
+table{width:100%;border-collapse:collapse;font-size:.97rem}
+th,td{text-align:left;padding:8px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+th{font-family:var(--cond);color:var(--muted);font-weight:600;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;border-bottom-color:var(--border)}
+td:first-child{font-weight:600}
+td[data-wien]{font-family:var(--cond);font-weight:800;font-size:1.15rem;white-space:nowrap;font-variant-numeric:tabular-nums}
+tr.em td{color:var(--accent)}
+.seg{display:inline-flex;background:var(--card2);border:1px solid var(--border);border-radius:9px;overflow:hidden;padding:2px;gap:2px}
+.seg button{border:0;border-radius:7px;background:transparent;color:var(--muted);padding:5px 14px;font-family:var(--cond);font-weight:700;font-size:.95rem;letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
+.seg button:hover{color:var(--fg)}
+.seg button[aria-pressed="true"]{background:var(--red);color:#fff}
+.seg button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:560px){.grid{grid-template-columns:1fr}}
+dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:7px 14px}
+dt{font-family:var(--cond);font-weight:600;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;font-size:.95rem;line-height:1.6}
+dd{margin:0;font-weight:500}
+dt.tyre{display:flex;align-items:center;gap:9px;color:var(--fg);font-weight:700;font-size:1.05rem}
+dt.tyre+dd{align-self:center}
+.ring{flex:none;width:30px;height:30px;border-radius:50%;border:4px solid;background:#222;display:inline-flex;align-items:center;justify-content:center;font-family:var(--cond);font-weight:800;font-size:.9rem;line-height:1;color:var(--fg);letter-spacing:0}
+.ring.hard{border-color:#eee}.ring.medium{border-color:#ffd200}.ring.soft{border-color:#e10600}
+.rows{display:flex;flex-direction:column;gap:10px}
+.row{background:var(--card2);border:1px solid var(--border);border-left:4px solid var(--red);border-radius:10px;padding:10px 14px}
+.row .lead{font-family:var(--cond);font-size:.9rem;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.1em}
+.row .t{font-weight:700;font-size:1.05rem}.row .d{color:var(--muted);font-size:.93rem}
+.bars{display:flex;flex-direction:column;gap:9px}
+.bar{display:grid;grid-template-columns:100px 1fr 46px;align-items:center;gap:12px;font-size:.97rem;font-weight:500}
+.bar .track{height:8px;border-radius:4px;background:var(--card2)}
+.bar .fill{height:100%;border-radius:4px;background:var(--bar)}
+.bar.em .fill{background:var(--bar-em)}.bar.em{font-weight:700}
+.bar .v{text-align:right;font-family:var(--cond);font-weight:800;font-size:1.2rem;font-variant-numeric:tabular-nums}
+.bars.wide .bar{grid-template-columns:140px 1fr 64px}
+ol.links{margin:0;padding:0;list-style:none;counter-reset:n;display:flex;flex-direction:column;gap:8px}
+ol.links li{counter-increment:n}
+ol.links a{display:flex;gap:12px;align-items:baseline;background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;color:var(--fg);text-decoration:none;font-weight:500}
+ol.links a:hover{border-color:var(--red)}
+ol.links a::before{content:counter(n);font-family:var(--cond);color:var(--accent);font-weight:800;font-size:1.1rem;min-width:1.2em}
+ol.links .meta{color:var(--muted);font-size:.8rem;font-weight:400;margin-left:auto;white-space:nowrap}
+ol.links .gap{display:flex;gap:12px;align-items:baseline;border:1px dashed var(--border);border-radius:10px;padding:6px 14px;color:var(--muted);font-size:.85rem}
+ol.links .gap::before{content:counter(n);font-family:var(--cond);font-weight:800;min-width:1.2em}
+.cd{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px 20px;margin:0 0 16px;display:flex;align-items:center;justify-content:space-between;gap:12px 18px;flex-wrap:wrap}
+.cd[hidden]{display:none}
+.cd .lbl{display:flex;align-items:center;gap:8px;font-family:var(--cond);color:var(--accent);font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em}
+.cd .lbl::before{content:"";width:4px;height:.95em;background:var(--accent);border-radius:2px}
+.cd .nm{font-family:var(--cond);font-weight:800;font-size:1.7rem;line-height:1.15;text-transform:uppercase;letter-spacing:.01em}
+.cd .when{color:var(--muted);font-size:.92rem}
+.cd .clock{display:flex;gap:6px}
+.cd .u{min-width:60px;text-align:center;border:1px solid var(--border);border-radius:10px;padding:6px 6px 4px;background:var(--card2)}
+.cd .u b{display:block;font-family:var(--cond);font-weight:800;font-size:2rem;line-height:1.05;font-variant-numeric:tabular-nums}
+.cd .u span{font-family:var(--cond);color:var(--muted);font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.cd.live{background:linear-gradient(90deg,rgba(225,6,0,.22),rgba(225,6,0,.06)),var(--card);border:2px solid var(--red)}
+.cd.live .lbl::before{width:.6em;height:.6em;border-radius:50%;animation:cdpulse 1.2s ease-in-out infinite}
+@keyframes cdpulse{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){.cd.live .lbl::before{animation:none}}
+.cd.done .nm{color:var(--soft)}
+.cd.live .clock,.cd.done .clock{display:none}
+footer{border-top:1px solid var(--border);margin-top:24px;padding-top:14px;color:#6f7580;font-size:.85rem}
+footer a{color:var(--muted)}
+/* Impressum link sits next to p#stand but outside it, so the Stand sed in README.md never removes it. Keep it. */
+footer .legal a{color:#6f7580;text-decoration:none}
+footer .legal a:hover{color:var(--muted);text-decoration:underline}
+@media (max-width:560px){
+ body{font-size:16px}
+ main{padding:22px 12px 36px}
+ h1{font-size:2.05rem}
+ h1::before{font-size:.8rem;letter-spacing:.28em}
+ section{padding:15px 14px;border-radius:14px}
+ .cd{padding:14px}
+ .cd .clock{width:100%}.cd .u{flex:1;min-width:0}
+ th,td{padding:7px 5px}
+ td[data-wien]{font-size:1.05rem}
+ .bar{grid-template-columns:86px 1fr 40px;gap:10px}
+ ol.links a{display:grid;grid-template-columns:1.2em 1fr;column-gap:12px;row-gap:2px}
+ ol.links .meta{grid-column:2;margin-left:0}
+}
+/* Personalisieren (idea #14): button, edit mode, hidden sections. Keep when rebuilding index.html. */
+main{position:relative}
+.pz-btn{position:absolute;top:32px;right:18px;font-family:var(--cond);font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;line-height:1;color:var(--muted);background:transparent;border:1px solid var(--border);border-radius:7px;padding:3px 8px;cursor:pointer}
+.pz-btn:hover,.pz-btn[aria-expanded="true"]{color:var(--fg);border-color:var(--red)}
+.pz-btn[hidden]{display:none}
+.pz-btn:focus-visible,.pz-ctl button:focus-visible,.pz-bar button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+html.pz-wait main>section{visibility:hidden}
+main>section.pz-off{display:none}
+.pz-edit main>section{padding-top:10px;padding-bottom:10px;margin-bottom:8px}
+.pz-edit main>section.pz-off{display:block;opacity:.45}
+.pz-edit main>section>:not(:first-child),.pz-edit main>section>.head:first-child>:not(h2):not(.pz-ctl){display:none}
+.pz-edit main>section>.head:first-child{margin:0;flex-wrap:nowrap}
+.pz-edit main>section.pz-dragging,.pz-edit main>section.pz-flash{position:relative;z-index:5;background:linear-gradient(rgba(225,6,0,.28),rgba(225,6,0,.28)),var(--card);border-color:var(--red);box-shadow:0 0 0 1px var(--red),0 10px 28px rgba(0,0,0,.6);transform:scale(1.02);transition:transform .12s,box-shadow .12s}
+.pz-edit main>section.pz-flash{animation:pz-flash .7s ease-out forwards}
+@keyframes pz-flash{0%,45%{transform:scale(1.02)}100%{transform:scale(1);box-shadow:none;background:var(--card);border-color:var(--border)}}
+@media (prefers-reduced-motion:reduce){.pz-edit main>section.pz-flash{animation-duration:.01s;animation-delay:.6s}}
+.pz-edit main>section.pz-dragging .pz-drag{cursor:grabbing;border-color:var(--red);color:var(--fg)}
+.pz-ctl{display:flex;gap:6px;margin-left:auto;flex:none}
+.pz-ctl button{width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;padding:0;font:700 1.05rem/1 var(--cond);color:var(--soft);background:var(--card2);border:1px solid var(--border);border-radius:8px;cursor:pointer}
+.pz-ctl button:hover{color:var(--fg);border-color:var(--red)}
+.pz-ctl button:disabled{opacity:.35;cursor:default;border-color:var(--border)}
+.pz-ctl .pz-drag{cursor:grab;touch-action:none}
+.pz-ctl .pz-eye[aria-pressed="false"]{color:var(--muted)}
+.pz-ctl svg{width:18px;height:18px}
+.pz-edit body{padding-bottom:84px}
+.pz-bar{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:10;display:flex;gap:8px;align-items:center;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:8px;box-shadow:0 6px 24px rgba(0,0,0,.5);max-width:calc(100% - 24px)}
+.pz-bar button{font-family:var(--cond);font-weight:700;font-size:.95rem;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:7px 12px;cursor:pointer;white-space:nowrap}
+.pz-bar button:hover{color:var(--fg);border-color:var(--red)}
+.pz-bar .pz-done{background:var(--red);border-color:var(--red);color:#fff}
+.pz-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (max-width:560px){
+ .pz-btn{top:20px;right:12px;font-size:.72rem;letter-spacing:.1em;padding:2px 7px}
+ .pz-ctl{gap:4px}
+ .pz-ctl button{width:32px;height:32px}
+ .pz-edit main>section>.head:first-child h2{font-size:1.1rem;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+}
+.wk-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}@media(min-width:700px){.wk-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(min-width:1000px){.wk-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}.wk{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:12px;min-width:0}.wk-s{font-family:var(--cond);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}.wk-t{color:var(--muted);font-size:.82rem}.wk-temp{font-family:var(--cond);font-weight:800;font-size:2rem;line-height:1.1;margin:6px 0;font-variant-numeric:tabular-nums}.wk-r{display:flex;justify-content:space-between;font-size:.85rem;color:var(--muted)}.wk-r b{color:var(--fg)}.wk.em .wk-r b{color:var(--accent)}.wk-bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin:4px 0 8px}.wk-bar i{display:block;height:100%;background:var(--bar)}.wk.em .wk-bar i{background:var(--bar-em)}.wk-w{font-size:.85rem;color:var(--muted)}.wk-w b{color:var(--fg);font-weight:600}.wk-h{font-size:.85rem;color:var(--soft);margin-top:4px}
+</style>
+<script>
+// Personalisieren (idea #14): per-browser section order and visibility, stored only in localStorage.
+// Section ids (main > section[id]) are stable across races. Archive copies (/archiv/) always show the default view.
+(function(){
+'use strict';
+if(location.pathname.indexOf('/archiv/')===0)return;
+var KEY='pushpush.ansicht.v1',root=document.documentElement,main=null,DEF=[],started=false;
+function clean(a){return Array.isArray(a)?a.filter(function(x){return typeof x==='string'}):[]}
+function load(){try{var r=localStorage.getItem(KEY);if(!r)return null;var c=JSON.parse(r);if(!c||typeof c!=='object')return null;return{order:clean(c.order),hidden:clean(c.hidden)}}catch(e){return null}}
+var cfg=load();
+if(cfg)root.classList.add('pz-wait');
+function secs(){var o=[];if(!main)return o;for(var n=main.firstElementChild;n;n=n.nextElementSibling){if(n.tagName==='SECTION'&&n.id)o.push(n)}return o}
+function apply(c){
+  var list=secs();if(!list.length)return;
+  var by={},res=[],seen={};list.forEach(function(s){by[s.id]=s});
+  c.order.forEach(function(id){if(by[id]&&!seen[id]){seen[id]=1;res.push(id)}});
+  // Sections missing from the stored order go right after their HTML predecessor (top if first).
+  DEF.forEach(function(id,i){if(seen[id])return;seen[id]=1;var p=-1;for(var j=i-1;j>=0;j--){var k=res.indexOf(DEF[j]);if(k>=0){p=k;break}}res.splice(p+1,0,id)});
+  var anchor=list[list.length-1].nextSibling;
+  res.forEach(function(id){main.insertBefore(by[id],anchor)});
+  list.forEach(function(s){s.classList.toggle('pz-off',c.hidden.indexOf(s.id)>=0)});
+}
+function save(){
+  var list=secs(),order=list.map(function(s){return s.id}),hidden=list.filter(function(s){return s.classList.contains('pz-off')}).map(function(s){return s.id});
+  var same=order.join('|')===DEF.join('|');
+  try{if(same&&!hidden.length)localStorage.removeItem(KEY);else localStorage.setItem(KEY,JSON.stringify({order:same?[]:order,hidden:hidden}))}catch(e){}
+}
+var EYE='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>';
+var EYE_OFF='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7c2 0 3.8.7 5.2 1.6M22 12s-3.6 7-10 7c-2 0-3.8-.7-5.2-1.6"/><path d="M3 3l18 18"/></svg>';
+var btn,bar,live,editing=false;
+function name(s){var h=s.querySelector('h2');return h?h.textContent.trim():s.id}
+function say(t){if(live)live.textContent=t}
+function mk(cls,label,html){var b=document.createElement('button');b.type='button';b.className=cls;b.setAttribute('aria-label',label);b.innerHTML=html;return b}
+function refresh(){
+  var list=secs();
+  list.forEach(function(s,i){var c=s.querySelector(':scope>.head>.pz-ctl');if(!c)return;var n=name(s),off=s.classList.contains('pz-off');
+    c.querySelector('.pz-up').disabled=i===0;c.querySelector('.pz-down').disabled=i===list.length-1;
+    var e=c.querySelector('.pz-eye');e.setAttribute('aria-pressed',off?'false':'true');e.setAttribute('aria-label',n+(off?' ist ausgeblendet, einblenden':' ist sichtbar, ausblenden'));e.innerHTML=off?EYE_OFF:EYE});
+}
+function pos(s){return secs().indexOf(s)+1}
+function flash(s){s.classList.remove('pz-flash');void s.offsetWidth;s.classList.add('pz-flash');clearTimeout(s._pzT);s._pzT=setTimeout(function(){s.classList.remove('pz-flash')},750)}
+function move(s,dir){var list=secs(),i=list.indexOf(s),t=list[i+dir];if(!t)return;if(dir<0)main.insertBefore(s,t);else main.insertBefore(t,s);save();refresh();flash(s);say(name(s)+' auf Position '+pos(s)+' von '+list.length)}
+function drag(s,h){
+  h.addEventListener('pointerdown',function(e){
+    if(e.button!==0)return;e.preventDefault();
+    s.classList.add('pz-dragging');var start=pos(s);
+    function mv(ev){var y=ev.clientY,p,n;
+      if(y<50)window.scrollBy(0,-12);else if(y>window.innerHeight-110)window.scrollBy(0,12);
+      while((p=s.previousElementSibling)&&p.tagName==='SECTION'&&p.id&&y<p.getBoundingClientRect().top+p.offsetHeight/2)main.insertBefore(p,s.nextSibling);
+      while((n=s.nextElementSibling)&&n.tagName==='SECTION'&&n.id&&y>n.getBoundingClientRect().top+n.offsetHeight/2)main.insertBefore(n,s);
+    }
+    function up(){document.removeEventListener('pointermove',mv);document.removeEventListener('pointerup',up);document.removeEventListener('pointercancel',up);s.classList.remove('pz-dragging');if(pos(s)!==start){save();refresh();flash(s);say(name(s)+' auf Position '+pos(s)+' von '+secs().length)}}
+    document.addEventListener('pointermove',mv);document.addEventListener('pointerup',up);document.addEventListener('pointercancel',up);
+  });
+  h.addEventListener('keydown',function(e){if(e.key==='ArrowUp'||e.key==='ArrowDown'){e.preventDefault();move(s,e.key==='ArrowUp'?-1:1);h.focus()}});
+}
+function enter(){
+  if(editing)return;editing=true;root.classList.add('pz-edit');btn.setAttribute('aria-expanded','true');
+  secs().forEach(function(s){var head=s.querySelector(':scope>.head');if(!head)return;var n=name(s),c=document.createElement('span');c.className='pz-ctl';
+    var d=mk('pz-drag',n+' verschieben: ziehen oder Pfeiltasten','⠿'),u=mk('pz-up',n+' nach oben','↑'),w=mk('pz-down',n+' nach unten','↓'),e=mk('pz-eye','',EYE);
+    u.addEventListener('click',function(){move(s,-1)});w.addEventListener('click',function(){move(s,1)});
+    e.addEventListener('click',function(){var off=s.classList.toggle('pz-off');save();refresh();say(n+(off?' ausgeblendet':' eingeblendet'))});
+    drag(s,d);c.appendChild(d);c.appendChild(u);c.appendChild(w);c.appendChild(e);head.appendChild(c)});
+  bar=document.createElement('div');bar.className='pz-bar';bar.setAttribute('role','toolbar');bar.setAttribute('aria-label','Ansicht anpassen');
+  var r=document.createElement('button');r.type='button';r.className='pz-reset';r.textContent='Standard wiederherstellen';
+  var f=document.createElement('button');f.type='button';f.className='pz-done';f.textContent='Fertig';
+  live=document.createElement('span');live.className='pz-sr';live.setAttribute('aria-live','polite');
+  r.addEventListener('click',function(){try{localStorage.removeItem(KEY)}catch(e){}apply({order:[],hidden:[]});refresh();say('Standardansicht wiederhergestellt')});
+  f.addEventListener('click',exit);
+  bar.appendChild(r);bar.appendChild(f);bar.appendChild(live);document.body.appendChild(bar);
+  refresh();
+}
+function exit(){
+  if(!editing)return;editing=false;root.classList.remove('pz-edit');btn.setAttribute('aria-expanded','false');
+  Array.prototype.forEach.call(document.querySelectorAll('.pz-ctl'),function(c){c.remove()});
+  if(bar){bar.remove();bar=live=null}
+  btn.focus();
+}
+function init(){
+  if(started)return;started=true;
+  try{
+    main=document.querySelector('main');if(!main)return;
+    DEF=secs().map(function(s){return s.id});
+    if(cfg)apply(cfg);
+    btn=document.getElementById('pz-btn');
+    if(btn&&DEF.length){btn.hidden=false;btn.addEventListener('click',function(){editing?exit():enter()})}
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&editing)exit()});
+  }catch(e){}finally{root.classList.remove('pz-wait')}
+}
+// Apply as soon as the footer is parsed (all sections exist), before first paint.
+var mo=null;
+try{mo=new MutationObserver(function(){if(document.querySelector('main>footer')){mo.disconnect();init()}});mo.observe(root,{childList:true,subtree:true})}catch(e){}
+document.addEventListener('DOMContentLoaded',function(){if(mo)mo.disconnect();init()});
+})();
+</script>
+<script id="pp-standalone-refresh">
+// Standalone refresh: installed Home Screen only (iOS navigator.standalone or display-mode standalone).
+// On first open and when returning to the foreground, compare #stand with the published homepage.
+// Reload only when that Stand timestamp is newer. Keep this block when rebuilding index.html.
+// Archive paths, the impressum, and normal browser tabs do not check or reload.
+// Does not read or write browser storage (the personalization key stays untouched). No service worker.
+(function(){
+'use strict';
+var GAP_MS=1000;
+var path=location.pathname;
+if(path!=='/'&&path!=='/index.html')return;
+function standalone(){
+  try{
+    var nav=window.navigator;
+    if(nav&&nav.standalone===true)return true;
+    if(typeof window.matchMedia==='function'&&window.matchMedia('(display-mode: standalone)').matches)return true;
+  }catch(e){}
+  return false;
+}
+if(!standalone())return;
+function norm(s){return String(s||'').replace(/\u00a0/g,' ').replace(/\s+/g,' ').trim()}
+function standKey(text){
+  var m=/^Stand:\s*(\d{2})\.(\d{2})\.(\d{4})\s+(\d{2}):(\d{2})\b/.exec(norm(text));
+  if(!m)return '';
+  if(+m[4]>23||+m[5]>59)return '';
+  return m[3]+m[2]+m[1]+m[4]+m[5];
+}
+function localKey(){
+  var el=document.getElementById('stand');
+  return standKey(el?el.textContent:'');
+}
+function remoteKey(html){
+  var id='st'+'and';
+  var re=new RegExp('<p\\b[^>]*\\bid=(["\'])'+id+'\\1[^>]*>([\\s\\S]*?)<\\/p>','i');
+  var m=re.exec(String(html));
+  if(!m)return '';
+  var text=m[2].replace(/<[^>]+>/g,'').replace(/&nbsp;/gi,' ').replace(/&amp;/gi,'&').replace(/&lt;/gi,'<').replace(/&gt;/gi,'>').replace(/&quot;/gi,'"').replace(/&#39;|&apos;/gi,"'");
+  return standKey(text);
+}
+function currentRev(){
+  var q=location.search.charAt(0)==='?'?location.search.slice(1):location.search;
+  if(!q)return '';
+  var parts=q.split('&'),i,kv;
+  for(i=0;i<parts.length;i++){
+    kv=parts[i].split('=');
+    if(kv[0]==='pp-rev'){
+      try{return decodeURIComponent(kv.slice(1).join('='))}catch(e){return ''}
+    }
+  }
+  return '';
+}
+var last=0,inflight=false;
+function check(){
+  if(document.visibilityState==='hidden')return Promise.resolve();
+  var local=localKey();
+  if(!local)return Promise.resolve();
+  var url=location.origin+'/?pp-bust='+Date.now();
+  return fetch(url,{cache:'no-store',credentials:'same-origin',headers:{'Accept':'text/html'}}).then(function(res){
+    if(!res||!res.ok)return '';
+    try{if(res.url&&new URL(res.url).origin!==location.origin)return ''}catch(e){return ''}
+    return res.text();
+  }).then(function(html){
+    if(typeof html!=='string'||!html)return;
+    if(document.visibilityState==='hidden')return;
+    var remote=remoteKey(html);
+    if(!remote||remote<=local)return;
+    if(currentRev()===remote)return;
+    var next='/?pp-rev='+remote+'&pp-bust='+Date.now()+(location.hash||'');
+    location.replace(next);
+  }).catch(function(){});
+}
+function schedule(){
+  if(document.visibilityState==='hidden')return;
+  if(inflight)return;
+  var now=Date.now();
+  if(now-last<GAP_MS)return;
+  last=now;
+  inflight=true;
+  Promise.resolve().then(check).catch(function(){}).then(function(){inflight=false});
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',schedule);
+else schedule();
+document.addEventListener('visibilitychange',function(){if(document.visibilityState==='visible')schedule()});
+window.addEventListener('pageshow',schedule);
+document.addEventListener('resume',schedule);
+})();
+</script>
+</head>
+<body>
+<main>
+<button type="button" class="pz-btn" id="pz-btn" hidden aria-expanded="false" aria-label="Ansicht personalisieren: Abschnitte ein- und ausblenden, Reihenfolge ändern">Personalisieren</button>
+<h1>São Paulo GP 2026 – São Paulo</h1>
+<p class="summary">Runde 20 im Autódromo José Carlos Pace (Interlagos), 6. bis 8. November, ohne Sprint. Norris siegt, Mercedes ist Konstrukteursweltmeister.</p>
+<p id="stand">Stand: 09.11.2026 09:36 Wien</p>
+
+<!-- Session countdown: the schedule lives in the JSON block #cd-sessions below.
+     Replace it for each new race weekend (ISO timestamps with UTC offset, duration in minutes). -->
+<div class="cd" id="countdown" hidden aria-live="polite">
+<div><div class="lbl" id="cd-lbl">Nächste Session</div><div class="nm" id="cd-nm"></div><div class="when" id="cd-when"></div></div>
+<div class="clock" id="cd-clock"><div class="u"><b id="cd-d">0</b><span>Tage</span></div><div class="u"><b id="cd-h">00</b><span>Std</span></div><div class="u"><b id="cd-m">00</b><span>Min</span></div><div class="u"><b id="cd-s">00</b><span>Sek</span></div></div>
+</div>
+<script type="application/json" id="cd-sessions">
+[
+  {"name": "1. Freies Training", "short": "FP1", "start": "2026-11-06T16:30:00+01:00", "minutes": 60},
+  {"name": "2. Freies Training", "short": "FP2", "start": "2026-11-06T20:00:00+01:00", "minutes": 60},
+  {"name": "3. Freies Training", "short": "FP3", "start": "2026-11-07T15:30:00+01:00", "minutes": 60},
+  {"name": "Qualifying", "short": "Qualifying", "start": "2026-11-07T19:00:00+01:00", "minutes": 60},
+  {"name": "Rennen", "short": "Rennen", "start": "2026-11-08T18:00:00+01:00", "minutes": 120}
+]
+</script>
+
+<div class="callout"><b>Mercedes ist Konstrukteursweltmeister</b>Nach der offiziellen FIA-Wertung (Doc 82) führt Mercedes mit 652 Punkten, 142 vor Ferrari. In den drei verbleibenden Rennen ohne Sprint sind nur noch 129 Punkte zu holen, der Titel ist also rechnerisch entschieden. Antonelli bleibt Fahrerweltmeister (390 Punkte, 111 vor Verstappen).</div>
+
+<section id="rennergebnis">
+<div class="head"><h2>Rennergebnis</h2><span class="cap">FIA Doc 81</span></div>
+<table>
+<thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Runden</th><th>Abstand</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Norris</td><td>McLaren</td><td>71</td><td>Sieger</td></tr>
+<tr><td>2</td><td>Verstappen</td><td>Red Bull</td><td>71</td><td>+14.602</td></tr>
+<tr><td>3</td><td>Hadjar</td><td>Red Bull</td><td>71</td><td>+24.485</td></tr>
+<tr><td>4</td><td>Russell</td><td>Mercedes</td><td>71</td><td>+33.991</td></tr>
+<tr><td>5</td><td>Antonelli</td><td>Mercedes</td><td>71</td><td>+41.017</td></tr>
+<tr><td>6</td><td>Piastri</td><td>McLaren</td><td>71</td><td>+56.475</td></tr>
+<tr><td>7</td><td>Lawson</td><td>Racing Bulls</td><td>71</td><td>+75.402</td></tr>
+<tr><td>8</td><td>Leclerc</td><td>Ferrari</td><td>71</td><td>+78.586</td></tr>
+<tr><td>9</td><td>Hamilton</td><td>Ferrari</td><td>70</td><td>1 Runde</td></tr>
+<tr><td>10</td><td>Hülkenberg</td><td>Audi</td><td>70</td><td>1 Runde</td></tr>
+</tbody>
+</table>
+<div class="head sub"><h3>Strategien Top 3</h3><span class="cap">Live-Timing</span></div>
+<table>
+<thead><tr><th>Fahrer</th><th>Stopps</th><th>Stints</th></tr></thead>
+<tbody>
+<tr><td>Norris</td><td>3</td><td>Zielreifen Intermediate (neu, 9 Runden)</td></tr>
+<tr><td>Verstappen</td><td>3</td><td>Zielreifen Intermediate (neu, 9 Runden)</td></tr>
+<tr><td>Hadjar</td><td>3</td><td>Zielreifen Intermediate (neu, 9 Runden)</td></tr>
+</tbody>
+</table>
+<ul>
+<li>Start 18:03 Wien bei Low Grip, Feld auf Intermediate. Kein Safety Car, kein VSC.</li>
+<li>Falschstart-Prüfungen gegen Albon und Verstappen ohne weitere Untersuchung; Hamilton Kurve 5 ohne weitere Maßnahme; Pérez Doppelgelb ohne weitere Maßnahme.</li>
+<li>Ab etwa 18:35 Wien Normal Grip und Überholen wieder erlaubt, Slick-Phase (Stroll später auf Soft ausgefallen).</li>
+<li>Albon 5 Sekunden (unsicheres Wiedereinordnen), im Rennen abgesessen.</li>
+<li>Hülkenberg 10 Sekunden (Verlassen der Strecke mit Vorteil, Kurve 1), im Rennen abgesessen.</li>
+<li>Nach dem Rennen: Antonelli 5 Sekunden Unsafe Release; Bearman 5 Sekunden Unsafe Release; Leclerc 5 Sekunden Kollision mit Lawson (Kurve 12) – Lawson dadurch P7 vor Leclerc.</li>
+<li>Schwarz-weiße Flagge für Camara (Track Limits).</li>
+<li>Ab etwa 19:24 Wien wieder Low Grip, Überholen deaktiviert, Feld zurück auf Intermediate.</li>
+<li>Ausfälle: Stroll (Runde 30), Bottas (keine gewertete Runde).</li>
+<li>Schnellste Runde: Antonelli 1:12.689 (Runde 55).</li>
+<li>Zielflagge 19:38 Wien.</li>
+</ul>
+</section>
+
+<section id="sessions">
+<div class="head"><h2>Sessions</h2>
+<div class="seg" role="group" aria-label="Zeitzone"><button type="button" data-zone="wien" aria-pressed="true">Wien</button><button type="button" data-zone="sao" aria-pressed="false">São Paulo</button></div></div>
+<table>
+<thead><tr><th>Session</th><th>Zeit</th><th>Free-TV</th></tr></thead>
+<tbody>
+<tr><td>FP1</td><td data-wien="Fr 16:30" data-sao="Fr 12:30">Fr 16:30</td><td>ServusTV live ab 16:15</td></tr>
+<tr><td>FP2</td><td data-wien="Fr 20:00" data-sao="Fr 16:00">Fr 20:00</td><td>ServusTV live ab 19:35</td></tr>
+<tr><td>FP3</td><td data-wien="Sa 15:30" data-sao="Sa 11:30">Sa 15:30</td><td>ServusTV live ab 15:15</td></tr>
+<tr><td>Qualifying</td><td data-wien="Sa 19:00" data-sao="Sa 15:00">Sa 19:00</td><td>ServusTV Vorbericht ab 18:40, Quali 19:00</td></tr>
+<tr class="em"><td>Rennen</td><td data-wien="So 18:00" data-sao="So 14:00">So 18:00</td><td>ServusTV Vorbericht ab 17:50, Start 18:00, Analyse ab ca. 19:40</td></tr>
+</tbody>
+</table>
+<p>Abstand zu São Paulo an allen Tagen 4 h. Free-TV live auf ServusTV (nicht ORF live). ORF 1 zeigt eine Wiederholung des Rennens So/Mo Nacht (ca. 23:55). Kommentar ServusTV: Gröbl/Goggi und Lauda.</p>
+</section>
+
+<section id="historie">
+<div class="head"><h2>Historie</h2></div>
+<dl><dt>2025</dt><dd>Pole Norris (1:09.511), Sieg Norris vor Antonelli und Verstappen</dd><dt>2024</dt><dd>Pole Norris (1:23.405), Sieg Verstappen vor Ocon und Gasly</dd><dt>2023</dt><dd>Pole Verstappen (1:10.727), Sieg Verstappen vor Norris und Alonso</dd><dt>Rundenrekord</dt><dd>Bottas 1:10.540 (2018)</dd></dl>
+</section>
+
+<section id="strecke">
+<div class="head"><h2>Strecke und Reifen</h2></div>
+<div class="grid">
+<dl><dt>Länge</dt><dd>4,309 km</dd><dt>Runden</dt><dd>71</dd><dt>Renndistanz</dt><dd>305,879 km</dd><dt>Boxenverlust</dt><dd>ca. 21 s bei Grün</dd><dt>SC-Chance</dt><dd>ca. 80 % (Schätzung, Williams-Preview)</dd></dl>
+<dl><dt class="tyre"><span class="ring hard" aria-hidden="true">H</span>Hard</dt><dd>C3 (weichste Auswahl; eine Stufe weicher als Sprint-Zuteilung 2025)</dd><dt class="tyre"><span class="ring medium" aria-hidden="true">M</span>Medium</dt><dd>C4</dd><dt class="tyre"><span class="ring soft" aria-hidden="true">S</span>Soft</dt><dd>C5</dd><dt>Zuteilung</dt><dd>2 Hard, 3 Medium, 8 Soft</dd></dl>
+</div>
+<p>Neuer Asphalt in Kurve 3–5 und 8–9. Erster GP hier 1973. Degradation ist der Schlüssel; typisch zwei Stopps, 2025 Soft/Medium bevorzugt.</p>
+</section>
+
+<section id="strategie">
+<div class="head"><h2>Strategie</h2></div>
+<div class="rows">
+<div class="row"><div class="lead">Plan A</div><div class="t">Zwei Stopps, Soft und Medium</div><div class="d">Wie 2025. Neuer Asphalt kann den Verschleiß ändern.</div></div>
+<div class="row"><div class="lead">Plan B</div><div class="t">Abweichung je nach Degradation und Wetter</div><div class="d">Regenrisiko am Wochenende, Soft/Medium bleiben die Favoriten bei Trockenheit.</div></div>
+<div class="row"><div class="lead">Joker</div><div class="t">Stopp unter SC oder VSC</div><div class="d">SC historisch sehr häufig (~80 %, Schätzung). Boxenverlust bei Grün ca. 21 s.</div></div>
+</div>
+</section>
+
+<section id="energie">
+<div class="head"><h2>Power Unit</h2><span class="cap">FIA Doc 28</span></div>
+<div class="grid">
+<dl><dt>Rennen</dt><dd>8,0 MJ/Runde</dd><dt>Rennen mit Overtake</dt><dd>8,5 MJ/Runde</dd><dt>Qualifying</dt><dd>6,5 MJ/Runde</dd></dl>
+<dl><dt>Freies Training</dt><dd>8,5 MJ/Runde</dd><dt>Out-Laps (außer Rennen)</dt><dd>9,0 MJ/Runde</dd><dt>Ratenlimit</dt><dd>100 kW/s</dd></dl>
+</div>
+<p>Power Limited Distance: 52,9 % der Runde</p>
+<div class="bars wide">
+<div class="bar"><span>Streckenlänge</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="v">4309 m</span></div>
+<div class="bar em"><span>Power Limited</span><div class="track"><div class="fill" style="width:52.9%"></div></div><span class="v">2278 m</span></div>
+</div>
+</section>
+
+<section id="wetter">
+<div class="head"><h2>Wetter</h2><span class="cap">Open-Meteo Interlagos, Stand 08.11.2026 17:37</span></div>
+<div class="wk-grid">
+<div class="wk" data-session="fp1"><div class="wk-s">FP1</div><div class="wk-t">Fr 16:30</div><div class="wk-temp" data-temp>25 °C</div><div class="wk-r"><span>Regen</span><b data-rain>30 %</b></div><div class="wk-bar"><i style="width:30%"></i></div><div class="wk-w">Wind <b data-wind>3 km/h</b></div><div class="wk-h" data-hint>leichter Niesel</div></div>
+<div class="wk em" data-session="fp2"><div class="wk-s">FP2</div><div class="wk-t">Fr 20:00</div><div class="wk-temp" data-temp>23 °C</div><div class="wk-r"><span>Regen</span><b data-rain>74 %</b></div><div class="wk-bar"><i style="width:74%"></i></div><div class="wk-w">Wind <b data-wind>11 km/h</b></div><div class="wk-h" data-hint>leichter Niesel</div></div>
+<div class="wk" data-session="fp3"><div class="wk-s">FP3</div><div class="wk-t">Sa 15:30</div><div class="wk-temp" data-temp>29 °C</div><div class="wk-r"><span>Regen</span><b data-rain>33 %</b></div><div class="wk-bar"><i style="width:33%"></i></div><div class="wk-w">Wind <b data-wind>17 km/h</b></div><div class="wk-h" data-hint>warm, leichter Niesel</div></div>
+<div class="wk em" data-session="quali"><div class="wk-s">Qualifying</div><div class="wk-t">Sa 19:00</div><div class="wk-temp" data-temp>24 °C</div><div class="wk-r"><span>Regen</span><b data-rain>80 %</b></div><div class="wk-bar"><i style="width:80%"></i></div><div class="wk-w">Wind <b data-wind>16 km/h</b></div><div class="wk-h" data-hint>dichter Niesel</div></div>
+<div class="wk em" data-session="rennen"><div class="wk-s">Rennen</div><div class="wk-t">So 18:00</div><div class="wk-temp" data-temp>16 °C</div><div class="wk-r"><span>Regen</span><b data-rain>100 %</b></div><div class="wk-bar"><i style="width:100%"></i></div><div class="wk-w">Wind <b data-wind>16 km/h</b></div><div class="wk-h" data-hint>mäßiger Niesel</div></div>
+</div>
+</section>
+
+<section id="ergebnisse">
+<div class="head"><h2>Ergebnisse</h2><span class="cap">FP1–FP3, Qualifying</span></div>
+<div class="head sub"><h3>Qualifying</h3><span class="cap">FIA Doc 50</span></div>
+<table>
+<thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Q1</th><th>Q2</th><th>Q3</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Norris</td><td>McLaren</td><td>1:30.939</td><td>1:29.207</td><td>1:27.470</td></tr>
+<tr><td>2</td><td>Russell</td><td>Mercedes</td><td>1:31.206</td><td>1:26.745</td><td>1:27.674</td></tr>
+<tr><td>3</td><td>Antonelli</td><td>Mercedes</td><td>1:32.229</td><td>1:29.302</td><td>1:28.095</td></tr>
+<tr><td>4</td><td>Leclerc</td><td>Ferrari</td><td>1:32.121</td><td>1:28.082</td><td>1:28.289</td></tr>
+<tr><td>5</td><td>Lawson</td><td>Racing Bulls</td><td>1:32.085</td><td>1:27.049</td><td>1:28.321</td></tr>
+<tr><td>6</td><td>Hülkenberg</td><td>Audi</td><td>1:31.693</td><td>1:28.361</td><td>1:28.668</td></tr>
+<tr><td>7</td><td>Hadjar</td><td>Red Bull</td><td>1:32.059</td><td>1:27.218</td><td>1:28.763</td></tr>
+<tr><td>8</td><td>Bearman</td><td>Haas</td><td>1:33.030</td><td>1:29.130</td><td>1:29.831</td></tr>
+<tr><td>9</td><td>Alonso</td><td>Aston Martin</td><td>1:32.092</td><td>1:29.072</td><td>1:30.311</td></tr>
+<tr><td>10</td><td>Albon</td><td>Williams</td><td>1:33.150</td><td>1:28.918</td><td>1:30.456</td></tr>
+<tr><td>11</td><td>Hamilton</td><td>Ferrari</td><td>1:31.666</td><td>1:30.001</td><td>–</td></tr>
+<tr><td>12</td><td>Piastri</td><td>McLaren</td><td>1:32.251</td><td>1:30.369</td><td>–</td></tr>
+<tr><td>13</td><td>Camara</td><td>Haas</td><td>1:32.809</td><td>1:31.515</td><td>–</td></tr>
+<tr><td>14</td><td>Lindblad</td><td>Racing Bulls</td><td>1:32.306</td><td>1:31.687</td><td>–</td></tr>
+<tr><td>15</td><td>Sainz</td><td>Williams</td><td>1:32.959</td><td>1:31.785</td><td>–</td></tr>
+<tr><td>16</td><td>Verstappen</td><td>Red Bull</td><td>1:31.238</td><td>–</td><td>–</td></tr>
+<tr><td>17</td><td>Colapinto</td><td>Alpine</td><td>1:33.327</td><td>–</td><td>–</td></tr>
+<tr><td>18</td><td>Gasly</td><td>Alpine</td><td>1:33.449</td><td>–</td><td>–</td></tr>
+<tr><td>19</td><td>Stroll</td><td>Aston Martin</td><td>1:33.653</td><td>–</td><td>–</td></tr>
+<tr><td>20</td><td>Bottas</td><td>Cadillac</td><td>1:33.774</td><td>–</td><td>–</td></tr>
+<tr><td>21</td><td>Pérez</td><td>Cadillac</td><td>1:34.509</td><td>–</td><td>–</td></tr>
+<tr><td>22</td><td>Bortoleto</td><td>Audi</td><td>1:41.564</td><td>–</td><td>–</td></tr>
+</tbody>
+</table>
+<div class="head sub"><h3>Startaufstellung</h3><span class="cap">FIA Doc 59</span></div>
+<table>
+<thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Hinweis</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Norris</td><td>McLaren</td><td>–</td></tr>
+<tr><td>2</td><td>Antonelli</td><td>Mercedes</td><td>–</td></tr>
+<tr><td>3</td><td>Lawson</td><td>Racing Bulls</td><td>–</td></tr>
+<tr><td>4</td><td>Hülkenberg</td><td>Audi</td><td>–</td></tr>
+<tr><td>5</td><td>Hadjar</td><td>Red Bull</td><td>–</td></tr>
+<tr><td>6</td><td>Bearman</td><td>Haas</td><td>–</td></tr>
+<tr><td>7</td><td>Russell</td><td>Mercedes</td><td>Quali P2, 5 Plätze Strafe</td></tr>
+<tr><td>8</td><td>Alonso</td><td>Aston Martin</td><td>–</td></tr>
+<tr><td>9</td><td>Albon</td><td>Williams</td><td>–</td></tr>
+<tr><td>10</td><td>Piastri</td><td>McLaren</td><td>–</td></tr>
+<tr><td>11</td><td>Camara</td><td>Haas</td><td>–</td></tr>
+<tr><td>12</td><td>Sainz</td><td>Williams</td><td>–</td></tr>
+<tr><td>13</td><td>Colapinto</td><td>Alpine</td><td>–</td></tr>
+<tr><td>14</td><td>Leclerc</td><td>Ferrari</td><td>Quali P4, 10 Plätze Strafe</td></tr>
+<tr><td>15</td><td>Gasly</td><td>Alpine</td><td>–</td></tr>
+<tr><td>16</td><td>Stroll</td><td>Aston Martin</td><td>–</td></tr>
+<tr><td>17</td><td>Bottas</td><td>Cadillac</td><td>–</td></tr>
+<tr><td>18</td><td>Lindblad</td><td>Racing Bulls</td><td>Quali P14, 10 Plätze Strafe</td></tr>
+<tr><td>19</td><td>Bortoleto</td><td>Audi</td><td>Quali P22, 10 Plätze Strafe</td></tr>
+<tr><td>20</td><td>Hamilton</td><td>Ferrari</td><td>Quali P11, 75 Plätze Strafe</td></tr>
+<tr><td>21</td><td>Verstappen</td><td>Red Bull</td><td>Quali P16, 30 Plätze Strafe</td></tr>
+<tr><td>22</td><td>Pérez</td><td>Cadillac</td><td>Quali P21, 30 Plätze Strafe</td></tr>
+</tbody>
+</table>
+<div class="head sub"><h3>Tipps</h3><span class="cap">Renntipp 08.11.26 17:35</span></div>
+<table>
+<thead><tr><th>Pos.</th><th>Quali-Tipp</th><th>Quali echt</th><th>Renntipp</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Verstappen</td><td>Norris</td><td>Norris</td></tr>
+<tr><td>2</td><td>Antonelli</td><td>Russell</td><td>Antonelli</td></tr>
+<tr><td>3</td><td>Norris</td><td>Antonelli</td><td>Russell</td></tr>
+<tr><td>4</td><td>Russell</td><td>Leclerc</td><td>Verstappen</td></tr>
+<tr><td>5</td><td>–</td><td>–</td><td>Hadjar</td></tr>
+<tr><td>6</td><td>–</td><td>–</td><td>Leclerc</td></tr>
+<tr><td>7</td><td>–</td><td>–</td><td>Piastri</td></tr>
+<tr><td>8</td><td>–</td><td>–</td><td>Lawson</td></tr>
+</tbody>
+</table>
+<div class="head sub"><h3>Freies Training</h3><div class="tools"><span class="cap" id="fp-cap">FIA Doc 17</span>
+<div class="seg" role="group" aria-label="Training"><button type="button" data-fp="fp1" data-cap="FIA Doc 17" aria-pressed="true">FP1</button><button type="button" data-fp="fp2" data-cap="FIA Doc 22" aria-pressed="false">FP2</button><button type="button" data-fp="fp3" data-cap="FIA Doc 32" aria-pressed="false">FP3</button></div></div></div>
+<div class="fp" id="fp1">
+<table>
+<thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Zeit</th><th>Abstand</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Norris</td><td>McLaren</td><td>1:11.717</td><td>–</td></tr>
+<tr><td>2</td><td>Antonelli</td><td>Mercedes</td><td>1:11.799</td><td>+0.082</td></tr>
+<tr><td>3</td><td>Verstappen</td><td>Red Bull</td><td>1:11.953</td><td>+0.236</td></tr>
+<tr><td>4</td><td>Hamilton</td><td>Ferrari</td><td>1:12.041</td><td>+0.324</td></tr>
+<tr><td>5</td><td>Russell</td><td>Mercedes</td><td>1:12.103</td><td>+0.386</td></tr>
+</tbody>
+</table>
+</div>
+<div class="fp" id="fp2" hidden>
+<table>
+<thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Zeit</th><th>Abstand</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Antonelli</td><td>Mercedes</td><td>1:10.763</td><td>–</td></tr>
+<tr><td>2</td><td>Norris</td><td>McLaren</td><td>1:11.016</td><td>+0.253</td></tr>
+<tr><td>3</td><td>Verstappen</td><td>Red Bull</td><td>1:11.022</td><td>+0.259</td></tr>
+<tr><td>4</td><td>Russell</td><td>Mercedes</td><td>1:11.036</td><td>+0.273</td></tr>
+<tr><td>5</td><td>Piastri</td><td>McLaren</td><td>1:11.084</td><td>+0.321</td></tr>
+</tbody>
+</table>
+</div>
+<div class="fp" id="fp3" hidden>
+<table>
+<thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Zeit</th><th>Abstand</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Verstappen</td><td>Red Bull</td><td>1:11.622</td><td>–</td></tr>
+<tr><td>2</td><td>Antonelli</td><td>Mercedes</td><td>1:11.647</td><td>+0.025</td></tr>
+<tr><td>3</td><td>Norris</td><td>McLaren</td><td>1:11.753</td><td>+0.131</td></tr>
+<tr><td>4</td><td>Russell</td><td>Mercedes</td><td>1:11.806</td><td>+0.184</td></tr>
+<tr><td>5</td><td>Leclerc</td><td>Ferrari</td><td>1:11.896</td><td>+0.274</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="longruns">
+<div class="head"><h2>Long Runs</h2><span class="cap">FastF1, FIA-Rennleitung</span></div>
+<div class="head sub"><h3>Teams, FP2</h3><span class="cap">bester Fahrer je Team</span></div>
+<table>
+<thead><tr><th>Rang</th><th>Team</th><th>Fahrer</th><th>Pace Ø</th><th>Abstand</th><th>Reifen</th><th>Runden</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Mercedes</td><td>Antonelli</td><td>1:15.144</td><td>–</td><td>Soft</td><td>10</td></tr>
+<tr><td>2</td><td>Ferrari</td><td>Hamilton</td><td>1:15.245</td><td>+0.101</td><td>Soft</td><td>5</td></tr>
+<tr><td>3</td><td>McLaren</td><td>Norris</td><td>1:15.497</td><td>+0.353</td><td>Hard</td><td>8</td></tr>
+<tr><td>4</td><td>Red Bull</td><td>Verstappen</td><td>1:15.501</td><td>+0.357</td><td>Medium</td><td>10</td></tr>
+<tr><td>5</td><td>Racing Bulls</td><td>Lawson</td><td>1:15.744</td><td>+0.600</td><td>Soft</td><td>5</td></tr>
+<tr><td>6</td><td>Alpine</td><td>Gasly</td><td>1:16.015</td><td>+0.871</td><td>Soft</td><td>10</td></tr>
+<tr><td>7</td><td>Audi</td><td>Bortoleto</td><td>1:16.015</td><td>+0.871</td><td>Soft</td><td>12</td></tr>
+<tr><td>8</td><td>Haas</td><td>Bearman</td><td>1:16.257</td><td>+1.113</td><td>Soft</td><td>10</td></tr>
+<tr><td>9</td><td>Williams</td><td>Albon</td><td>1:16.595</td><td>+1.451</td><td>Soft</td><td>6</td></tr>
+<tr><td>10</td><td>Cadillac</td><td>Bottas</td><td>1:16.638</td><td>+1.494</td><td>Soft</td><td>5</td></tr>
+<tr><td>11</td><td>Aston Martin</td><td>Stroll</td><td>1:17.207</td><td>+2.063</td><td>Hard</td><td>6</td></tr>
+</tbody>
+</table>
+<div class="head sub"><h3>Fahrer</h3><div class="tools"><span class="cap" id="lr-cap">FP2, Hauptdaten</span>
+<div class="seg" role="group" aria-label="Long Runs Training"><button type="button" data-lr="lr-fp1" data-cap="FP1, grüne Strecke" aria-pressed="false">FP1</button><button type="button" data-lr="lr-fp2" data-cap="FP2, Hauptdaten" aria-pressed="true">FP2</button><button type="button" data-lr="lr-fp3" data-cap="FP3, wenige Long Runs" aria-pressed="false">FP3</button></div></div></div>
+<div class="lr" id="lr-fp1" hidden>
+<table>
+<thead><tr><th>Fahrer</th><th>Team</th><th>Reifen</th><th>Runden</th><th>Alter Ø</th><th>Pace Ø</th><th>Median</th></tr></thead>
+<tbody>
+<tr><td>Norris</td><td>McLaren</td><td>Soft</td><td>12/13</td><td>10</td><td>1:14.851</td><td>1:14.717</td></tr>
+<tr><td>Russell</td><td>Mercedes</td><td>Soft</td><td>6/8</td><td>8</td><td>1:15.725</td><td>1:15.755</td></tr>
+<tr><td>Verstappen</td><td>Red Bull</td><td>Soft</td><td>8/10</td><td>10</td><td>1:16.016</td><td>1:15.963</td></tr>
+<tr><td>Hamilton</td><td>Ferrari</td><td>Soft</td><td>9/12</td><td>8</td><td>1:16.024</td><td>1:16.081</td></tr>
+<tr><td>Antonelli</td><td>Mercedes</td><td>Medium</td><td>5/7</td><td>15</td><td>1:16.091</td><td>1:15.881</td></tr>
+<tr><td>Bortoleto</td><td>Audi</td><td>Soft</td><td>7/8</td><td>10</td><td>1:16.454</td><td>1:16.348</td></tr>
+<tr><td>Camara</td><td>Haas</td><td>Medium</td><td>4/5</td><td>4</td><td>1:16.505</td><td>1:16.410</td></tr>
+<tr><td>Lawson</td><td>Racing Bulls</td><td>Soft</td><td>6/7</td><td>12</td><td>1:16.743</td><td>1:16.678</td></tr>
+<tr><td>Bearman</td><td>Haas</td><td>Soft</td><td>7/8</td><td>8</td><td>1:17.331</td><td>1:17.470</td></tr>
+<tr><td>Colapinto</td><td>Alpine</td><td>Soft</td><td>9/10</td><td>14</td><td>1:17.371</td><td>1:17.537</td></tr>
+<tr><td>Lindblad</td><td>Racing Bulls</td><td>Hard</td><td>6/6</td><td>18</td><td>1:17.798</td><td>1:17.911</td></tr>
+<tr><td>Camara</td><td>Haas</td><td>Medium</td><td>6/7</td><td>20</td><td>1:18.412</td><td>1:18.469</td></tr>
+<tr><td>Herta</td><td>Cadillac</td><td>Soft</td><td>7/8</td><td>13</td><td>1:18.612</td><td>1:18.681</td></tr>
+</tbody>
+</table>
+</div>
+<div class="lr" id="lr-fp2">
+<table>
+<thead><tr><th>Fahrer</th><th>Team</th><th>Reifen</th><th>Runden</th><th>Alter Ø</th><th>Pace Ø</th><th>Median</th></tr></thead>
+<tbody>
+<tr><td>Antonelli</td><td>Mercedes</td><td>Soft</td><td>10/11</td><td>9</td><td>1:15.144</td><td>1:15.154</td></tr>
+<tr><td>Hamilton</td><td>Ferrari</td><td>Soft</td><td>5/5</td><td>8</td><td>1:15.245</td><td>1:15.265</td></tr>
+<tr><td>Norris</td><td>McLaren</td><td>Hard</td><td>8/8</td><td>4</td><td>1:15.497</td><td>1:15.437</td></tr>
+<tr><td>Verstappen</td><td>Red Bull</td><td>Medium</td><td>10/10</td><td>14</td><td>1:15.501</td><td>1:15.651</td></tr>
+<tr><td>Piastri</td><td>McLaren</td><td>Soft</td><td>10/11</td><td>12</td><td>1:15.520</td><td>1:15.540</td></tr>
+<tr><td>Hadjar</td><td>Red Bull</td><td>Soft</td><td>9/9</td><td>5</td><td>1:15.569</td><td>1:15.611</td></tr>
+<tr><td>Russell</td><td>Mercedes</td><td>Soft</td><td>15/15</td><td>12</td><td>1:15.733</td><td>1:15.838</td></tr>
+<tr><td>Lawson</td><td>Racing Bulls</td><td>Soft</td><td>5/5</td><td>8</td><td>1:15.744</td><td>1:15.759</td></tr>
+<tr><td>Leclerc</td><td>Ferrari</td><td>Soft</td><td>8/9</td><td>12</td><td>1:15.897</td><td>1:15.905</td></tr>
+<tr><td>Gasly</td><td>Alpine</td><td>Soft</td><td>10/10</td><td>14</td><td>1:16.015</td><td>1:15.961</td></tr>
+<tr><td>Bortoleto</td><td>Audi</td><td>Soft</td><td>12/12</td><td>12</td><td>1:16.015</td><td>1:16.132</td></tr>
+<tr><td>Bearman</td><td>Haas</td><td>Soft</td><td>10/10</td><td>12</td><td>1:16.257</td><td>1:16.139</td></tr>
+<tr><td>Lindblad</td><td>Racing Bulls</td><td>Soft</td><td>14/14</td><td>14</td><td>1:16.279</td><td>1:16.377</td></tr>
+<tr><td>Hamilton</td><td>Ferrari</td><td>Medium</td><td>8/8</td><td>14</td><td>1:16.284</td><td>1:16.112</td></tr>
+<tr><td>Lawson</td><td>Racing Bulls</td><td>Soft</td><td>8/8</td><td>16</td><td>1:16.369</td><td>1:16.280</td></tr>
+<tr><td>Colapinto</td><td>Alpine</td><td>Hard</td><td>9/9</td><td>14</td><td>1:16.535</td><td>1:16.491</td></tr>
+<tr><td>Albon</td><td>Williams</td><td>Soft</td><td>6/6</td><td>8</td><td>1:16.595</td><td>1:16.574</td></tr>
+<tr><td>Bottas</td><td>Cadillac</td><td>Soft</td><td>5/5</td><td>9</td><td>1:16.638</td><td>1:16.303</td></tr>
+<tr><td>Sainz</td><td>Williams</td><td>Soft</td><td>9/9</td><td>10</td><td>1:16.656</td><td>1:16.769</td></tr>
+<tr><td>Albon</td><td>Williams</td><td>Soft</td><td>6/7</td><td>15</td><td>1:17.011</td><td>1:17.072</td></tr>
+<tr><td>Pérez</td><td>Cadillac</td><td>Soft</td><td>14/14</td><td>14</td><td>1:17.110</td><td>1:17.112</td></tr>
+<tr><td>Stroll</td><td>Aston Martin</td><td>Hard</td><td>6/7</td><td>12</td><td>1:17.207</td><td>1:17.070</td></tr>
+<tr><td>Bottas</td><td>Cadillac</td><td>Medium</td><td>7/7</td><td>13</td><td>1:17.248</td><td>1:17.368</td></tr>
+<tr><td>Camara</td><td>Haas</td><td>Soft</td><td>6/6</td><td>4</td><td>1:17.264</td><td>1:17.191</td></tr>
+<tr><td>Alonso</td><td>Aston Martin</td><td>Soft</td><td>11/11</td><td>14</td><td>1:17.349</td><td>1:17.335</td></tr>
+</tbody>
+</table>
+</div>
+<div class="lr" id="lr-fp3" hidden>
+<table>
+<thead><tr><th>Fahrer</th><th>Team</th><th>Reifen</th><th>Runden</th><th>Alter Ø</th><th>Pace Ø</th><th>Median</th></tr></thead>
+<tbody>
+<tr><td>Hülkenberg</td><td>Audi</td><td>Medium</td><td>5/6</td><td>13</td><td>1:16.561</td><td>1:16.533</td></tr>
+<tr><td>Pérez</td><td>Cadillac</td><td>Medium</td><td>7/7</td><td>19</td><td>1:19.732</td><td>1:19.731</td></tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>Long Run: mind. 5 Runden am Stück auf einem Reifen, jede innerhalb 107 % der schnellsten Stintrunde. Ohne Out-, In- und gestrichene Runden; Ausreißer über Median +1,5 s raus (Verkehr). Gewertet ab 3 gültigen Runden, Team-Rang = schnellster Lauf des besten Fahrers.</li>
+<li>Runden = gewertet/gesamt im Lauf. Keine Gelb- oder SC-Phasen in den Läufen. Sprit unbekannt, keine Benzinkorrektur; Soft ist im Schnitt schneller als Medium und Hard.</li>
+</ul>
+</section>
+
+<section id="fahrer-wm">
+<div class="head"><h2>Fahrer-WM</h2><span class="cap">FIA Doc 82</span></div>
+<div class="bars" data-max="390">
+<div class="bar em"><span>Antonelli</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="v">390</span></div>
+<div class="bar"><span>Verstappen</span><div class="track"><div class="fill" style="width:71.5%"></div></div><span class="v">279</span></div>
+<div class="bar"><span>Russell</span><div class="track"><div class="fill" style="width:67.2%"></div></div><span class="v">262</span></div>
+<div class="bar"><span>Hamilton</span><div class="track"><div class="fill" style="width:66.9%"></div></div><span class="v">261</span></div>
+<div class="bar"><span>Leclerc</span><div class="track"><div class="fill" style="width:63.8%"></div></div><span class="v">249</span></div>
+<div class="bar"><span>Norris</span><div class="track"><div class="fill" style="width:63.1%"></div></div><span class="v">246</span></div>
+</div>
+<p>Antonelli ist Weltmeister: 111 Punkte vor Verstappen, nur noch 75 Punkte in drei Rennen ohne Sprint. Um P2 kämpfen Verstappen, Russell und Hamilton.</p>
+</section>
+
+<section id="konstrukteure">
+<div class="head"><h2>Konstrukteure</h2><span class="cap">FIA Doc 82</span></div>
+<div class="bars">
+<div class="bar em"><span>Mercedes</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="v">652</span></div>
+<div class="bar"><span>Ferrari</span><div class="track"><div class="fill" style="width:78.2%"></div></div><span class="v">510</span></div>
+<div class="bar"><span>Red Bull</span><div class="track"><div class="fill" style="width:63.7%"></div></div><span class="v">415</span></div>
+<div class="bar"><span>McLaren</span><div class="track"><div class="fill" style="width:61.0%"></div></div><span class="v">398</span></div>
+</div>
+<p>Mercedes ist Konstrukteursweltmeister: 142 Punkte vor Ferrari, nur noch 129 Punkte in drei Rennen ohne Sprint. Kampf um P3: Red Bull 17 Punkte vor McLaren.</p>
+</section>
+
+<section id="motortausch">
+<div class="head"><h2>Strafen</h2><span class="cap">FIA Doc 15–16, 25, 33, 35, 37, 39–41, 43, 55–57, 60–64, 67, 71, 78–80</span></div>
+<table>
+<thead><tr><th>Fahrer</th><th>Element / Vergehen</th><th>Strafe</th></tr></thead>
+<tbody>
+<tr><td>Russell</td><td>6. ICE</td><td>5 Startplätze Gridstrafe (nächstes Rennen)</td></tr>
+<tr><td>Colapinto</td><td>Pit-Lane-Geschwindigkeit 80,6 km/h (FP1)</td><td>100 € Geldstrafe (Team)</td></tr>
+<tr><td>Camara</td><td>Behindern von Leclerc (Kurve 15, FP2)</td><td>Verweis (Fahren), 1. der Saison</td></tr>
+<tr><td>Verstappen</td><td>5. ICE, 5. TC, 5. EXH</td><td>30 Startplätze Gridstrafe (Rennen)</td></tr>
+<tr><td>Pérez</td><td>5. ICE, 5. TC, 4. MGU-K</td><td>30 Startplätze Gridstrafe (Rennen)</td></tr>
+<tr><td>Leclerc</td><td>5. ICE</td><td>10 Startplätze Gridstrafe (Rennen)</td></tr>
+<tr><td>Hamilton</td><td>5. ICE</td><td>10 Startplätze Gridstrafe (Rennen)</td></tr>
+<tr><td>Hamilton</td><td>6. ICE, 5. TC, 5. EXH, 4. ES, 4. PU-CE, 4. MGU-K, 7. PU-ANC</td><td>65 weitere Startplätze, gesamt 75 (Rennen)</td></tr>
+<tr><td>Pérez</td><td>Plastikteil aus dem Auto geworfen (FP3)</td><td>Formelle Verwarnung (Team)</td></tr>
+<tr><td>Bearman</td><td>Rückwärtsfahren in der Boxengasse (Quali)</td><td>Verweis (Fahren), 2. der Saison</td></tr>
+<tr><td>Lindblad</td><td>7. ICE, 6. TC</td><td>10 Startplätze Gridstrafe (Rennen)</td></tr>
+<tr><td>Bortoleto</td><td>6. ES, 6. PU-CE</td><td>10 Startplätze Gridstrafe (Rennen)</td></tr>
+<tr><td>Hülkenberg</td><td>Boxenausfahrt-Linie nicht frühestmöglich überquert (Aufwärmrunde)</td><td>Verweis (Fahren), 3. der Saison</td></tr>
+<tr><td>Pérez</td><td>Boxenausfahrt-Linie nicht frühestmöglich überquert (Aufwärmrunde)</td><td>Verweis (Fahren), 4. der Saison</td></tr>
+<tr><td>Hadjar</td><td>Boxenausfahrt-Linie nicht frühestmöglich überquert (Aufwärmrunde)</td><td>Verweis (Fahren), 2. der Saison</td></tr>
+<tr><td>Bottas</td><td>Boxenausfahrt-Linie nicht frühestmöglich überquert (Aufwärmrunde)</td><td>Verweis (Fahren), 1. der Saison</td></tr>
+<tr><td>Stroll</td><td>Boxenausfahrt-Linie nicht frühestmöglich überquert (Aufwärmrunde)</td><td>Verweis (Fahren), 1. der Saison</td></tr>
+<tr><td>Albon</td><td>Unsicheres Wiedereinordnen (Kurve 2/3, Rennen)</td><td>5 Sekunden Zeitstrafe, 2 Strafpunkte</td></tr>
+<tr><td>Hülkenberg</td><td>Verlassen der Strecke mit Vorteil (Kurve 1, Rennen)</td><td>10 Sekunden Zeitstrafe</td></tr>
+<tr><td>Bearman</td><td>Unsafe Release vor Leclerc (Rennen)</td><td>5 Sekunden Zeitstrafe</td></tr>
+<tr><td>Leclerc</td><td>Kollision mit Lawson (Kurve 12, Rennen)</td><td>5 Sekunden Zeitstrafe</td></tr>
+<tr><td>Antonelli</td><td>Unsafe Release vor Colapinto (Rennen)</td><td>5 Sekunden Zeitstrafe</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="fia">
+<div class="head"><h2>FIA-Dokumente</h2><span class="cap">São Paulo GP 2026</span></div>
+<ol class="links">
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_competition_visa.pdf">Doc 1 – Competition Visa<span class="meta">fia.com · 05.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_competition_notes_-_pirelli_preview.pdf">Doc 2 – Pirelli Preview<span class="meta">fia.com · 05.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_power_unit_information.pdf">Doc 3 – Power Unit Information<span class="meta">fia.com · 05.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_car_display_procedure.pdf">Doc 4 – Car Display Procedure<span class="meta">fia.com · 05.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_timetable_v3.pdf">Doc 5 – Timetable V3<span class="meta">fia.com · 05.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_race_directors_competition_notes.pdf">Doc 6 – Race Director's Competition Notes<span class="meta">fia.com · 05.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_competition_notes_-_circuit_map_pit_lane_drawing_emergency_exits_map_and_red_zone.pdf">Doc 7 – Competition Notes - Circuit Map, Pit Lane Drawing, Emergency Exits Map and Red Zone<span class="meta">fia.com · 05.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_pu_elements_used_per_driver_up_to_now.pdf">Doc 8 – PU-Elemente je Fahrer bisher<span class="meta">fia.com · 06.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_self_scrutineering.pdf">Doc 9 – Self Scrutineering<span class="meta">fia.com · 06.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_curfew.pdf">Doc 10 – Curfew<span class="meta">fia.com · 06.11.26</span></a></li>
+<li><span class="gap">Doc 11 – nicht veröffentlicht<span class="meta">–</span></span></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_car_presentation_submissions.pdf">Doc 12 – Car Presentation Submissions<span class="meta">fia.com · 06.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_entry_list.pdf">Doc 13 – Entry List<span class="meta">fia.com · 06.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_new_pu_elements_for_this_competition.pdf">Doc 14 – New PU Elements for this Competition<span class="meta">fia.com · 06.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_car_63_-_changes_to_pu_element.pdf">Doc 15 – Infringement - Car 63 - Changes to PU element<span class="meta">fia.com · 06.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_car_43_-_pit_lane_speeding.pdf">Doc 16 – Infringement - Car 43 - Pit Lane Speeding<span class="meta">fia.com · 06.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_free_practice_1_classification.pdf">Doc 17 – Free Practice 1 Classification<span class="meta">fia.com · 06.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_free_practice_1_deleted_lap_times.pdf">Doc 18 – Infringement - Free Practice 1 Deleted Lap Times<span class="meta">fia.com · 06.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_free_practice_1_deleted_lap_times_-_double_yellow.pdf">Doc 19 – Infringement - Free Practice 1 Deleted Lap Times - Double Yellow<span class="meta">fia.com · 06.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_summons_-_car_51_-_alleged_impeding_of_car_16.pdf">Doc 20 – Summons - Car 51 - Alleged impeding of Car 16<span class="meta">fia.com · 06.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_summons_-_car_16_-_alleged_impeding_by_car_51.pdf">Doc 21 – Summons - Car 16 - Alleged impeding by Car 51<span class="meta">fia.com · 06.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_free_practice_2_classification.pdf">Doc 22 – Free Practice 2 Classification<span class="meta">fia.com · 06.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_free_practice_2_deleted_lap_times.pdf">Doc 23 – Infringement - Free Practice 2 Deleted Lap Times<span class="meta">fia.com · 06.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_race_director_notes_-_sc2_-_sc1_times.pdf">Doc 24 – Race Director Notes - SC2 - SC1 Times<span class="meta">fia.com · 06.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_car_51_-_unnecessarily_impeding_of_car_16.pdf">Doc 25 – Infringement - Car 51 - Unnecessarily impeding of Car 16<span class="meta">fia.com · 06.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_fp1_and_fp2_scrutineering.pdf">Doc 26 – FP1 and FP2 Scrutineering<span class="meta">fia.com · 06.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_curfew_0.pdf">Doc 27 – Curfew<span class="meta">fia.com · 07.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_power_unit_information_v2.pdf">Doc 28 – Power Unit Information V2<span class="meta">fia.com · 07.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_post-qualifying_procedure.pdf">Doc 29 – Post-Qualifying Procedure<span class="meta">fia.com · 07.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_new_pu_elements_for_this_competition_0.pdf">Doc 30 – New PU Elements for this Competition<span class="meta">fia.com · 07.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_summons_-_car_11_-_alleged_driving_in_an_unsafe_condition.pdf">Doc 31 – Summons - Car 11 - Alleged driving in an unsafe condition<span class="meta">fia.com · 07.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_free_practice_3_classification.pdf">Doc 32 – Free Practice 3 Classification<span class="meta">fia.com · 07.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_car_3_-_changes_to_pu_elements.pdf">Doc 33 – Infringement - Car 3 - Changes to PU elements<span class="meta">fia.com · 07.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_race_directors_competition_notes_v2.pdf">Doc 34 – Race Director's Competition Notes V2<span class="meta">fia.com · 07.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_car_16_-_changes_to_pu_element.pdf">Doc 35 – Infringement - Car 16 - Changes to PU element<span class="meta">fia.com · 07.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_free_practice_3_deleted_lap_times.pdf">Doc 36 – Infringement - Free Practice 3 Deleted Lap Times<span class="meta">fia.com · 07.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_car_44_-_changes_to_pu_element.pdf">Doc 37 – Infringement - Car 44 - Changes to PU element<span class="meta">fia.com · 07.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_garage_doors.pdf">Doc 38 – Garage Doors<span class="meta">fia.com · 07.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_car_11_-_changes_to_pu_elements.pdf">Doc 39 – Infringement - Car 11 - Changes to PU elements<span class="meta">fia.com · 07.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_car_11_-_driving_in_an_unsafe_condition.pdf">Doc 40 – Infringement - Car 11 - Driving in an unsafe condition<span class="meta">fia.com · 07.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_car_87_-_reversing_in_the_pit_lane.pdf">Doc 41 – Infringement - Car 87 - Reversing in the Pit Lane<span class="meta">fia.com · 07.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_new_pu_elements_for_this_competition_1.pdf">Doc 42 – New PU Elements for this Competition<span class="meta">fia.com · 07.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_car_44_-_additional_changes_to_pu_elements.pdf">Doc 43 – Infringement - Car 44 - Additional changes to PU elements<span class="meta">fia.com · 07.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_qualifying_deleted_lap_times.pdf">Doc 44 – Infringement - Qualifying Deleted Lap Times<span class="meta">fia.com · 07.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_provisional_qualifying_classification.pdf">Doc 45 – Provisional Qualifying Classification<span class="meta">fia.com · 07.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_qualifying_deleted_lap_times_-_double_yellow.pdf">Doc 46 – Infringement - Qualifying Deleted Lap Times - Double Yellow<span class="meta">fia.com · 07.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_covers-on_time.pdf">Doc 47 – Covers-on Time<span class="meta">fia.com · 07.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_timetable_v4.pdf">Doc 48 – Timetable V4<span class="meta">fia.com · 07.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_fp3_and_qualifying_scrutineering.pdf">Doc 49 – FP3 and Qualifying Scrutineering<span class="meta">fia.com · 07.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_final_qualifying_classification.pdf">Doc 50 – Final Qualifying Classification<span class="meta">fia.com · 07.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_provisional_starting_grid.pdf">Doc 51 – Provisional Starting Grid<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_timetable_v5.pdf">Doc 52 – Timetable V5<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_pre-race_procedure.pdf">Doc 53 – Pre-Race Procedure<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_post-race_procedure.pdf">Doc 54 – Post-Race Procedure<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_new_pu_elements_for_this_competition_2.pdf">Doc 55 – New PU Elements for this Competition<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_car_41_-_changes_to_pu_elements.pdf">Doc 56 – Infringement - Car 41 - Changes to PU elements<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_car_5_-_changes_to_pu_elements.pdf">Doc 57 – Infringement - Car 5 - Changes to PU elements<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_parts_and_parameters_been_replaced_and_or_changed_during_parc_ferme.pdf">Doc 58 – Parts and Parameters replaced/changed during Parc Fermé<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_final_starting_grid.pdf">Doc 59 – Final Starting Grid<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_car_27_-_failure_to_follow_race_directors_instruction_-_practice_start.pdf">Doc 60 – Infringement - Car 27 - Failure to follow RD Instruction - Practice Start<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_car_11_-_failure_to_follow_race_directors_instruction_-_practice_start.pdf">Doc 61 – Infringement - Car 11 - Failure to follow RD Instruction - Practice Start<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_car_6_-_failure_to_follow_race_directors_instruction_-_practice_start.pdf">Doc 62 – Infringement - Car 6 - Failure to follow RD Instruction - Practice Start<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_car_77_-_failure_to_follow_race_directors_instruction_-_practice_start.pdf">Doc 63 – Infringement - Car 77 - Failure to follow RD Instruction - Practice Start<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_car_18_-_failure_to_follow_race_directors_instruction_-_practice_start.pdf">Doc 64 – Infringement - Car 18 - Failure to follow RD Instruction - Practice Start<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_decision_-_car_44_-_alleged_leaving_the_track_and_gaining_an_advantage.pdf">Doc 65 – Decision - Car 44 - Alleged leaving the track and gaining an advantage<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_decision_-_car_11_-_alleged_failure_to_slow_under_yellow_flags.pdf">Doc 66 – Decision - Car 11 - Alleged failure to slow under yellow flags<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_car_23_-_rejoining_the_track_unsafely.pdf">Doc 67 – Infringement - Car 23 - Rejoining the track unsafely<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_summons_-_car_12_-_alleged_unsafe_release.pdf">Doc 68 – Summons - Car 12 - Alleged unsafe release<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_summons_-_car_43_-_alleged_unsafe_release_by_car_12.pdf">Doc 69 – Summons - Car 43 - Alleged unsafe release by Car 12<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_provisional_race_classification.pdf">Doc 70 – Provisional Race Classification<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_car_27_-_leaving_the_track_and_gaining_an_advantage.pdf">Doc 71 – Infringement - Car 27 - Leaving the track and gaining an advantage<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_summons_-_car_16_-_alleged_causing_a_collision.pdf">Doc 72 – Summons - Car 16 - Alleged causing a collision<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_summons_-_car_30_-_alleged_causing_a_collision.pdf">Doc 73 – Summons - Car 30 - Alleged causing a collision<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_summons_-_car_87_-_alleged_unsafe_release.pdf">Doc 74 – Summons - Car 87 - Alleged unsafe release<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_summons_-_car_16_-_alleged_unsafe_release_by_car_87.pdf">Doc 75 – Summons - Car 16 - Alleged unsafe release by Car 87<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_race_deleted_lap_times.pdf">Doc 76 – Infringement - Race Deleted Lap Times<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_race_scrutineering.pdf">Doc 77 – Race Scrutineering<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_car_87_-_unsafe_release.pdf">Doc 78 – Infringement - Car 87 - Unsafe release<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_car_16_-_causing_a_collision.pdf">Doc 79 – Infringement - Car 16 - Causing a collision<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_infringement_-_car_12_-_unsafe_release.pdf">Doc 80 – Infringement - Car 12 - Unsafe release<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_final_race_classification.pdf">Doc 81 – Final Race Classification<span class="meta">fia.com · 08.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_sao_paulo_grand_prix_-_championship_points.pdf">Doc 82 – Championship Points<span class="meta">fia.com · 08.11.26</span></a></li>
+</ol>
+</section>
+
+<footer>
+<p>Quellen: Pirelli, formula1.com, FIA Docs Mexico City GP 2026 (Doc 87, WM-Stand), Open-Meteo Interlagos (Stand 04.11.2026), ServusTV / tele.at, Williams-Preview (SC-Schätzung), F1 Need-to-know (Boxenverlust). Vorheriges Rennen: <a href="/archiv/2026-19-mexiko-mexiko-stadt.html">Mexiko GP 2026, Mexiko-Stadt</a></p>
+<p class="legal"><a href="/archiv/">Archiv</a> · <a href="/bingo/">Bingo</a> · <a href="/impressum.html">Impressum</a></p>
+</footer>
+</main>
+<script>
+(function(){document.querySelectorAll('.seg').forEach(function(g){var b=g.querySelectorAll('button');b.forEach(function(x){x.addEventListener('click',function(){b.forEach(function(y){y.setAttribute('aria-pressed',y===x?'true':'false')});var z=x.getAttribute('data-zone');if(z){document.querySelectorAll('td[data-wien]').forEach(function(td){td.textContent=td.getAttribute('data-'+z)})}var f=x.getAttribute('data-fp');if(f){document.querySelectorAll('.fp').forEach(function(d){d.hidden=d.id!==f});var c=document.getElementById('fp-cap');if(c)c.textContent=x.getAttribute('data-cap')}var l=x.getAttribute('data-lr');if(l){document.querySelectorAll('.lr').forEach(function(d){d.hidden=d.id!==l});var lc=document.getElementById('lr-cap');if(lc)lc.textContent=x.getAttribute('data-cap')}})})})})();
+</script>
+<script>
+// Session countdown: reads #cd-sessions, shows next session, LIVE state or weekend end.
+(function(){
+var box=document.getElementById('countdown'),src=document.getElementById('cd-sessions');
+if(!box||!src)return;
+var list;try{list=JSON.parse(src.textContent)}catch(e){return}
+list=list.map(function(x){var t=Date.parse(x.start);return{name:x.name,short:x.short||x.name,t:t,end:t+(x.minutes||60)*60000}}).filter(function(x){return !isNaN(x.t)}).sort(function(a,b){return a.t-b.t});
+if(!list.length)return;
+function fmt(t){
+  // Always display Vienna time, independent of the visitor's timezone.
+  try{
+    var d=new Date(t);
+    var wd=d.toLocaleDateString('de-AT',{timeZone:'Europe/Vienna',weekday:'short'}).replace('.','');
+    var dt=d.toLocaleDateString('de-AT',{timeZone:'Europe/Vienna',day:'2-digit',month:'2-digit'});
+    var hm=d.toLocaleTimeString('de-AT',{timeZone:'Europe/Vienna',hour:'2-digit',minute:'2-digit',hour12:false});
+    var tz='MEZ';try{var p=new Intl.DateTimeFormat('de-DE',{timeZone:'Europe/Vienna',timeZoneName:'short'}).formatToParts(d);p.forEach(function(q){if(q.type==='timeZoneName')tz=q.value})}catch(e){}
+    if(!/^MES?Z$/.test(tz))tz='Wien';
+    return wd+' '+dt.replace(/\.?$/,'.')+' '+hm+' '+tz;
+  }catch(e){return new Date(t).toLocaleString()}
+}
+function pad(n){return(n<10?'0':'')+n}
+var $=function(id){return document.getElementById(id)};
+function tick(){
+  var now=Date.now(),live=null,next=null;
+  for(var i=0;i<list.length;i++){var x=list[i];if(now>=x.t&&now<x.end){live=x;break}if(now<x.t){next=x;break}}
+  box.classList.remove('live','done');
+  if(live){
+    box.classList.add('live');$('cd-lbl').textContent='Live';$('cd-nm').textContent='LIVE: '+live.name;$('cd-when').textContent='seit '+fmt(live.t);
+  }else if(next){
+    var r=Math.floor((next.t-now)/1000);
+    $('cd-lbl').textContent='Nächste Session';$('cd-nm').textContent=next.name;$('cd-when').textContent=fmt(next.t);
+    $('cd-d').textContent=Math.floor(r/86400);$('cd-h').textContent=pad(Math.floor(r%86400/3600));$('cd-m').textContent=pad(Math.floor(r%3600/60));$('cd-s').textContent=pad(r%60);
+  }else{
+    box.hidden=true;return;
+  }
+  box.hidden=false;
+}
+tick();setInterval(tick,1000);
+})();
+</script>
+
+</body>
+</html>
