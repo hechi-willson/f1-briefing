@@ -155,6 +155,7 @@ main>section.pz-off{display:none}
  .pz-ctl button{width:32px;height:32px}
  .pz-edit main>section>.head:first-child h2{font-size:1.1rem;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 }
+.pu-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.pu{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:12px;min-width:0}.pu-s{font-family:var(--cond);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}.pu-v{font-family:var(--cond);font-weight:800;font-size:2.2rem;line-height:1.1;margin:6px 0;font-variant-numeric:tabular-nums}.pu-v small{font-size:.5em;font-weight:700;color:var(--muted);margin-left:4px;letter-spacing:.04em}.pu.em .pu-v{color:var(--accent)}.pu-bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden}.pu-bar i{display:block;height:100%;background:var(--bar)}.pu.em .pu-bar i{background:var(--bar-em)}.pu-batt{margin-top:10px;background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:12px}.pu-bh{display:flex;justify-content:space-between;align-items:baseline;gap:10px}.pu-bh .pu-m{color:var(--muted);font-size:.85rem;font-variant-numeric:tabular-nums}.batt{display:flex;align-items:center;margin-top:8px}.batt-body{position:relative;flex:1;height:44px;border:3px solid var(--soft);border-radius:8px;padding:3px;box-sizing:border-box}.batt-body i{display:block;height:100%;border-radius:3px;background:repeating-linear-gradient(90deg,var(--bar-em) 0 calc(10% - 3px),transparent calc(10% - 3px) 10%)}.batt-body b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--cond);font-weight:800;font-size:1.5rem;font-variant-numeric:tabular-nums;text-shadow:0 1px 3px rgba(0,0,0,.8)}.batt-tip{width:7px;height:18px;background:var(--soft);border-radius:0 3px 3px 0}@media (max-width:560px){.pu-v{font-size:1.8rem}}
 .wk-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}@media(min-width:700px){.wk-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(min-width:1000px){.wk-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}.wk{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:12px;min-width:0}.wk-s{font-family:var(--cond);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}.wk-t{color:var(--muted);font-size:.82rem}.wk-temp{font-family:var(--cond);font-weight:800;font-size:2rem;line-height:1.1;margin:6px 0;font-variant-numeric:tabular-nums}.wk-r{display:flex;justify-content:space-between;font-size:.85rem;color:var(--muted)}.wk-r b{color:var(--fg)}.wk.em .wk-r b{color:var(--accent)}.wk-bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin:4px 0 8px}.wk-bar i{display:block;height:100%;background:var(--bar)}.wk.em .wk-bar i{background:var(--bar-em)}.wk-w{font-size:.85rem;color:var(--muted)}.wk-w b{color:var(--fg);font-weight:600}.wk-h{font-size:.85rem;color:var(--soft);margin-top:4px}
 </style>
 <script>
@@ -345,7 +346,7 @@ document.addEventListener('resume',schedule);
 <button type="button" class="pz-btn" id="pz-btn" hidden aria-expanded="false" aria-label="Ansicht personalisieren: Abschnitte ein- und ausblenden, Reihenfolge ändern">Personalisieren</button>
 <h1>São Paulo GP 2026 – São Paulo</h1>
 <p class="summary">Runde 20 im Autódromo José Carlos Pace (Interlagos), 6. bis 8. November, ohne Sprint. Norris siegt, Mercedes ist Konstrukteursweltmeister.</p>
-<p id="stand">Stand: 09.11.2026 09:36 Wien</p>
+<p id="stand">Stand: 09.11.2026 09:59 Wien</p>
 
 <!-- Session countdown: the schedule lives in the JSON block #cd-sessions below.
      Replace it for each new race weekend (ISO timestamps with UTC offset, duration in minutes). -->
@@ -447,14 +448,14 @@ document.addEventListener('resume',schedule);
 
 <section id="energie">
 <div class="head"><h2>Power Unit</h2><span class="cap">FIA Doc 28</span></div>
-<div class="grid">
-<dl><dt>Rennen</dt><dd>8,0 MJ/Runde</dd><dt>Rennen mit Overtake</dt><dd>8,5 MJ/Runde</dd><dt>Qualifying</dt><dd>6,5 MJ/Runde</dd></dl>
-<dl><dt>Freies Training</dt><dd>8,5 MJ/Runde</dd><dt>Out-Laps (außer Rennen)</dt><dd>9,0 MJ/Runde</dd><dt>Ratenlimit</dt><dd>100 kW/s</dd></dl>
+<div class="pu-grid">
+<div class="pu"><div class="pu-s">Qualifying</div><div class="pu-v">6,5<small>MJ</small></div><div class="pu-bar"><i style="width:76.5%"></i></div></div>
+<div class="pu"><div class="pu-s">Rennen</div><div class="pu-v">8,0<small>MJ</small></div><div class="pu-bar"><i style="width:94.1%"></i></div></div>
+<div class="pu em"><div class="pu-s">Overtake</div><div class="pu-v">8,5<small>MJ</small></div><div class="pu-bar"><i style="width:100%"></i></div></div>
 </div>
-<p>Power Limited Distance: 52,9 % der Runde</p>
-<div class="bars wide">
-<div class="bar"><span>Streckenlänge</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="v">4309 m</span></div>
-<div class="bar em"><span>Power Limited</span><div class="track"><div class="fill" style="width:52.9%"></div></div><span class="v">2278 m</span></div>
+<div class="pu-batt">
+<div class="pu-bh"><div class="pu-s">Power Limited</div><div class="pu-m">2278 m von 4309 m</div></div>
+<div class="batt" role="img" aria-label="Power Limited 52,9 % der Runde"><div class="batt-body"><i style="width:52.9%"></i><b>52,9 %</b></div><div class="batt-tip"></div></div>
 </div>
 </section>
 
