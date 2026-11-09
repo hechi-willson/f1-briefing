@@ -158,6 +158,7 @@ main>section.pz-off{display:none}
 .pu-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.pu{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:12px;min-width:0}.pu-s{font-family:var(--cond);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}.pu-v{font-family:var(--cond);font-weight:800;font-size:2.2rem;line-height:1.1;margin:6px 0;font-variant-numeric:tabular-nums}.pu-v small{font-size:.5em;font-weight:700;color:var(--muted);margin-left:4px;letter-spacing:.04em}.pu.em .pu-v{color:var(--accent)}.pu-bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden}.pu-bar i{display:block;height:100%;background:var(--bar)}.pu.em .pu-bar i{background:var(--bar-em)}.pu-batt{margin-top:10px;background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:12px}.pu-bh{display:flex;justify-content:space-between;align-items:baseline;gap:10px}.pu-bh .pu-m{color:var(--muted);font-size:.85rem;font-variant-numeric:tabular-nums}.batt{display:flex;align-items:center;margin-top:8px}.batt-body{position:relative;flex:1;height:44px;border:3px solid var(--soft);border-radius:8px;padding:3px;box-sizing:border-box}.batt-body i{display:block;height:100%;border-radius:3px;background:repeating-linear-gradient(90deg,var(--bar-em) 0 calc(10% - 3px),transparent calc(10% - 3px) 10%)}.batt-body b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--cond);font-weight:800;font-size:1.5rem;font-variant-numeric:tabular-nums;text-shadow:0 1px 3px rgba(0,0,0,.8)}.batt-tip{width:7px;height:18px;background:var(--soft);border-radius:0 3px 3px 0}@media (max-width:560px){.pu-v{font-size:1.8rem}}
 .bar .pos{display:inline-block;min-width:1.7em;margin-right:4px;color:var(--muted);font-family:var(--cond);font-weight:700;font-variant-numeric:tabular-nums}.bars.pick .bar{grid-template-columns:128px 1fr 46px}.bars.pick .bar>span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}@media (max-width:560px){.bars.pick .bar{grid-template-columns:112px 1fr 40px}.bar .pos{min-width:1.5em;margin-right:2px}}
 .bars.top5:not(.open)>.bar:nth-child(n+6){display:none}.bars.pick .bar{cursor:pointer;-webkit-tap-highlight-color:transparent}.bars.pick .bar:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.tipps .tk{display:inline-block;width:1.2em;margin-right:6px;text-align:center;font-weight:800;font-size:1.05em;line-height:1}.tipps .tk.ok{color:#2fd47a}.tipps .tk.no{color:var(--accent)}
 table.top5:not(.open) tbody tr:nth-child(n+6){display:none}.more{display:block;margin:8px auto 0;background:var(--card2);border:1px solid var(--border);border-radius:9px;color:var(--soft);padding:4px 12px;font-family:var(--cond);font-weight:700;font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;cursor:pointer}.more:hover{color:var(--fg);border-color:var(--red)}.more:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
 .wk-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}@media(min-width:700px){.wk-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(min-width:1000px){.wk-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}.wk{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:12px;min-width:0}.wk-s{font-family:var(--cond);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}.wk-t{color:var(--muted);font-size:.82rem}.wk-temp{font-family:var(--cond);font-weight:800;font-size:2rem;line-height:1.1;margin:6px 0;font-variant-numeric:tabular-nums}.wk-r{display:flex;justify-content:space-between;font-size:.85rem;color:var(--muted)}.wk-r b{color:var(--fg)}.wk.em .wk-r b{color:var(--accent)}.wk-bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin:4px 0 8px}.wk-bar i{display:block;height:100%;background:var(--bar)}.wk.em .wk-bar i{background:var(--bar-em)}.wk-w{font-size:.85rem;color:var(--muted)}.wk-w b{color:var(--fg);font-weight:600}.wk-h{font-size:.85rem;color:var(--soft);margin-top:4px}
 </style>
@@ -349,7 +350,7 @@ document.addEventListener('resume',schedule);
 <button type="button" class="pz-btn" id="pz-btn" hidden aria-expanded="false" aria-label="Ansicht personalisieren: Abschnitte ein- und ausblenden, Reihenfolge ändern">Personalisieren</button>
 <h1>São Paulo GP 2026 – São Paulo</h1>
 <p class="summary">Runde 20 im Autódromo José Carlos Pace (Interlagos), 6. bis 8. November, ohne Sprint. Norris siegt, Mercedes ist Konstrukteursweltmeister.</p>
-<p id="stand">Stand: 09.11.2026 10:51 Wien</p>
+<p id="stand">Stand: 09.11.2026 11:19 Wien</p>
 
 <!-- Session countdown: the schedule lives in the JSON block #cd-sessions below.
      Replace it for each new race weekend (ISO timestamps with UTC offset, duration in minutes). -->
@@ -438,6 +439,17 @@ document.addEventListener('resume',schedule);
 <p>Abstand zu São Paulo an allen Tagen 4 h. Free-TV live auf ServusTV (nicht ORF live). ORF 1 zeigt eine Wiederholung des Rennens So/Mo Nacht (ca. 23:55). Kommentar ServusTV: Gröbl/Goggi und Lauda.</p>
 </section>
 
+<section id="wetter">
+<div class="head"><h2>Wetter</h2><span class="cap">Open-Meteo Interlagos, Stand 08.11.2026 17:37</span></div>
+<div class="wk-grid">
+<div class="wk" data-session="fp1"><div class="wk-s">FP1</div><div class="wk-t">Fr 16:30</div><div class="wk-temp" data-temp>25 °C</div><div class="wk-r"><span>Regen</span><b data-rain>30 %</b></div><div class="wk-bar"><i style="width:30%"></i></div><div class="wk-w">Wind <b data-wind>3 km/h</b></div><div class="wk-h" data-hint>leichter Niesel</div></div>
+<div class="wk em" data-session="fp2"><div class="wk-s">FP2</div><div class="wk-t">Fr 20:00</div><div class="wk-temp" data-temp>23 °C</div><div class="wk-r"><span>Regen</span><b data-rain>74 %</b></div><div class="wk-bar"><i style="width:74%"></i></div><div class="wk-w">Wind <b data-wind>11 km/h</b></div><div class="wk-h" data-hint>leichter Niesel</div></div>
+<div class="wk" data-session="fp3"><div class="wk-s">FP3</div><div class="wk-t">Sa 15:30</div><div class="wk-temp" data-temp>29 °C</div><div class="wk-r"><span>Regen</span><b data-rain>33 %</b></div><div class="wk-bar"><i style="width:33%"></i></div><div class="wk-w">Wind <b data-wind>17 km/h</b></div><div class="wk-h" data-hint>warm, leichter Niesel</div></div>
+<div class="wk em" data-session="quali"><div class="wk-s">Qualifying</div><div class="wk-t">Sa 19:00</div><div class="wk-temp" data-temp>24 °C</div><div class="wk-r"><span>Regen</span><b data-rain>80 %</b></div><div class="wk-bar"><i style="width:80%"></i></div><div class="wk-w">Wind <b data-wind>16 km/h</b></div><div class="wk-h" data-hint>dichter Niesel</div></div>
+<div class="wk em" data-session="rennen"><div class="wk-s">Rennen</div><div class="wk-t">So 18:00</div><div class="wk-temp" data-temp>16 °C</div><div class="wk-r"><span>Regen</span><b data-rain>100 %</b></div><div class="wk-bar"><i style="width:100%"></i></div><div class="wk-w">Wind <b data-wind>16 km/h</b></div><div class="wk-h" data-hint>mäßiger Niesel</div></div>
+</div>
+</section>
+
 <section id="historie">
 <div class="head"><h2>Historie</h2></div>
 <dl><dt>2025</dt><dd>Pole Norris (1:09.511), Sieg Norris vor Antonelli und Verstappen</dd><dt>2024</dt><dd>Pole Norris (1:23.405), Sieg Verstappen vor Ocon und Gasly</dd><dt>2023</dt><dd>Pole Verstappen (1:10.727), Sieg Verstappen vor Norris und Alonso</dd><dt>Rundenrekord</dt><dd>Bottas 1:10.540 (2018)</dd></dl>
@@ -471,17 +483,6 @@ document.addEventListener('resume',schedule);
 <div class="pu-batt">
 <div class="pu-bh"><div class="pu-s">Power Limited</div><div class="pu-m">2278 m von 4309 m</div></div>
 <div class="batt" role="img" aria-label="Power Limited 52,9 % der Runde"><div class="batt-body"><i style="width:52.9%"></i><b>52,9 %</b></div><div class="batt-tip"></div></div>
-</div>
-</section>
-
-<section id="wetter">
-<div class="head"><h2>Wetter</h2><span class="cap">Open-Meteo Interlagos, Stand 08.11.2026 17:37</span></div>
-<div class="wk-grid">
-<div class="wk" data-session="fp1"><div class="wk-s">FP1</div><div class="wk-t">Fr 16:30</div><div class="wk-temp" data-temp>25 °C</div><div class="wk-r"><span>Regen</span><b data-rain>30 %</b></div><div class="wk-bar"><i style="width:30%"></i></div><div class="wk-w">Wind <b data-wind>3 km/h</b></div><div class="wk-h" data-hint>leichter Niesel</div></div>
-<div class="wk em" data-session="fp2"><div class="wk-s">FP2</div><div class="wk-t">Fr 20:00</div><div class="wk-temp" data-temp>23 °C</div><div class="wk-r"><span>Regen</span><b data-rain>74 %</b></div><div class="wk-bar"><i style="width:74%"></i></div><div class="wk-w">Wind <b data-wind>11 km/h</b></div><div class="wk-h" data-hint>leichter Niesel</div></div>
-<div class="wk" data-session="fp3"><div class="wk-s">FP3</div><div class="wk-t">Sa 15:30</div><div class="wk-temp" data-temp>29 °C</div><div class="wk-r"><span>Regen</span><b data-rain>33 %</b></div><div class="wk-bar"><i style="width:33%"></i></div><div class="wk-w">Wind <b data-wind>17 km/h</b></div><div class="wk-h" data-hint>warm, leichter Niesel</div></div>
-<div class="wk em" data-session="quali"><div class="wk-s">Qualifying</div><div class="wk-t">Sa 19:00</div><div class="wk-temp" data-temp>24 °C</div><div class="wk-r"><span>Regen</span><b data-rain>80 %</b></div><div class="wk-bar"><i style="width:80%"></i></div><div class="wk-w">Wind <b data-wind>16 km/h</b></div><div class="wk-h" data-hint>dichter Niesel</div></div>
-<div class="wk em" data-session="rennen"><div class="wk-s">Rennen</div><div class="wk-t">So 18:00</div><div class="wk-temp" data-temp>16 °C</div><div class="wk-r"><span>Regen</span><b data-rain>100 %</b></div><div class="wk-bar"><i style="width:100%"></i></div><div class="wk-w">Wind <b data-wind>16 km/h</b></div><div class="wk-h" data-hint>mäßiger Niesel</div></div>
 </div>
 </section>
 
@@ -541,20 +542,6 @@ document.addEventListener('resume',schedule);
 <tr><td>20</td><td>Hamilton</td><td>Ferrari</td><td>Quali P11, 75 Plätze Strafe</td></tr>
 <tr><td>21</td><td>Verstappen</td><td>Red Bull</td><td>Quali P16, 30 Plätze Strafe</td></tr>
 <tr><td>22</td><td>Pérez</td><td>Cadillac</td><td>Quali P21, 30 Plätze Strafe</td></tr>
-</tbody>
-</table>
-<div class="head sub"><h3>Tipps</h3><span class="cap">Renntipp 08.11.26 17:35</span></div>
-<table>
-<thead><tr><th>Pos.</th><th>Quali-Tipp</th><th>Quali echt</th><th>Renntipp</th></tr></thead>
-<tbody>
-<tr><td>1</td><td>Verstappen</td><td>Norris</td><td>Norris</td></tr>
-<tr><td>2</td><td>Antonelli</td><td>Russell</td><td>Antonelli</td></tr>
-<tr><td>3</td><td>Norris</td><td>Antonelli</td><td>Russell</td></tr>
-<tr><td>4</td><td>Russell</td><td>Leclerc</td><td>Verstappen</td></tr>
-<tr><td>5</td><td>–</td><td>–</td><td>Hadjar</td></tr>
-<tr><td>6</td><td>–</td><td>–</td><td>Leclerc</td></tr>
-<tr><td>7</td><td>–</td><td>–</td><td>Piastri</td></tr>
-<tr><td>8</td><td>–</td><td>–</td><td>Lawson</td></tr>
 </tbody>
 </table>
 <div class="head sub"><h3>Freies Training</h3><div class="tools"><span class="cap" id="fp-cap">FIA Doc 17</span>
@@ -645,6 +632,23 @@ document.addEventListener('resume',schedule);
 </tbody>
 </table>
 </div>
+</section>
+
+<section id="tipps">
+<div class="head"><h2>Tipps</h2><span class="cap">Renntipp 08.11.26 17:35</span></div>
+<table class="tipps">
+<thead><tr><th>Pos.</th><th>Quali-Tipp</th><th>Renntipp</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><span class="tk no" role="img" aria-label="falsch, echt: Norris" title="Echt: Norris">✗</span>Verstappen</td><td><span class="tk ok" role="img" aria-label="richtig">✓</span>Norris</td></tr>
+<tr><td>2</td><td><span class="tk no" role="img" aria-label="falsch, echt: Russell" title="Echt: Russell">✗</span>Antonelli</td><td><span class="tk no" role="img" aria-label="falsch, echt: Verstappen" title="Echt: Verstappen">✗</span>Antonelli</td></tr>
+<tr><td>3</td><td><span class="tk no" role="img" aria-label="falsch, echt: Antonelli" title="Echt: Antonelli">✗</span>Norris</td><td><span class="tk no" role="img" aria-label="falsch, echt: Hadjar" title="Echt: Hadjar">✗</span>Russell</td></tr>
+<tr><td>4</td><td><span class="tk no" role="img" aria-label="falsch, echt: Leclerc" title="Echt: Leclerc">✗</span>Russell</td><td><span class="tk no" role="img" aria-label="falsch, echt: Russell" title="Echt: Russell">✗</span>Verstappen</td></tr>
+<tr><td>5</td><td>–</td><td><span class="tk no" role="img" aria-label="falsch, echt: Antonelli" title="Echt: Antonelli">✗</span>Hadjar</td></tr>
+<tr><td>6</td><td>–</td><td><span class="tk no" role="img" aria-label="falsch, echt: Piastri" title="Echt: Piastri">✗</span>Leclerc</td></tr>
+<tr><td>7</td><td>–</td><td><span class="tk no" role="img" aria-label="falsch, echt: Lawson" title="Echt: Lawson">✗</span>Piastri</td></tr>
+<tr><td>8</td><td>–</td><td><span class="tk no" role="img" aria-label="falsch, echt: Leclerc" title="Echt: Leclerc">✗</span>Lawson</td></tr>
+</tbody>
+</table>
 </section>
 
 <section id="longruns">
