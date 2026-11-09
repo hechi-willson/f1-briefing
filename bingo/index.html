@@ -86,25 +86,29 @@ footer .legal a:hover{color:var(--muted);text-decoration:underline}
   'use strict';
   var KEY = 'pushpush.bingo.v1';
   var N = 16;
-  var WIN = 'Bingo. Volle Reihe.';
+  var WIN = 'Bingo!';
   var POOL = [
-    'McLaren slow stop',
+    'McLaren slow stop (3.5s)',
     'Ferrari strategy fumble',
-    'Audi finishes P11',
+    'Audi starts or finishes P11',
     'Stroll DNF',
-    '"Superclipping"',
-    'Rain expected in X minutes',
-    'Max complains about downshifts',
-    'FIA software bug',
-    '"Wollt grad fragen"',
-    'Gröbl erzählt aus den 50ern',
+    '"Super-Clipping"',
+    'Rain expected message',
+    'Max complains about the car',
+    'Red Bull radio issues',
+    'Team order',
     'Safety Car',
     'Virtual Safety Car',
     'Red flag',
     '10-second time penalty',
     '5-second time penalty',
     'Collision between teammates',
-    'Kimi track limits warning'
+    'Kimi 3x track limits',
+    'Extra formation lap',
+    // '"Wollt grad fragen"',
+    // 'Gröbl erzählt aus den 50ern',
+    '"Schatzi"',
+    'Alex widerspricht Stewards'
   ];
   var LINES = [
     [0, 1, 2, 3], [4, 5, 6, 7], [8, 9, 10, 11], [12, 13, 14, 15],
