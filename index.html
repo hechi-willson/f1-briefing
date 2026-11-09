@@ -156,6 +156,7 @@ main>section.pz-off{display:none}
  .pz-edit main>section>.head:first-child h2{font-size:1.1rem;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 }
 .pu-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.pu{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:12px;min-width:0}.pu-s{font-family:var(--cond);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}.pu-v{font-family:var(--cond);font-weight:800;font-size:2.2rem;line-height:1.1;margin:6px 0;font-variant-numeric:tabular-nums}.pu-v small{font-size:.5em;font-weight:700;color:var(--muted);margin-left:4px;letter-spacing:.04em}.pu.em .pu-v{color:var(--accent)}.pu-bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden}.pu-bar i{display:block;height:100%;background:var(--bar)}.pu.em .pu-bar i{background:var(--bar-em)}.pu-batt{margin-top:10px;background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:12px}.pu-bh{display:flex;justify-content:space-between;align-items:baseline;gap:10px}.pu-bh .pu-m{color:var(--muted);font-size:.85rem;font-variant-numeric:tabular-nums}.batt{display:flex;align-items:center;margin-top:8px}.batt-body{position:relative;flex:1;height:44px;border:3px solid var(--soft);border-radius:8px;padding:3px;box-sizing:border-box}.batt-body i{display:block;height:100%;border-radius:3px;background:repeating-linear-gradient(90deg,var(--bar-em) 0 calc(10% - 3px),transparent calc(10% - 3px) 10%)}.batt-body b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--cond);font-weight:800;font-size:1.5rem;font-variant-numeric:tabular-nums;text-shadow:0 1px 3px rgba(0,0,0,.8)}.batt-tip{width:7px;height:18px;background:var(--soft);border-radius:0 3px 3px 0}@media (max-width:560px){.pu-v{font-size:1.8rem}}
+table.top5:not(.open) tbody tr:nth-child(n+6){display:none}.more{display:block;margin:8px auto 0;background:var(--card2);border:1px solid var(--border);border-radius:9px;color:var(--soft);padding:4px 12px;font-family:var(--cond);font-weight:700;font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;cursor:pointer}.more:hover{color:var(--fg);border-color:var(--red)}.more:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
 .wk-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}@media(min-width:700px){.wk-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(min-width:1000px){.wk-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}.wk{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:12px;min-width:0}.wk-s{font-family:var(--cond);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}.wk-t{color:var(--muted);font-size:.82rem}.wk-temp{font-family:var(--cond);font-weight:800;font-size:2rem;line-height:1.1;margin:6px 0;font-variant-numeric:tabular-nums}.wk-r{display:flex;justify-content:space-between;font-size:.85rem;color:var(--muted)}.wk-r b{color:var(--fg)}.wk.em .wk-r b{color:var(--accent)}.wk-bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin:4px 0 8px}.wk-bar i{display:block;height:100%;background:var(--bar)}.wk.em .wk-bar i{background:var(--bar-em)}.wk-w{font-size:.85rem;color:var(--muted)}.wk-w b{color:var(--fg);font-weight:600}.wk-h{font-size:.85rem;color:var(--soft);margin-top:4px}
 </style>
 <script>
@@ -346,7 +347,7 @@ document.addEventListener('resume',schedule);
 <button type="button" class="pz-btn" id="pz-btn" hidden aria-expanded="false" aria-label="Ansicht personalisieren: Abschnitte ein- und ausblenden, Reihenfolge ändern">Personalisieren</button>
 <h1>São Paulo GP 2026 – São Paulo</h1>
 <p class="summary">Runde 20 im Autódromo José Carlos Pace (Interlagos), 6. bis 8. November, ohne Sprint. Norris siegt, Mercedes ist Konstrukteursweltmeister.</p>
-<p id="stand">Stand: 09.11.2026 09:59 Wien</p>
+<p id="stand">Stand: 09.11.2026 10:23 Wien</p>
 
 <!-- Session countdown: the schedule lives in the JSON block #cd-sessions below.
      Replace it for each new race weekend (ISO timestamps with UTC offset, duration in minutes). -->
@@ -368,7 +369,7 @@ document.addEventListener('resume',schedule);
 
 <section id="rennergebnis">
 <div class="head"><h2>Rennergebnis</h2><span class="cap">FIA Doc 81</span></div>
-<table>
+<table class="top5">
 <thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Runden</th><th>Abstand</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>Norris</td><td>McLaren</td><td>71</td><td>Sieger</td></tr>
@@ -381,6 +382,18 @@ document.addEventListener('resume',schedule);
 <tr><td>8</td><td>Leclerc</td><td>Ferrari</td><td>71</td><td>+78.586</td></tr>
 <tr><td>9</td><td>Hamilton</td><td>Ferrari</td><td>70</td><td>1 Runde</td></tr>
 <tr><td>10</td><td>Hülkenberg</td><td>Audi</td><td>70</td><td>1 Runde</td></tr>
+<tr><td>11</td><td>Lindblad</td><td>Racing Bulls</td><td>70</td><td>1 Runde</td></tr>
+<tr><td>12</td><td>Alonso</td><td>Aston Martin</td><td>70</td><td>1 Runde</td></tr>
+<tr><td>13</td><td>Colapinto</td><td>Alpine</td><td>70</td><td>1 Runde</td></tr>
+<tr><td>14</td><td>Gasly</td><td>Alpine</td><td>70</td><td>1 Runde</td></tr>
+<tr><td>15</td><td>Albon</td><td>Williams</td><td>70</td><td>1 Runde</td></tr>
+<tr><td>16</td><td>Bortoleto</td><td>Audi</td><td>70</td><td>1 Runde</td></tr>
+<tr><td>17</td><td>Bearman</td><td>Haas</td><td>70</td><td>1 Runde</td></tr>
+<tr><td>18</td><td>Pérez</td><td>Cadillac</td><td>69</td><td>2 Runden</td></tr>
+<tr><td>19</td><td>Sainz</td><td>Williams</td><td>69</td><td>2 Runden</td></tr>
+<tr><td>20</td><td>Camara</td><td>Haas</td><td>69</td><td>2 Runden</td></tr>
+<tr><td>–</td><td>Stroll</td><td>Aston Martin</td><td>30</td><td>Ausfall</td></tr>
+<tr><td>–</td><td>Bottas</td><td>Cadillac</td><td>0</td><td>nicht gestartet</td></tr>
 </tbody>
 </table>
 <div class="head sub"><h3>Strategien Top 3</h3><span class="cap">Live-Timing</span></div>
@@ -473,7 +486,7 @@ document.addEventListener('resume',schedule);
 <section id="ergebnisse">
 <div class="head"><h2>Ergebnisse</h2><span class="cap">FP1–FP3, Qualifying</span></div>
 <div class="head sub"><h3>Qualifying</h3><span class="cap">FIA Doc 50</span></div>
-<table>
+<table class="top5">
 <thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Q1</th><th>Q2</th><th>Q3</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>Norris</td><td>McLaren</td><td>1:30.939</td><td>1:29.207</td><td>1:27.470</td></tr>
@@ -501,7 +514,7 @@ document.addEventListener('resume',schedule);
 </tbody>
 </table>
 <div class="head sub"><h3>Startaufstellung</h3><span class="cap">FIA Doc 59</span></div>
-<table>
+<table class="top5">
 <thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Hinweis</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>Norris</td><td>McLaren</td><td>–</td></tr>
@@ -545,7 +558,7 @@ document.addEventListener('resume',schedule);
 <div class="head sub"><h3>Freies Training</h3><div class="tools"><span class="cap" id="fp-cap">FIA Doc 17</span>
 <div class="seg" role="group" aria-label="Training"><button type="button" data-fp="fp1" data-cap="FIA Doc 17" aria-pressed="true">FP1</button><button type="button" data-fp="fp2" data-cap="FIA Doc 22" aria-pressed="false">FP2</button><button type="button" data-fp="fp3" data-cap="FIA Doc 32" aria-pressed="false">FP3</button></div></div></div>
 <div class="fp" id="fp1">
-<table>
+<table class="top5">
 <thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Zeit</th><th>Abstand</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>Norris</td><td>McLaren</td><td>1:11.717</td><td>–</td></tr>
@@ -553,11 +566,28 @@ document.addEventListener('resume',schedule);
 <tr><td>3</td><td>Verstappen</td><td>Red Bull</td><td>1:11.953</td><td>+0.236</td></tr>
 <tr><td>4</td><td>Hamilton</td><td>Ferrari</td><td>1:12.041</td><td>+0.324</td></tr>
 <tr><td>5</td><td>Russell</td><td>Mercedes</td><td>1:12.103</td><td>+0.386</td></tr>
+<tr><td>6</td><td>Hadjar</td><td>Red Bull</td><td>1:12.156</td><td>+0.439</td></tr>
+<tr><td>7</td><td>Mini</td><td>Alpine</td><td>1:12.569</td><td>+0.852</td></tr>
+<tr><td>8</td><td>Bortoleto</td><td>Audi</td><td>1:12.614</td><td>+0.897</td></tr>
+<tr><td>9</td><td>Colapinto</td><td>Alpine</td><td>1:12.654</td><td>+0.937</td></tr>
+<tr><td>10</td><td>Lawson</td><td>Racing Bulls</td><td>1:12.715</td><td>+0.998</td></tr>
+<tr><td>11</td><td>Fornaroli</td><td>McLaren</td><td>1:12.833</td><td>+1.116</td></tr>
+<tr><td>12</td><td>Bearman</td><td>Haas</td><td>1:12.837</td><td>+1.120</td></tr>
+<tr><td>13</td><td>Alonso</td><td>Aston Martin</td><td>1:13.017</td><td>+1.300</td></tr>
+<tr><td>14</td><td>Lindblad</td><td>Racing Bulls</td><td>1:13.038</td><td>+1.321</td></tr>
+<tr><td>15</td><td>Bottas</td><td>Cadillac</td><td>1:13.371</td><td>+1.654</td></tr>
+<tr><td>16</td><td>Albon</td><td>Williams</td><td>1:13.511</td><td>+1.794</td></tr>
+<tr><td>17</td><td>Browning</td><td>Williams</td><td>1:13.591</td><td>+1.874</td></tr>
+<tr><td>18</td><td>Camara</td><td>Haas</td><td>1:13.696</td><td>+1.979</td></tr>
+<tr><td>19</td><td>Stroll</td><td>Aston Martin</td><td>1:13.760</td><td>+2.043</td></tr>
+<tr><td>20</td><td>Herta</td><td>Cadillac</td><td>1:14.275</td><td>+2.558</td></tr>
+<tr><td>21</td><td>Beganovic</td><td>Ferrari</td><td>1:14.357</td><td>+2.640</td></tr>
+<tr><td>22</td><td>Slater</td><td>Audi</td><td>1:14.966</td><td>+3.249</td></tr>
 </tbody>
 </table>
 </div>
 <div class="fp" id="fp2" hidden>
-<table>
+<table class="top5">
 <thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Zeit</th><th>Abstand</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>Antonelli</td><td>Mercedes</td><td>1:10.763</td><td>–</td></tr>
@@ -565,11 +595,27 @@ document.addEventListener('resume',schedule);
 <tr><td>3</td><td>Verstappen</td><td>Red Bull</td><td>1:11.022</td><td>+0.259</td></tr>
 <tr><td>4</td><td>Russell</td><td>Mercedes</td><td>1:11.036</td><td>+0.273</td></tr>
 <tr><td>5</td><td>Piastri</td><td>McLaren</td><td>1:11.084</td><td>+0.321</td></tr>
+<tr><td>6</td><td>Hamilton</td><td>Ferrari</td><td>1:11.213</td><td>+0.450</td></tr>
+<tr><td>7</td><td>Leclerc</td><td>Ferrari</td><td>1:11.483</td><td>+0.720</td></tr>
+<tr><td>8</td><td>Bortoleto</td><td>Audi</td><td>1:11.780</td><td>+1.017</td></tr>
+<tr><td>9</td><td>Hadjar</td><td>Red Bull</td><td>1:11.839</td><td>+1.076</td></tr>
+<tr><td>10</td><td>Bearman</td><td>Haas</td><td>1:11.991</td><td>+1.228</td></tr>
+<tr><td>11</td><td>Colapinto</td><td>Alpine</td><td>1:11.996</td><td>+1.233</td></tr>
+<tr><td>12</td><td>Lindblad</td><td>Racing Bulls</td><td>1:12.008</td><td>+1.245</td></tr>
+<tr><td>13</td><td>Lawson</td><td>Racing Bulls</td><td>1:12.042</td><td>+1.279</td></tr>
+<tr><td>14</td><td>Gasly</td><td>Alpine</td><td>1:12.109</td><td>+1.346</td></tr>
+<tr><td>15</td><td>Alonso</td><td>Aston Martin</td><td>1:12.538</td><td>+1.775</td></tr>
+<tr><td>16</td><td>Camara</td><td>Haas</td><td>1:12.561</td><td>+1.798</td></tr>
+<tr><td>17</td><td>Sainz</td><td>Williams</td><td>1:12.742</td><td>+1.979</td></tr>
+<tr><td>18</td><td>Stroll</td><td>Aston Martin</td><td>1:12.942</td><td>+2.179</td></tr>
+<tr><td>19</td><td>Albon</td><td>Williams</td><td>1:12.953</td><td>+2.190</td></tr>
+<tr><td>20</td><td>Pérez</td><td>Cadillac</td><td>1:13.316</td><td>+2.553</td></tr>
+<tr><td>21</td><td>Bottas</td><td>Cadillac</td><td>1:13.383</td><td>+2.620</td></tr>
 </tbody>
 </table>
 </div>
 <div class="fp" id="fp3" hidden>
-<table>
+<table class="top5">
 <thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Zeit</th><th>Abstand</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>Verstappen</td><td>Red Bull</td><td>1:11.622</td><td>–</td></tr>
@@ -577,6 +623,23 @@ document.addEventListener('resume',schedule);
 <tr><td>3</td><td>Norris</td><td>McLaren</td><td>1:11.753</td><td>+0.131</td></tr>
 <tr><td>4</td><td>Russell</td><td>Mercedes</td><td>1:11.806</td><td>+0.184</td></tr>
 <tr><td>5</td><td>Leclerc</td><td>Ferrari</td><td>1:11.896</td><td>+0.274</td></tr>
+<tr><td>6</td><td>Piastri</td><td>McLaren</td><td>1:11.935</td><td>+0.313</td></tr>
+<tr><td>7</td><td>Lindblad</td><td>Racing Bulls</td><td>1:12.060</td><td>+0.438</td></tr>
+<tr><td>8</td><td>Lawson</td><td>Racing Bulls</td><td>1:12.171</td><td>+0.549</td></tr>
+<tr><td>9</td><td>Hadjar</td><td>Red Bull</td><td>1:12.213</td><td>+0.591</td></tr>
+<tr><td>10</td><td>Bortoleto</td><td>Audi</td><td>1:12.644</td><td>+1.022</td></tr>
+<tr><td>11</td><td>Gasly</td><td>Alpine</td><td>1:12.644</td><td>+1.022</td></tr>
+<tr><td>12</td><td>Hamilton</td><td>Ferrari</td><td>1:12.833</td><td>+1.211</td></tr>
+<tr><td>13</td><td>Hülkenberg</td><td>Audi</td><td>1:12.865</td><td>+1.243</td></tr>
+<tr><td>14</td><td>Colapinto</td><td>Alpine</td><td>1:12.925</td><td>+1.303</td></tr>
+<tr><td>15</td><td>Camara</td><td>Haas</td><td>1:12.981</td><td>+1.359</td></tr>
+<tr><td>16</td><td>Bearman</td><td>Haas</td><td>1:13.109</td><td>+1.487</td></tr>
+<tr><td>17</td><td>Albon</td><td>Williams</td><td>1:13.147</td><td>+1.525</td></tr>
+<tr><td>18</td><td>Alonso</td><td>Aston Martin</td><td>1:13.171</td><td>+1.549</td></tr>
+<tr><td>19</td><td>Sainz</td><td>Williams</td><td>1:13.303</td><td>+1.681</td></tr>
+<tr><td>20</td><td>Pérez</td><td>Cadillac</td><td>1:13.573</td><td>+1.951</td></tr>
+<tr><td>21</td><td>Bottas</td><td>Cadillac</td><td>1:13.722</td><td>+2.100</td></tr>
+<tr><td>22</td><td>Stroll</td><td>Aston Martin</td><td>1:14.766</td><td>+3.144</td></tr>
 </tbody>
 </table>
 </div>
@@ -862,5 +925,6 @@ tick();setInterval(tick,1000);
 })();
 </script>
 
+<script>(function(){document.querySelectorAll("table.top5").forEach(function(t){var n=t.tBodies[0]?t.tBodies[0].rows.length:0;if(n<=5)return;var b=document.createElement("button");b.type="button";b.className="more";b.setAttribute("aria-expanded","false");var lbl=function(){var o=t.classList.contains("open");b.textContent=o?"Nur Top 5":"Alle "+n+" anzeigen";b.setAttribute("aria-expanded",o?"true":"false")};lbl();b.addEventListener("click",function(){var o=t.classList.toggle("open");lbl();if(!o){var w=t.closest(".fp");var tgt=(w?w.previousElementSibling:t.previousElementSibling)||t;requestAnimationFrame(function(){requestAnimationFrame(function(){var y=tgt.getBoundingClientRect().top+window.pageYOffset-8;window.scrollTo({top:Math.max(0,y),behavior:"smooth"})})})}});t.insertAdjacentElement("afterend",b)})})();</script>
 </body>
 </html>
