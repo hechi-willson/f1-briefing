@@ -162,6 +162,56 @@ main>section.pz-off{display:none}
 .qs{display:inline-block;width:2.2em;margin-right:4px;color:var(--muted);font-family:var(--cond);font-weight:700;font-size:.78em;letter-spacing:.04em}
 table.top5:not(.open) tbody tr:nth-child(n+6){display:none}.more{display:block;margin:8px auto 0;background:var(--card2);border:1px solid var(--border);border-radius:9px;color:var(--soft);padding:4px 12px;font-family:var(--cond);font-weight:700;font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;cursor:pointer}.more:hover{color:var(--fg);border-color:var(--red)}.more:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
 .wk-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}@media(min-width:700px){.wk-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(min-width:1000px){.wk-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}.wk{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:12px;min-width:0}.wk-s{font-family:var(--cond);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}.wk-t{color:var(--muted);font-size:.82rem}.wk-temp{font-family:var(--cond);font-weight:800;font-size:2rem;line-height:1.1;margin:6px 0;font-variant-numeric:tabular-nums}.wk-r{display:flex;justify-content:space-between;font-size:.85rem;color:var(--muted)}.wk-r b{color:var(--fg)}.wk.em .wk-r b{color:var(--accent)}.wk-bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin:4px 0 8px}.wk-bar i{display:block;height:100%;background:var(--bar)}.wk.em .wk-bar i{background:var(--bar-em)}.wk-w{font-size:.85rem;color:var(--muted)}.wk-w b{color:var(--fg);font-weight:600}.wk-h{font-size:.85rem;color:var(--soft);margin-top:4px}
+
+
+/* Long Runs tables are wide (many columns); scroll inside the section so the page does not overflow on phones. */
+#longruns{overflow-x:auto;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+#longruns table{width:max-content;min-width:100%}
+/* Sticky bottom section nav (preview/bottom-nav). Keep when rebuilding index.html. */
+html{scroll-behavior:smooth;scroll-padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+main>section{scroll-margin-top:12px}
+body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+.bnav{position:fixed;left:50%;bottom:calc(10px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:9;display:flex;align-items:stretch;max-width:min(720px,calc(100% - 16px));background:rgba(21,23,29,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--border);border-radius:16px;box-shadow:0 8px 28px rgba(0,0,0,.55);overflow:hidden}
+.bnav[hidden]{display:none}
+.pz-edit .bnav{display:none}
+.bnav-track{display:flex;gap:2px;align-items:stretch;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:6px;min-width:0;max-width:100%}
+.bnav-track::-webkit-scrollbar{display:none}
+.bnav a{flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-width:52px;padding:8px 9px;border-radius:12px;color:var(--muted);text-decoration:none;-webkit-tap-highlight-color:transparent}
+.bnav a:hover{color:var(--fg);background:rgba(255,255,255,.04)}
+.bnav a:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.bnav a[aria-current="true"]{color:#fff;background:var(--red)}
+.bnav a[hidden]{display:none}
+.bnav svg{width:28px;height:28px;display:block}
+.bnav .bnav-l{display:none;font-family:var(--cond);font-weight:700;font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;line-height:1.1;white-space:nowrap}
+.bnav-arr{display:none;flex:none;align-items:center;justify-content:center;width:30px;padding:0;border:0;color:var(--soft);background:transparent;cursor:pointer;z-index:2;position:relative}
+.bnav-arr svg{width:18px;height:18px}
+.bnav-arr:hover{color:var(--fg)}
+.bnav-arr:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.bnav-arr[hidden]{display:none}
+.bnav-arr-l::after,.bnav-arr-r::before{content:"";position:absolute;top:0;bottom:0;width:18px;pointer-events:none}
+.bnav-arr-l::after{left:100%;background:linear-gradient(90deg,rgba(21,23,29,.95),transparent)}
+.bnav-arr-r::before{right:100%;background:linear-gradient(270deg,rgba(21,23,29,.95),transparent)}
+@media (min-width:600px){
+ .bnav.bnav-more-l .bnav-arr-l,.bnav.bnav-more-r .bnav-arr-r{display:inline-flex}
+}
+@media (pointer:coarse){
+ .bnav-arr{display:none!important}
+}
+@media (min-width:600px){
+ .bnav{border-radius:18px}
+ .bnav-track{gap:4px;padding:8px}
+ .bnav a{min-width:58px;padding:7px 10px;gap:3px}
+ .bnav svg{width:22px;height:22px}
+ .bnav .bnav-l{display:block}
+}
+@media (max-width:560px){
+ body{padding-bottom:calc(78px + env(safe-area-inset-bottom,0px))}
+ html{scroll-padding-bottom:calc(78px + env(safe-area-inset-bottom,0px))}
+ .bnav{bottom:calc(8px + env(safe-area-inset-bottom,0px));max-width:calc(100% - 12px);border-radius:14px}
+ .bnav-track{padding:5px}
+ .bnav a{min-width:48px;padding:7px 8px}
+}
 </style>
 <script>
 // Personalisieren (idea #14): per-browser section order and visibility, stored only in localStorage.
@@ -351,7 +401,7 @@ document.addEventListener('resume',schedule);
 <button type="button" class="pz-btn" id="pz-btn" hidden aria-expanded="false" aria-label="Ansicht personalisieren: Abschnitte ein- und ausblenden, Reihenfolge ändern">Personalisieren</button>
 <h1>São Paulo GP 2026 – São Paulo</h1>
 <p class="summary">Runde 20 im Autódromo José Carlos Pace (Interlagos), 6. bis 8. November, ohne Sprint. Norris siegt, Mercedes ist Konstrukteursweltmeister.</p>
-<p id="stand">Stand: 09.11.2026 11:51 Wien</p>
+<p id="stand">Stand: 09.11.2026 17:55 Wien</p>
 
 <!-- Session countdown: the schedule lives in the JSON block #cd-sessions below.
      Replace it for each new race weekend (ISO timestamps with UTC offset, duration in minutes). -->
@@ -914,6 +964,11 @@ document.addEventListener('resume',schedule);
 <p class="legal"><a href="/archiv/">Archiv</a> · <a href="/bingo/">Bingo</a> · <a href="/impressum.html">Impressum</a></p>
 </footer>
 </main>
+<div id="bnav" class="bnav" hidden>
+<button type="button" class="bnav-arr bnav-arr-l" aria-label="Abschnitte nach links" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+<div class="bnav-track" role="navigation" aria-label="Abschnitte"></div>
+<button type="button" class="bnav-arr bnav-arr-r" aria-label="Abschnitte nach rechts" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
 <script>
 (function(){document.querySelectorAll('.seg').forEach(function(g){var b=g.querySelectorAll('button');b.forEach(function(x){x.addEventListener('click',function(){b.forEach(function(y){y.setAttribute('aria-pressed',y===x?'true':'false')});var z=x.getAttribute('data-zone');if(z){document.querySelectorAll('td[data-wien]').forEach(function(td){td.textContent=td.getAttribute('data-'+z)})}var f=x.getAttribute('data-fp');if(f){document.querySelectorAll('.fp').forEach(function(d){d.hidden=d.id!==f});var c=document.getElementById('fp-cap');if(c)c.textContent=x.getAttribute('data-cap')}var l=x.getAttribute('data-lr');if(l){document.querySelectorAll('.lr').forEach(function(d){d.hidden=d.id!==l});var lc=document.getElementById('lr-cap');if(lc)lc.textContent=x.getAttribute('data-cap')}})})})})();
 </script>
@@ -960,5 +1015,211 @@ tick();setInterval(tick,1000);
 
 <script>(function(){document.querySelectorAll("table.top5,.bars.top5").forEach(function(t){var n=t.tBodies?(t.tBodies[0]?t.tBodies[0].rows.length:0):t.querySelectorAll(":scope>.bar").length;if(n<=5)return;var b=document.createElement("button");b.type="button";b.className="more";b.setAttribute("aria-expanded","false");var lbl=function(){var o=t.classList.contains("open");b.textContent=o?"Nur Top 5":"Alle "+n+" anzeigen";b.setAttribute("aria-expanded",o?"true":"false")};lbl();b.addEventListener("click",function(){var o=t.classList.toggle("open");lbl();if(!o){var w=t.closest(".fp");var tgt=(w?w.previousElementSibling:t.previousElementSibling)||t;requestAnimationFrame(function(){requestAnimationFrame(function(){var y=tgt.getBoundingClientRect().top+window.pageYOffset-8;window.scrollTo({top:Math.max(0,y),behavior:"smooth"})})})}});t.insertAdjacentElement("afterend",b)})})();</script>
 <script>(function(){document.querySelectorAll(".bars.pick").forEach(function(g){var bs=[].slice.call(g.querySelectorAll(":scope>.bar"));bs.forEach(function(b){var v=b.querySelector(".v");b.dataset.v=v.textContent.trim();b.setAttribute("role","button");b.tabIndex=0;b.setAttribute("aria-pressed","false")});function sel(b){var on=!b.classList.contains("em");bs.forEach(function(x){x.classList.remove("em");x.setAttribute("aria-pressed","false")});if(on){b.classList.add("em");b.setAttribute("aria-pressed","true")}var r=+b.dataset.v;bs.forEach(function(x){var v=x.querySelector(".v"),d=+x.dataset.v-r;v.textContent=(!on||x===b)?x.dataset.v:(d>0?"+"+d:d<0?"\u2212"+(-d):"\u00b10")})}bs.forEach(function(b){b.addEventListener("click",function(){sel(b)});b.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();sel(b)}})})})})();</script>
+
+<script>
+// Sticky bottom section nav: icon buttons, active highlight, sync with Personalisieren.
+(function(){
+'use strict';
+if(location.pathname.indexOf('/archiv/')===0)return;
+var ICONS={
+  rennergebnis:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V3"/><path d="M5 4h13v9H5"/><path fill="currentColor" stroke="none" d="M5 4h3.25v3H5zm6.5 0H15v3h-3.5zM8.25 7h3.25v3H8.25zM15 7h3v3h-3zM5 10h3.25v3H5zm6.5 0H15v3h-3.5z"/></svg>',
+  sessions:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>',
+  wetter:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17a4 4 0 1 1 .7-7.9A5.5 5.5 0 0 1 18 11a3.5 3.5 0 0 1-.2 6H7z"/></svg>',
+  historie:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 7v5l3 2"/></svg>',
+  strecke:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 4v2M12 18v2M4 12h2M18 12h2"/></svg>',
+  strategie:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20h14"/><path d="M7 20v-3h10v3"/><path d="M8 17V10h8v7"/><path d="M6 10V6h3v2h2V6h2v2h2V6h3v4"/></svg>',
+  energie:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 6 13h5l-1 9 8-12h-5l0-8z"/></svg>',
+  ergebnisse:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12"/><path d="M4 6h.01M4 12h.01M4 18h.01"/></svg>',
+  tipps:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3 11c.4.4.7 1 .8 1.5h4.4c.1-.5.4-1.1.8-1.5A6 6 0 0 0 12 3z"/></svg>',
+  longruns:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19a9 9 0 1 1 14 0"/><path d="M12 12l5-3"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg>',
+  'fahrer-wm':'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v3a5 5 0 0 1-10 0V4z"/><path d="M7 5H5a2 2 0 0 0 2 4M17 5h2a2 2 0 0 1-2 4"/></svg>',
+  konstrukteure:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.8 7.8l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.8-7.8z"/></svg>',
+  motortausch:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M12 17h.01"/><path d="M10.3 4.3 2.8 18a2 2 0 0 0 1.7 3h15a2 2 0 0 0 1.7-3L13.7 4.3a2 2 0 0 0-3.4 0z"/></svg>',
+  fia:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg>'
+};
+var LABELS={
+  rennergebnis:'Rennen',
+  sessions:'Sessions',
+  wetter:'Wetter',
+  historie:'Historie',
+  strecke:'Strecke',
+  strategie:'Strategie',
+  energie:'Energie',
+  ergebnisse:'Zeiten',
+  tipps:'Tipps',
+  longruns:'Longruns',
+  'fahrer-wm':'Fahrer',
+  konstrukteure:'Teams',
+  motortausch:'Strafen',
+  fia:'FIA'
+};
+var FALLBACK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/></svg>';
+var ARR_L='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>';
+var ARR_R='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>';
+var nav=null,track=null,btnL=null,btnR=null,links={},io=null,clicking=false,clickT=0;
+
+function secs(){
+  var main=document.querySelector('main'),o=[];
+  if(!main)return o;
+  for(var n=main.firstElementChild;n;n=n.nextElementSibling){
+    if(n.tagName==='SECTION'&&n.id)o.push(n);
+  }
+  return o;
+}
+function titleOf(s){
+  var h=s.querySelector('h2');
+  return h?h.textContent.trim():(LABELS[s.id]||s.id);
+}
+function setActive(id){
+  Object.keys(links).forEach(function(k){
+    var a=links[k];
+    if(!a)return;
+    if(k===id)a.setAttribute('aria-current','true');
+    else a.removeAttribute('aria-current');
+  });
+}
+function updateArrows(){
+  if(!nav||!track)return;
+  var max=track.scrollWidth-track.clientWidth;
+  var overflow=max>2;
+  var sl=track.scrollLeft;
+  var moreL=overflow&&sl>2;
+  var moreR=overflow&&sl<max-2;
+  nav.classList.toggle('bnav-more-l',moreL);
+  nav.classList.toggle('bnav-more-r',moreR);
+  if(btnL){btnL.hidden=!moreL;btnL.disabled=!moreL}
+  if(btnR){btnR.hidden=!moreR;btnR.disabled=!moreR}
+}
+function scrollByButtons(dir){
+  if(!track)return;
+  var step=Math.min(track.clientWidth*0.7, 200);
+  var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  track.scrollBy({left:dir*step,behavior:reduce?'auto':'smooth'});
+}
+function observe(){
+  if(io){io.disconnect();io=null}
+  var list=secs().filter(function(s){return !s.classList.contains('pz-off')});
+  if(!list.length||!('IntersectionObserver' in window))return;
+  var ratios={};
+  io=new IntersectionObserver(function(entries){
+    if(clicking)return;
+    entries.forEach(function(e){ratios[e.target.id]=e.isIntersecting?e.intersectionRatio:0});
+    var best='',bestR=0;
+    list.forEach(function(s){
+      var r=ratios[s.id]||0;
+      if(r>bestR){bestR=r;best=s.id}
+    });
+    if(best)setActive(best);
+  },{root:null,rootMargin:'-12% 0px -55% 0px',threshold:[0,.1,.25,.5,.75,1]});
+  list.forEach(function(s){io.observe(s);ratios[s.id]=0});
+}
+function sync(){
+  if(!nav||!track)return;
+  var list=secs(),seen={};
+  list.forEach(function(s){
+    seen[s.id]=1;
+    var a=links[s.id];
+    if(!a){
+      a=document.createElement('a');
+      a.href='#'+s.id;
+      a.dataset.id=s.id;
+      a.innerHTML=(ICONS[s.id]||FALLBACK)+'<span class="bnav-l"></span>';
+      a.addEventListener('click',function(ev){
+        ev.preventDefault();
+        var t=document.getElementById(s.id);
+        if(!t)return;
+        clicking=true;clearTimeout(clickT);
+        setActive(s.id);
+        t.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'start'});
+        try{history.replaceState(null,'','#'+s.id)}catch(e){}
+        clickT=setTimeout(function(){clicking=false},700);
+      });
+      links[s.id]=a;
+    }
+    var label=LABELS[s.id]||titleOf(s);
+    a.setAttribute('aria-label',titleOf(s));
+    a.title=titleOf(s);
+    var span=a.querySelector('.bnav-l');
+    if(span)span.textContent=label;
+    a.hidden=s.classList.contains('pz-off');
+    track.appendChild(a);
+  });
+  Object.keys(links).forEach(function(id){
+    if(!seen[id]){links[id].remove();delete links[id]}
+  });
+  nav.hidden=!list.some(function(s){return !s.classList.contains('pz-off')});
+  observe();
+  updateArrows();
+  if(window.scrollY<40&&!track.querySelector('a[aria-current="true"]')){
+    var first=list.find(function(s){return !s.classList.contains('pz-off')});
+    if(first)setActive(first.id);
+  }
+}
+function init(){
+  nav=document.getElementById('bnav');
+  if(!nav)return;
+  track=nav.querySelector('.bnav-track');
+  btnL=nav.querySelector('.bnav-arr-l');
+  btnR=nav.querySelector('.bnav-arr-r');
+  if(!track){
+    track=document.createElement('div');
+    track.className='bnav-track';
+    track.setAttribute('role','navigation');
+    track.setAttribute('aria-label','Abschnitte');
+    while(nav.firstChild)track.appendChild(nav.firstChild);
+    nav.appendChild(track);
+  }
+  if(!btnL){
+    btnL=document.createElement('button');
+    btnL.type='button';btnL.className='bnav-arr bnav-arr-l';
+    btnL.setAttribute('aria-label','Abschnitte nach links');
+    btnL.hidden=true;btnL.innerHTML=ARR_L;
+    nav.insertBefore(btnL,track);
+  }
+  if(!btnR){
+    btnR=document.createElement('button');
+    btnR.type='button';btnR.className='bnav-arr bnav-arr-r';
+    btnR.setAttribute('aria-label','Abschnitte nach rechts');
+    btnR.hidden=true;btnR.innerHTML=ARR_R;
+    nav.appendChild(btnR);
+  }
+  btnL.addEventListener('click',function(){scrollByButtons(-1)});
+  btnR.addEventListener('click',function(){scrollByButtons(1)});
+  track.addEventListener('scroll',function(){updateArrows()},{passive:true});
+  track.addEventListener('wheel',function(e){
+    if(track.scrollWidth<=track.clientWidth+2)return;
+    var dx=e.deltaX,dy=e.deltaY;
+    if(e.deltaMode===1){dx*=16;dy*=16}
+    else if(e.deltaMode===2){dx*=track.clientWidth;dy*=track.clientHeight}
+    if(Math.abs(dy)<Math.abs(dx))return;
+    if(dy===0)return;
+    var max=track.scrollWidth-track.clientWidth;
+    var next=track.scrollLeft+dy;
+    if((dy<0&&track.scrollLeft<=0)||(dy>0&&track.scrollLeft>=max-0.5))return;
+    e.preventDefault();
+    track.scrollLeft=Math.max(0,Math.min(max,next));
+    updateArrows();
+  },{passive:false});
+  window.addEventListener('resize',updateArrows);
+  sync();
+  var main=document.querySelector('main');
+  if(main&&'MutationObserver' in window){
+    new MutationObserver(function(){sync()}).observe(main,{childList:true,subtree:true,attributes:true,attributeFilter:['class','id']});
+  }
+  var root=document.documentElement;
+  if('MutationObserver' in window){
+    new MutationObserver(function(){sync()}).observe(root,{attributes:true,attributeFilter:['class']});
+  }
+  if(location.hash){
+    var id=location.hash.slice(1);
+    if(links[id]&&!links[id].hidden)setActive(id);
+  }
+  requestAnimationFrame(updateArrows);
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);
+else init();
+})();
+</script>
+
 </body>
 </html>
