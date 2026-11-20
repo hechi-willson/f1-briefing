@@ -41,7 +41,7 @@ Gepflegt von PushPush. Änderungen nur auf Hechis Wunsch. Zuletzt geändert: 09.
 - Rundenzahl nicht in der Session-Tabelle, sondern in „Strecke und Reifen“ (erste Liste nach „Länge“): „Runden“ ohne Sprint, bei Sprint-Wochenenden „Runden (Sprint)“ und „Runden (Rennen)“.
 - Reihenfolge (seit 09.11.2026): Rennergebnis, Sessions, Wetter, Historie, Strecke und Reifen, Strategie, Power Unit, Ergebnisse, Tipps, Long Runs, Fahrer-WM, Konstrukteure, Strafen, FIA-Dokumente.
 - Section „Historie“ steht direkt nach „Wetter“ und vor „Strecke und Reifen“: pro Jahr der letzten drei Jahre „Pole X (Zeit), Sieg Y vor Z und W“, neuestes zuerst, dazu der Rundenrekord.
-- Section „Strafen“: Spalten Fahrer, Element / Vergehen, Strafe (keine Spalte „Nr. / erlaubt“).
+- Section „Strafen“: Spalten Fahrer, Element / Vergehen, Strafe (keine Spalte „Nr. / erlaubt“). Gelöschte Rundenzeiten (Track Limits, Doppelgelb usw.) gehören nicht in „Strafen“ (Hechi, 20.11.2026).
 - Favicon (seit 02.11.2026): favicon.svg, favicon.ico und apple-touch-icon.png im Hauptverzeichnis nicht löschen; die drei `<link rel="icon"…>`/`apple-touch-icon`-Zeilen im `<head>` von index.html beim Neuaufbau übernehmen.
 - Countdown-Card nach dem Rennen ausgeblendet (passiert automatisch im Script, nicht wieder einbauen).
 - Überschrift h1 ohne „Briefing“ (steht schon darüber); Stand-Zeile `<p id="stand">` direkt unter dem Absatz `.summary`, nicht im Footer.
