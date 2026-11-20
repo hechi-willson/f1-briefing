@@ -401,7 +401,7 @@ document.addEventListener('resume',schedule);
 <button type="button" class="pz-btn" id="pz-btn" hidden aria-expanded="false" aria-label="Ansicht personalisieren: Abschnitte ein- und ausblenden, Reihenfolge ändern">Personalisieren</button>
 <h1>Las Vegas GP 2026 – Las Vegas</h1>
 <p class="summary">Runde 21 auf dem Las Vegas Strip Circuit, 19. bis 21. November (Ortszeit), ohne Sprint. Nachtrennen, in Wien Freitag bis Sonntag früh. Antonelli und Mercedes sind bereits Weltmeister.</p>
-<p id="stand">Stand: 20.11.2026 01:07 Wien</p>
+<p id="stand">Stand: 20.11.2026 04:44 Wien</p>
 
 <!-- Session countdown: the schedule lives in the JSON block #cd-sessions below.
      Replace it for each new race weekend (ISO timestamps with UTC offset, duration in minutes). -->
@@ -443,12 +443,12 @@ document.addEventListener('resume',schedule);
 </section>
 
 <section id="wetter">
-<div class="head"><h2>Wetter</h2><span class="cap">Open-Meteo Las Vegas, Stand 20.11.2026 01:07</span></div>
+<div class="head"><h2>Wetter</h2><span class="cap">Open-Meteo Las Vegas, Stand 20.11.2026 04:44</span></div>
 <div class="wk-grid">
 <div class="wk" data-session="fp1"><div class="wk-s">FP1</div><div class="wk-t">Fr 01:30</div><div class="wk-temp" data-temp>13 °C</div><div class="wk-r"><span>Regen</span><b data-rain>32 %</b></div><div class="wk-bar"><i style="width:32%"></i></div><div class="wk-w">Wind <b data-wind>10 km/h</b></div><div class="wk-h" data-hint>bedeckt, Niesel möglich</div></div>
-<div class="wk" data-session="fp2"><div class="wk-s">FP2</div><div class="wk-t">Fr 05:00</div><div class="wk-temp" data-temp>11 °C</div><div class="wk-r"><span>Regen</span><b data-rain>11 %</b></div><div class="wk-bar"><i style="width:11%"></i></div><div class="wk-w">Wind <b data-wind>30 km/h</b></div><div class="wk-h" data-hint>klar, sehr windig</div></div>
-<div class="wk" data-session="fp3"><div class="wk-s">FP3</div><div class="wk-t">Sa 01:30</div><div class="wk-temp" data-temp>13 °C</div><div class="wk-r"><span>Regen</span><b data-rain>5 %</b></div><div class="wk-bar"><i style="width:5%"></i></div><div class="wk-w">Wind <b data-wind>6 km/h</b></div><div class="wk-h" data-hint>klar, trocken</div></div>
-<div class="wk" data-session="quali"><div class="wk-s">Qualifying</div><div class="wk-t">Sa 05:00</div><div class="wk-temp" data-temp>9 °C</div><div class="wk-r"><span>Regen</span><b data-rain>2 %</b></div><div class="wk-bar"><i style="width:2%"></i></div><div class="wk-w">Wind <b data-wind>7 km/h</b></div><div class="wk-h" data-hint>bedeckt, kühl</div></div>
+<div class="wk" data-session="fp2"><div class="wk-s">FP2</div><div class="wk-t">Fr 05:00</div><div class="wk-temp" data-temp>11 °C</div><div class="wk-r"><span>Regen</span><b data-rain>10 %</b></div><div class="wk-bar"><i style="width:10%"></i></div><div class="wk-w">Wind <b data-wind>20 km/h</b></div><div class="wk-h" data-hint>Niesel möglich, böig</div></div>
+<div class="wk" data-session="fp3"><div class="wk-s">FP3</div><div class="wk-t">Sa 01:30</div><div class="wk-temp" data-temp>12 °C</div><div class="wk-r"><span>Regen</span><b data-rain>5 %</b></div><div class="wk-bar"><i style="width:5%"></i></div><div class="wk-w">Wind <b data-wind>10 km/h</b></div><div class="wk-h" data-hint>klar, trocken</div></div>
+<div class="wk" data-session="quali"><div class="wk-s">Qualifying</div><div class="wk-t">Sa 05:00</div><div class="wk-temp" data-temp>10 °C</div><div class="wk-r"><span>Regen</span><b data-rain>2 %</b></div><div class="wk-bar"><i style="width:2%"></i></div><div class="wk-w">Wind <b data-wind>22 km/h</b></div><div class="wk-h" data-hint>bedeckt, windig</div></div>
 <div class="wk" data-session="rennen"><div class="wk-s">Rennen</div><div class="wk-t">So 05:00</div><div class="wk-temp" data-temp>13 °C</div><div class="wk-r"><span>Regen</span><b data-rain>0 %</b></div><div class="wk-bar"><i style="width:0%"></i></div><div class="wk-w">Wind <b data-wind>7 km/h</b></div><div class="wk-h" data-hint>bedeckt, trocken</div></div>
 </div>
 </section>
@@ -495,10 +495,10 @@ document.addEventListener('resume',schedule);
 <p>Qualifying Samstag 05:00 Wien.</p>
 <div class="head sub"><h3>Startaufstellung</h3><span class="cap">noch keine Daten</span></div>
 <p>Startaufstellung folgt nach dem Qualifying.</p>
-<div class="head sub"><h3>Freies Training</h3><div class="tools"><span class="cap" id="fp-cap">noch keine Daten</span>
-<div class="seg" role="group" aria-label="Training"><button type="button" data-fp="fp1" data-cap="noch keine Daten" aria-pressed="true">FP1</button><button type="button" data-fp="fp2" data-cap="noch keine Daten" aria-pressed="false">FP2</button><button type="button" data-fp="fp3" data-cap="noch keine Daten" aria-pressed="false">FP3</button></div></div></div>
+<div class="head sub"><h3>Freies Training</h3><div class="tools"><span class="cap" id="fp-cap">Formula 1</span>
+<div class="seg" role="group" aria-label="Training"><button type="button" data-fp="fp1" data-cap="Formula 1" aria-pressed="true">FP1</button><button type="button" data-fp="fp2" data-cap="noch keine Daten" aria-pressed="false">FP2</button><button type="button" data-fp="fp3" data-cap="noch keine Daten" aria-pressed="false">FP3</button></div></div></div>
 <div class="fp" id="fp1">
-<p>noch keine Daten</p>
+<p>Keine gewerteten Zeiten. Session im Regen, nur Installationsrunden.</p>
 </div>
 <div class="fp" id="fp2" hidden>
 <p>noch keine Daten</p>
