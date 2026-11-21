@@ -401,7 +401,7 @@ document.addEventListener('resume',schedule);
 <button type="button" class="pz-btn" id="pz-btn" hidden aria-expanded="false" aria-label="Ansicht personalisieren: Abschnitte ein- und ausblenden, Reihenfolge ändern">Personalisieren</button>
 <h1>Las Vegas GP 2026 – Las Vegas</h1>
 <p class="summary">Runde 21 auf dem Las Vegas Strip Circuit, 19. bis 21. November (Ortszeit), ohne Sprint. Nachtrennen, in Wien Freitag bis Sonntag früh. Antonelli und Mercedes sind bereits Weltmeister.</p>
-<p id="stand">Stand: 21.11.2026 04:38 Wien</p>
+<p id="stand">Stand: 21.11.2026 09:45 Wien</p>
 
 <!-- Session countdown: the schedule lives in the JSON block #cd-sessions below.
      Replace it for each new race weekend (ISO timestamps with UTC offset, duration in minutes). -->
@@ -490,11 +490,63 @@ document.addEventListener('resume',schedule);
 </section>
 
 <section id="ergebnisse">
-<div class="head"><h2>Ergebnisse</h2><span class="cap">noch keine Daten</span></div>
-<div class="head sub"><h3>Qualifying</h3><span class="cap">noch keine Daten</span></div>
-<p>Qualifying Samstag 05:00 Wien.</p>
-<div class="head sub"><h3>Startaufstellung</h3><span class="cap">noch keine Daten</span></div>
-<p>Startaufstellung folgt nach dem Qualifying.</p>
+<div class="head"><h2>Ergebnisse</h2><span class="cap">FP2, FP3, Qualifying</span></div>
+<div class="head sub"><h3>Qualifying</h3><span class="cap">FIA Doc 48</span></div>
+<table class="top5">
+<thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Zeit</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Antonelli</td><td>Mercedes</td><td><small class="qs">Q3</small>1:33.893</td></tr>
+<tr><td>2</td><td>Verstappen</td><td>Red Bull</td><td><small class="qs">Q3</small>1:34.151</td></tr>
+<tr><td>3</td><td>Russell</td><td>Mercedes</td><td><small class="qs">Q3</small>1:34.224</td></tr>
+<tr><td>4</td><td>Norris</td><td>McLaren</td><td><small class="qs">Q3</small>1:34.244</td></tr>
+<tr><td>5</td><td>Hadjar</td><td>Red Bull</td><td><small class="qs">Q3</small>1:34.592</td></tr>
+<tr><td>6</td><td>Lindblad</td><td>Racing Bulls</td><td><small class="qs">Q3</small>1:34.668</td></tr>
+<tr><td>7</td><td>Piastri</td><td>McLaren</td><td><small class="qs">Q3</small>1:34.899</td></tr>
+<tr><td>8</td><td>Lawson</td><td>Racing Bulls</td><td><small class="qs">Q3</small>1:35.090</td></tr>
+<tr><td>9</td><td>Gasly</td><td>Alpine</td><td><small class="qs">Q3</small>1:35.105</td></tr>
+<tr><td>10</td><td>Colapinto</td><td>Alpine</td><td><small class="qs">Q3</small>1:35.314</td></tr>
+<tr><td>11</td><td>Leclerc</td><td>Ferrari</td><td><small class="qs">Q2</small>1:35.197</td></tr>
+<tr><td>12</td><td>Hamilton</td><td>Ferrari</td><td><small class="qs">Q2</small>1:35.253</td></tr>
+<tr><td>13</td><td>Hülkenberg</td><td>Audi</td><td><small class="qs">Q2</small>1:35.460</td></tr>
+<tr><td>14</td><td>Sainz</td><td>Williams</td><td><small class="qs">Q2</small>1:35.641</td></tr>
+<tr><td>15</td><td>Bortoleto</td><td>Audi</td><td><small class="qs">Q2</small>1:35.993</td></tr>
+<tr><td>16</td><td>Albon</td><td>Williams</td><td><small class="qs">Q2</small>1:36.125</td></tr>
+<tr><td>17</td><td>Camara</td><td>Haas</td><td><small class="qs">Q1</small>1:36.220</td></tr>
+<tr><td>18</td><td>Pérez</td><td>Cadillac</td><td><small class="qs">Q1</small>1:37.383</td></tr>
+<tr><td>19</td><td>Alonso</td><td>Aston Martin</td><td><small class="qs">Q1</small>1:37.400</td></tr>
+<tr><td>20</td><td>Stroll</td><td>Aston Martin</td><td><small class="qs">Q1</small>1:37.550</td></tr>
+<tr><td>21</td><td>Bottas</td><td>Cadillac</td><td><small class="qs">Q1</small>1:37.601</td></tr>
+<tr><td>–</td><td>Bearman</td><td>Haas</td><td><small class="qs">Q1</small>1:48.005 (nicht klassiert, 107 %)</td></tr>
+</tbody>
+</table>
+<div class="head sub"><h3>Startaufstellung</h3><span class="cap">FIA Doc 49</span></div>
+<table class="top5">
+<thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Hinweis</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Verstappen</td><td>Red Bull</td><td>–</td></tr>
+<tr><td>2</td><td>Russell</td><td>Mercedes</td><td>–</td></tr>
+<tr><td>3</td><td>Norris</td><td>McLaren</td><td>–</td></tr>
+<tr><td>4</td><td>Hadjar</td><td>Red Bull</td><td>–</td></tr>
+<tr><td>5</td><td>Lindblad</td><td>Racing Bulls</td><td>–</td></tr>
+<tr><td>6</td><td>Antonelli</td><td>Mercedes</td><td>Quali P1, 5 Plätze Strafe</td></tr>
+<tr><td>7</td><td>Lawson</td><td>Racing Bulls</td><td>–</td></tr>
+<tr><td>8</td><td>Gasly</td><td>Alpine</td><td>–</td></tr>
+<tr><td>9</td><td>Colapinto</td><td>Alpine</td><td>–</td></tr>
+<tr><td>10</td><td>Leclerc</td><td>Ferrari</td><td>–</td></tr>
+<tr><td>11</td><td>Hamilton</td><td>Ferrari</td><td>–</td></tr>
+<tr><td>12</td><td>Hülkenberg</td><td>Audi</td><td>–</td></tr>
+<tr><td>13</td><td>Bortoleto</td><td>Audi</td><td>–</td></tr>
+<tr><td>14</td><td>Albon</td><td>Williams</td><td>–</td></tr>
+<tr><td>15</td><td>Camara</td><td>Haas</td><td>–</td></tr>
+<tr><td>16</td><td>Pérez</td><td>Cadillac</td><td>–</td></tr>
+<tr><td>17</td><td>Piastri</td><td>McLaren</td><td>Quali P7, 10 Plätze Strafe</td></tr>
+<tr><td>18</td><td>Alonso</td><td>Aston Martin</td><td>–</td></tr>
+<tr><td>19</td><td>Bottas</td><td>Cadillac</td><td>–</td></tr>
+<tr><td>20</td><td>Sainz</td><td>Williams</td><td>Quali P14, 10 Plätze Strafe</td></tr>
+<tr><td>21</td><td>Stroll</td><td>Aston Martin</td><td>Quali P20, 10 Plätze Strafe</td></tr>
+<tr><td>22</td><td>Bearman</td><td>Haas</td><td>Nicht klassiert (107 %), Start erlaubt (Doc 46), 35 Plätze Strafe</td></tr>
+</tbody>
+</table>
 <div class="head sub"><h3>Freies Training</h3><div class="tools"><span class="cap" id="fp-cap">Formula 1</span>
 <div class="seg" role="group" aria-label="Training"><button type="button" data-fp="fp1" data-cap="Formula 1" aria-pressed="true">FP1</button><button type="button" data-fp="fp2" data-cap="FIA Doc 15" aria-pressed="false">FP2</button><button type="button" data-fp="fp3" data-cap="FIA Doc 33" aria-pressed="false">FP3</button></div></div></div>
 <div class="fp" id="fp1">
@@ -561,8 +613,17 @@ document.addEventListener('resume',schedule);
 </section>
 
 <section id="tipps">
-<div class="head"><h2>Tipps</h2><span class="cap">noch offen</span></div>
-<p>Quali-Tipp Samstag 04:30 Wien, Renntipp Sonntag 04:30 Wien.</p>
+<div class="head"><h2>Tipps</h2><span class="cap">Quali-Tipp 21.11.26 04:38</span></div>
+<table class="tipps">
+<thead><tr><th>Pos.</th><th>Quali-Tipp</th><th>Renntipp</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><span class="tk no" role="img" aria-label="falsch, echt: Antonelli" title="Echt: Antonelli">✗</span>Norris</td><td>–</td></tr>
+<tr><td>2</td><td><span class="tk no" role="img" aria-label="falsch, echt: Verstappen" title="Echt: Verstappen">✗</span>Russell</td><td>–</td></tr>
+<tr><td>3</td><td><span class="tk no" role="img" aria-label="falsch, echt: Russell" title="Echt: Russell">✗</span>Piastri</td><td>–</td></tr>
+<tr><td>4</td><td><span class="tk no" role="img" aria-label="falsch, echt: Norris" title="Echt: Norris">✗</span>Gasly</td><td>–</td></tr>
+</tbody>
+</table>
+<p>Renntipp Sonntag 04:30 Wien.</p>
 </section>
 
 <section id="longruns">
@@ -674,7 +735,7 @@ document.addEventListener('resume',schedule);
 </section>
 
 <section id="motortausch">
-<div class="head"><h2>Strafen</h2><span class="cap">Las Vegas GP 2026</span></div>
+<div class="head"><h2>Strafen</h2><span class="cap">FIA Doc 16–20, 36–38, 45, 46, 49</span></div>
 <table>
 <thead><tr><th>Fahrer</th><th>Element / Vergehen</th><th>Strafe</th></tr></thead>
 <tbody>
@@ -683,6 +744,10 @@ document.addEventListener('resume',schedule);
 <tr><td>Sainz</td><td>5. TC</td><td>10 Startplätze Gridstrafe (Rennen)</td></tr>
 <tr><td>Stroll</td><td>9. ES, 8. PU-CE</td><td>10 Startplätze Gridstrafe (Rennen)</td></tr>
 <tr><td>Bearman</td><td>5. ICE, 5. TC, 5. EXH, 5. MGU-K</td><td>35 Startplätze Gridstrafe (Rennen)</td></tr>
+<tr><td>Albon</td><td>Unberechenbares Fahren in Kurve 17 (FP3)</td><td>Verwarnung (Reprimand)</td></tr>
+<tr><td>Verstappen</td><td>Richtungswechsel beim Bremsen in Kurve 14 (FP3, Kontakt mit Russell)</td><td>Verwarnung (Warning)</td></tr>
+<tr><td>Verstappen</td><td>Unberechenbares Fahren vor Kurve 17 (FP3)</td><td>Keine weitere Maßnahme</td></tr>
+<tr><td>Racing Bulls (Lindblad)</td><td>Unsafe Release im Qualifying</td><td>5.000 € Geldstrafe (Team)</td></tr>
 </tbody>
 </table>
 </section>
@@ -715,6 +780,30 @@ document.addEventListener('resume',schedule);
 <li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_infringement_-_free_practice_2_deleted_lap_times_-_double_yellow_flags.pdf">Doc 23 – FP2 gelöschte Zeiten, Doppelgelb<span class="meta">fia.com · 20.11.26</span></a></li>
 <li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_fp1_and_fp2_scrutineering.pdf">Doc 24 – FP1 und FP2 Scrutineering<span class="meta">fia.com · 20.11.26</span></a></li>
 <li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_timetable_v3.pdf">Doc 25 – Timetable V3<span class="meta">fia.com · 20.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_curfew.pdf">Doc 26 – Technical Delegate Report, Personal im Fahrerlager<span class="meta">fia.com · 20.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_competition_notes_-_pirelli_preview_v3.pdf">Doc 27 – Pirelli Preview V3<span class="meta">fia.com · 20.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_post-qualifying_procedure.pdf">Doc 28 – Post-Qualifying-Ablauf<span class="meta">fia.com · 20.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_summons_-_car_3_-_alleged_erratic_driving_in_turn_16.pdf">Doc 29 – Vorladung VER, Kurve 16<span class="meta">fia.com · 21.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_summons_-_car_23_-_alleged_erratic_driving_in_turn_17.pdf">Doc 30 – Vorladung ALB, Kurve 17<span class="meta">fia.com · 21.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_summons_-_car_3_-_alleged_incident_with_car_63.pdf">Doc 31 – Vorladung VER, Kontakt mit RUS<span class="meta">fia.com · 21.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_summons_-_car_63_-_alleged_incident_with_car_3.pdf">Doc 32 – Vorladung RUS, Kontakt mit VER<span class="meta">fia.com · 21.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_free_practice_3_classification.pdf">Doc 33 – FP3-Klassement<span class="meta">fia.com · 21.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_infringement_-_free_practice_3_deleted_lap_times.pdf">Doc 34 – FP3 gelöschte Rundenzeiten<span class="meta">fia.com · 21.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_infringement_-_free_practice_3_deleted_lap_times_-_double_yellow_flags.pdf">Doc 35 – FP3 gelöschte Zeiten, Doppelgelb<span class="meta">fia.com · 21.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_infringement_-_car_23_-_erratic_driving_in_turn_17.pdf">Doc 36 – ALB #23, Reprimand, Kurve 17<span class="meta">fia.com · 21.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_infringement_-_car_3_-_erratic_driving_in_turn_14.pdf">Doc 37 – VER #3, Warning, Kurve 14<span class="meta">fia.com · 21.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_decision_-_alleged_driving_erratically.pdf">Doc 38 – VER #3, keine weitere Maßnahme<span class="meta">fia.com · 21.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_summons_-_car_41_-_alleged_unsafe_release.pdf">Doc 39 – Vorladung LIN #41, Unsafe Release<span class="meta">fia.com · 21.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_provisional_qualifying_classification.pdf">Doc 40 – Vorläufiges Quali-Klassement<span class="meta">fia.com · 21.11.26</span></a></li>
+<li><span class="gap">Doc 41 – kein Dokument verfügbar (Covers-on Time, ohne PDF-Link)<span class="meta">–</span></span></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_infringement_-_qualifying_deleted_lap_times.pdf">Doc 42 – Quali gelöschte Rundenzeiten<span class="meta">fia.com · 21.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_covers-on_time_-_corrected.pdf">Doc 43 – Covers-On-Zeit korrigiert<span class="meta">fia.com · 21.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_decision_-_qualifying_sc2-sc1_times.pdf">Doc 44 – Quali SC2-SC1-Zeiten, keine Maßnahme<span class="meta">fia.com · 21.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_infringement_-_car_41_unsafe_release.pdf">Doc 45 – LIN #41, Unsafe Release, 5.000 € Team<span class="meta">fia.com · 21.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_decision_-_car_87_-_permission_to_start.pdf">Doc 46 – BEA #87, Start erlaubt<span class="meta">fia.com · 21.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_fp3_and_qualifying_scrutineering.pdf">Doc 47 – FP3 und Quali Scrutineering<span class="meta">fia.com · 21.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_final_qualifying_classification.pdf">Doc 48 – Finales Quali-Klassement<span class="meta">fia.com · 21.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_provisional_starting_grid.pdf">Doc 49 – Vorläufige Startaufstellung<span class="meta">fia.com · 21.11.26</span></a></li>
 </ol>
 </section>
 
