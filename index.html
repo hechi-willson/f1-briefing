@@ -401,7 +401,7 @@ document.addEventListener('resume',schedule);
 <button type="button" class="pz-btn" id="pz-btn" hidden aria-expanded="false" aria-label="Ansicht personalisieren: Abschnitte ein- und ausblenden, Reihenfolge ändern">Personalisieren</button>
 <h1>Las Vegas GP 2026 – Las Vegas</h1>
 <p class="summary">Runde 21 auf dem Las Vegas Strip Circuit, 19. bis 21. November (Ortszeit), ohne Sprint. Nachtrennen, in Wien Freitag bis Sonntag früh. Antonelli und Mercedes sind bereits Weltmeister.</p>
-<p id="stand">Stand: 22.11.2026 06:53 Wien</p>
+<p id="stand">Stand: 22.11.2026 09:44 Wien</p>
 
 <!-- Session countdown: the schedule lives in the JSON block #cd-sessions below.
      Replace it for each new race weekend (ISO timestamps with UTC offset, duration in minutes). -->
@@ -422,7 +422,7 @@ document.addEventListener('resume',schedule);
 <div class="callout"><b>Nachtschicht</b>Alle Sessions liegen in Wien zwischen 01:30 und 06:00: Trainings Fr und Sa 01:30 bzw. 05:00, Quali Sa 05:00, Rennen So 05:00. Live im Free-TV auf ORF 1.</div>
 
 <section id="rennergebnis">
-<div class="head"><h2>Rennergebnis</h2><span class="cap">Live-Timing, vorläufig</span></div>
+<div class="head"><h2>Rennergebnis</h2><span class="cap">FIA Doc 65</span></div>
 <table class="top5">
 <thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Runden</th><th>Abstand</th></tr></thead>
 <tbody>
@@ -439,15 +439,15 @@ document.addEventListener('resume',schedule);
 <tr><td>11</td><td>Hülkenberg</td><td>Audi</td><td>50</td><td>+22.720</td></tr>
 <tr><td>12</td><td>Bortoleto</td><td>Audi</td><td>50</td><td>+28.602</td></tr>
 <tr><td>13</td><td>Bearman</td><td>Haas</td><td>50</td><td>+28.843</td></tr>
-<tr><td>14</td><td>Hadjar</td><td>Red Bull</td><td>50</td><td>+36.488</td></tr>
-<tr><td>15</td><td>Lawson</td><td>Racing Bulls</td><td>50</td><td>+36.588</td></tr>
+<tr><td>14</td><td>Lawson</td><td>Racing Bulls</td><td>50</td><td>+36.588</td></tr>
+<tr><td>15</td><td>Hadjar</td><td>Red Bull</td><td>50</td><td>+46.488</td></tr>
 <tr><td>16</td><td>Camara</td><td>Haas</td><td>50</td><td>+47.814</td></tr>
 <tr><td>17</td><td>Stroll</td><td>Aston Martin</td><td>50</td><td>+68.353</td></tr>
 <tr><td>18</td><td>Bottas</td><td>Cadillac</td><td>50</td><td>+71.673</td></tr>
 <tr><td>19</td><td>Alonso</td><td>Aston Martin</td><td>49</td><td>1 Runde</td></tr>
-<tr><td>20</td><td>Lindblad</td><td>Racing Bulls</td><td>19</td><td>Ausfall</td></tr>
-<tr><td>21</td><td>Pérez</td><td>Cadillac</td><td>17</td><td>Ausfall</td></tr>
-<tr><td>22</td><td>Albon</td><td>Williams</td><td>–</td><td>Ausfall</td></tr>
+<tr><td>–</td><td>Lindblad</td><td>Racing Bulls</td><td>19</td><td>Ausfall</td></tr>
+<tr><td>–</td><td>Pérez</td><td>Cadillac</td><td>17</td><td>Ausfall</td></tr>
+<tr><td>–</td><td>Albon</td><td>Williams</td><td>–</td><td>nicht gestartet</td></tr>
 </tbody>
 </table>
 <div class="head sub"><h3>Strategien Top 3</h3><span class="cap">Live-Timing</span></div>
@@ -461,13 +461,14 @@ document.addEventListener('resume',schedule);
 </table>
 <ul>
 <li>Safety Car ab Runde 19 bis etwa Runde 27/28 (Live-Timing uneindeutig). Lindblad (19 Runden) und Pérez (17 Runden) schieden aus, Albon ohne gewertete Runde.</li>
-<li>Hamilton 10 Sekunden (Verlassen der Strecke mit Vorteil, Kurve 8, Zwischenfall mit Norris), unter Safety Car abgesessen.</li>
-<li>Leclerc 10 Sekunden (Kollision mit Hamilton, Kurve 7, etwa Runde 38).</li>
-<li>Nach dem Rennen offen: Kollision Pérez/Camara (Kurve 14), Zwischenfall Hadjar/Russell, Gelbflaggen-Verstoß Piastri (Kurve 7). Ein Ergebnis der Stewards liegt in den Daten nicht vor.</li>
+<li>Hamilton 10 Sekunden (Verlassen der Strecke mit Vorteil, Kurve 8, Zwischenfall mit Norris, Doc 54), unter Safety Car abgesessen.</li>
+<li>Leclerc 10 Sekunden (Kollision mit Hamilton, Kurve 7, Doc 60), im Endergebnis addiert.</li>
+<li>Hadjar 10 Sekunden (unnötig langsam unter Safety Car, Doc 64), im Endergebnis addiert: P14 auf P15, Lawson P14.</li>
+<li>Pérez: Kollision mit Camara in Kurve 14 (Doc 61), 10 Sekunden in 5 Startplätze Gridstrafe im nächsten Rennen umgewandelt (Ausfall).</li>
 <li>Hadjar: Unsafe Release geprüft, keine weitere Untersuchung.</li>
 <li>Alonso mit 49 Runden gewertet (1 Runde Rückstand).</li>
-<li>Gelöschte Rundenzeiten wegen Track Limits u. a. bei Hülkenberg, Hamilton, Hadjar, Gasly, Colapinto, Sainz, Leclerc, Stroll, Russell, Camara und Alonso.</li>
-<li>Offen: Das offizielle FIA-Endergebnis war nicht abrufbar. Schnellste Runde und die erste Reifenwahl der Top 3 sind in den Daten nicht enthalten.</li>
+<li>Gelöschte Rundenzeiten (Doc 62) wegen Track Limits u. a. bei Hülkenberg, Hamilton, Hadjar, Gasly, Colapinto, Sainz, Leclerc, Stroll, Russell, Camara und Alonso.</li>
+<li>Schnellste Runde: Lawson 1:35.591 (Runde 50). Die erste Reifenwahl der Top 3 ist in den Daten nicht enthalten.</li>
 </ul>
 </section>
 
@@ -564,7 +565,7 @@ document.addEventListener('resume',schedule);
 <tr><td>–</td><td>Bearman</td><td>Haas</td><td><small class="qs">Q1</small>1:48.005 (nicht klassiert, 107 %)</td></tr>
 </tbody>
 </table>
-<div class="head sub"><h3>Startaufstellung</h3><span class="cap">FIA Doc 49</span></div>
+<div class="head sub"><h3>Startaufstellung</h3><span class="cap">FIA Doc 53</span></div>
 <table class="top5">
 <thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Hinweis</th></tr></thead>
 <tbody>
@@ -662,14 +663,14 @@ document.addEventListener('resume',schedule);
 <table class="tipps">
 <thead><tr><th>Pos.</th><th>Quali-Tipp</th><th>Renntipp</th></tr></thead>
 <tbody>
-<tr><td>1</td><td><span class="tk no" role="img" aria-label="falsch, echt: Antonelli" title="Echt: Antonelli">✗</span>Norris</td><td>Russell</td></tr>
-<tr><td>2</td><td><span class="tk no" role="img" aria-label="falsch, echt: Verstappen" title="Echt: Verstappen">✗</span>Russell</td><td>Verstappen</td></tr>
-<tr><td>3</td><td><span class="tk no" role="img" aria-label="falsch, echt: Russell" title="Echt: Russell">✗</span>Piastri</td><td>Norris</td></tr>
-<tr><td>4</td><td><span class="tk no" role="img" aria-label="falsch, echt: Norris" title="Echt: Norris">✗</span>Gasly</td><td>Antonelli</td></tr>
-<tr><td>5</td><td>–</td><td>Hadjar</td></tr>
-<tr><td>6</td><td>–</td><td>Gasly</td></tr>
-<tr><td>7</td><td>–</td><td>Piastri</td></tr>
-<tr><td>8</td><td>–</td><td>Lawson</td></tr>
+<tr><td>1</td><td><span class="tk no" role="img" aria-label="falsch, echt: Antonelli" title="Echt: Antonelli">✗</span>Norris</td><td><span class="tk no" role="img" aria-label="falsch, echt: Verstappen" title="Echt: Verstappen">✗</span>Russell</td></tr>
+<tr><td>2</td><td><span class="tk no" role="img" aria-label="falsch, echt: Verstappen" title="Echt: Verstappen">✗</span>Russell</td><td><span class="tk no" role="img" aria-label="falsch, echt: Norris" title="Echt: Norris">✗</span>Verstappen</td></tr>
+<tr><td>3</td><td><span class="tk no" role="img" aria-label="falsch, echt: Russell" title="Echt: Russell">✗</span>Piastri</td><td><span class="tk no" role="img" aria-label="falsch, echt: Piastri" title="Echt: Piastri">✗</span>Norris</td></tr>
+<tr><td>4</td><td><span class="tk no" role="img" aria-label="falsch, echt: Norris" title="Echt: Norris">✗</span>Gasly</td><td><span class="tk ok" role="img" aria-label="richtig">✓</span>Antonelli</td></tr>
+<tr><td>5</td><td>–</td><td><span class="tk no" role="img" aria-label="falsch, echt: Gasly" title="Echt: Gasly">✗</span>Hadjar</td></tr>
+<tr><td>6</td><td>–</td><td><span class="tk no" role="img" aria-label="falsch, echt: Colapinto" title="Echt: Colapinto">✗</span>Gasly</td></tr>
+<tr><td>7</td><td>–</td><td><span class="tk no" role="img" aria-label="falsch, echt: Hamilton" title="Echt: Hamilton">✗</span>Piastri</td></tr>
+<tr><td>8</td><td>–</td><td><span class="tk no" role="img" aria-label="falsch, echt: Sainz" title="Echt: Sainz">✗</span>Lawson</td></tr>
 </tbody>
 </table>
 </section>
@@ -733,7 +734,7 @@ document.addEventListener('resume',schedule);
 </section>
 
 <section id="fahrer-wm">
-<div class="head"><h2>Fahrer-WM</h2><span class="cap">nach Las Vegas, vorläufig (Live-Timing, ohne FIA-Doc)</span></div>
+<div class="head"><h2>Fahrer-WM</h2><span class="cap">nach Las Vegas, FIA Doc 66</span></div>
 <div class="bars top5 pick" data-max="402">
 <div class="bar"><span><b class="pos">1</b>Antonelli</span><div class="track"><div class="fill" style="width:100.0%"></div></div><span class="v">402</span></div>
 <div class="bar"><span><b class="pos">2</b>Verstappen</span><div class="track"><div class="fill" style="width:75.6%"></div></div><span class="v">304</span></div>
@@ -761,11 +762,11 @@ document.addEventListener('resume',schedule);
 <div class="bar"><span><b class="pos">24</b>Pérez</span><div class="track"><div class="fill" style="width:0.0%"></div></div><span class="v">0</span></div>
 <div class="bar"><span><b class="pos">25</b>Camara</span><div class="track"><div class="fill" style="width:0.0%"></div></div><span class="v">0</span></div>
 </div>
-<p>Antonelli ist Weltmeister: 98 Punkte vor Verstappen, nur noch 50 Punkte in zwei Rennen ohne Sprint. Um P2 kämpfen Verstappen (304), Hamilton (267), Russell und Norris (je 264, Russell vorn nach Platzierungen: Siege 3:3, zweite Plätze 4:2). Stand vorläufig, bis FIA-Klassement und Stewards-Entscheidungen vorliegen.</p>
+<p>Antonelli ist Weltmeister: 98 Punkte vor Verstappen, nur noch 50 Punkte in zwei Rennen ohne Sprint. Um P2 kämpfen Verstappen (304), Hamilton (267), Russell und Norris (je 264, Russell vorn nach Platzierungen: Siege 3:3, zweite Plätze 4:2). Laut Doc 66 unter Vorbehalt einer Berufungsabsicht von Audi gegen Doc 69 (Italien GP).</p>
 </section>
 
 <section id="konstrukteure">
-<div class="head"><h2>Konstrukteure</h2><span class="cap">nach Las Vegas, vorläufig (Live-Timing, ohne FIA-Doc)</span></div>
+<div class="head"><h2>Konstrukteure</h2><span class="cap">nach Las Vegas, FIA Doc 66</span></div>
 <div class="bars top5 pick">
 <div class="bar"><span><b class="pos">1</b>Mercedes</span><div class="track"><div class="fill" style="width:100.0%"></div></div><span class="v">666</span></div>
 <div class="bar"><span><b class="pos">2</b>Ferrari</span><div class="track"><div class="fill" style="width:77.6%"></div></div><span class="v">517</span></div>
@@ -779,11 +780,11 @@ document.addEventListener('resume',schedule);
 <div class="bar"><span><b class="pos">10</b>Aston Martin</span><div class="track"><div class="fill" style="width:1.1%"></div></div><span class="v">7</span></div>
 <div class="bar"><span><b class="pos">11</b>Cadillac</span><div class="track"><div class="fill" style="width:0.0%"></div></div><span class="v">0</span></div>
 </div>
-<p>Mercedes ist Konstrukteursweltmeister: 149 Punkte vor Ferrari, nur noch 88 Punkte in zwei Rennen ohne Sprint. Kampf um P3: Red Bull 9 Punkte vor McLaren. Stand vorläufig.</p>
+<p>Mercedes ist Konstrukteursweltmeister: 149 Punkte vor Ferrari, nur noch 88 Punkte in zwei Rennen ohne Sprint. Kampf um P3: Red Bull 9 Punkte vor McLaren. Laut Doc 66 unter Vorbehalt einer Berufungsabsicht von Audi gegen Doc 69 (Italien GP).</p>
 </section>
 
 <section id="motortausch">
-<div class="head"><h2>Strafen</h2><span class="cap">FIA Doc 16–20, 36–38, 45, 46, 49</span></div>
+<div class="head"><h2>Strafen</h2><span class="cap">FIA Doc 16–20, 36–38, 45, 46, 49, 54, 60, 61, 64</span></div>
 <table>
 <thead><tr><th>Fahrer</th><th>Element / Vergehen</th><th>Strafe</th></tr></thead>
 <tbody>
@@ -796,6 +797,10 @@ document.addEventListener('resume',schedule);
 <tr><td>Verstappen</td><td>Richtungswechsel beim Bremsen in Kurve 14 (FP3, Kontakt mit Russell)</td><td>Verwarnung (Warning)</td></tr>
 <tr><td>Verstappen</td><td>Unberechenbares Fahren vor Kurve 17 (FP3)</td><td>Keine weitere Maßnahme</td></tr>
 <tr><td>Racing Bulls (Lindblad)</td><td>Unsafe Release im Qualifying</td><td>5.000 € Geldstrafe (Team)</td></tr>
+<tr><td>Hamilton</td><td>Verlassen der Strecke mit Vorteil in Kurve 8 (Rennen)</td><td>10 Sekunden Zeitstrafe</td></tr>
+<tr><td>Leclerc</td><td>Kollision mit Hamilton in Kurve 7 (Rennen)</td><td>10 Sekunden Zeitstrafe</td></tr>
+<tr><td>Pérez</td><td>Kollision mit Camara in Kurve 14 (Rennen)</td><td>5 Startplätze Gridstrafe (nächstes Rennen)</td></tr>
+<tr><td>Hadjar</td><td>Unnötig langsam unter Safety Car (Rennen)</td><td>10 Sekunden Zeitstrafe</td></tr>
 </tbody>
 </table>
 </section>
@@ -852,6 +857,23 @@ document.addEventListener('resume',schedule);
 <li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_fp3_and_qualifying_scrutineering.pdf">Doc 47 – FP3 und Quali Scrutineering<span class="meta">fia.com · 21.11.26</span></a></li>
 <li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_final_qualifying_classification.pdf">Doc 48 – Finales Quali-Klassement<span class="meta">fia.com · 21.11.26</span></a></li>
 <li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_provisional_starting_grid.pdf">Doc 49 – Vorläufige Startaufstellung<span class="meta">fia.com · 21.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_pre-race_procedure.pdf">Doc 50 – Pre-Race Procedure<span class="meta">fia.com · 21.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_post-race_procedure.pdf">Doc 51 – Post-Race Procedure<span class="meta">fia.com · 21.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_parts_and_parameters_been_replaced_and_or_changed_during_parc_ferme.pdf">Doc 52 – Teile im Parc Fermé getauscht<span class="meta">fia.com · 22.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_final_starting_grid.pdf">Doc 53 – Finale Startaufstellung<span class="meta">fia.com · 22.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_infringement_-_car_44_-_leaving_the_track_and_gaining_an_advantage.pdf">Doc 54 – HAM #44, 10 s Strafe, Strecke verlassen<span class="meta">fia.com · 22.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_summons_-_car_11_-_alleged_causing_a_collision_with_car_51.pdf">Doc 55 – Vorladung PER #11, Kollision mit CAM #51<span class="meta">fia.com · 22.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_summons_-_car_51_-_alleged_causing_a_collision_with_car_11.pdf">Doc 56 – Vorladung CAM #51, Kollision mit PER #11<span class="meta">fia.com · 22.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_summons_-_incident_between_car_6_and_car_63.pdf">Doc 57 – Vorladung HAD #6, Zwischenfall mit RUS #63<span class="meta">fia.com · 22.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_summons_-_incident_between_car_63_and_car_6.pdf">Doc 58 – Vorladung RUS #63, Zwischenfall mit HAD #6<span class="meta">fia.com · 22.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_provisional_race_classification.pdf">Doc 59 – Vorläufiges Rennklassement<span class="meta">fia.com · 22.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_infringement_-_car_16_-_causing_a_collision_with_car_44.pdf">Doc 60 – LEC #16, 10 s Strafe, Kollision mit HAM #44<span class="meta">fia.com · 22.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_infringement_-_car_11_-_causing_a_collision_with_car_51.pdf">Doc 61 – PER #11, 5 Plätze Gridstrafe, Kollision mit CAM #51<span class="meta">fia.com · 22.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_infringement_-_race_deleted_lap_times.pdf">Doc 62 – Rennen gelöschte Rundenzeiten<span class="meta">fia.com · 22.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_race_scrutineering.pdf">Doc 63 – Rennen Scrutineering<span class="meta">fia.com · 22.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_infringement_-_car_6_-_driving_unnecessarily_slowly.pdf">Doc 64 – HAD #6, 10 s Strafe, unnötig langsam unter SC<span class="meta">fia.com · 22.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_final_race_classification.pdf">Doc 65 – Finales Rennklassement<span class="meta">fia.com · 22.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_las_vegas_grand_prix_-_championship_points.pdf">Doc 66 – Meisterschaftspunkte<span class="meta">fia.com · 22.11.26</span></a></li>
 </ol>
 </section>
 
