@@ -401,7 +401,7 @@ document.addEventListener('resume',schedule);
 <button type="button" class="pz-btn" id="pz-btn" hidden aria-expanded="false" aria-label="Ansicht personalisieren: Abschnitte ein- und ausblenden, Reihenfolge ändern">Personalisieren</button>
 <h1>Katar GP 2026 – Lusail</h1>
 <p class="summary">Runde 22 auf dem Lusail International Circuit, 27. bis 29. November (Ortszeit), ohne Sprint. Abendrennen unter Flutlicht, in Wien Freitag bis Sonntag nachmittags und abends. Antonelli und Mercedes sind bereits Weltmeister.</p>
-<p id="stand">Stand: 27.11.2026 17:39 Wien</p>
+<p id="stand">Stand: 27.11.2026 19:55 Wien</p>
 
 <!-- Session countdown: the schedule lives in the JSON block #cd-sessions below.
      Replace it for each new race weekend (ISO timestamps with UTC offset, duration in minutes). -->
@@ -496,7 +496,7 @@ document.addEventListener('resume',schedule);
 <div class="head sub"><h3>Startaufstellung</h3><span class="cap">noch keine Daten</span></div>
 <p>Startaufstellung folgt nach dem Qualifying.</p>
 <div class="head sub"><h3>Freies Training</h3><div class="tools"><span class="cap" id="fp-cap">Formula 1</span>
-<div class="seg" role="group" aria-label="Training"><button type="button" data-fp="fp1" data-cap="Formula 1" aria-pressed="true">FP1</button><button type="button" data-fp="fp2" data-cap="noch keine Daten" aria-pressed="false">FP2</button><button type="button" data-fp="fp3" data-cap="noch keine Daten" aria-pressed="false">FP3</button></div></div></div>
+<div class="seg" role="group" aria-label="Training"><button type="button" data-fp="fp1" data-cap="Formula 1" aria-pressed="true">FP1</button><button type="button" data-fp="fp2" data-cap="Formula 1" aria-pressed="false">FP2</button><button type="button" data-fp="fp3" data-cap="noch keine Daten" aria-pressed="false">FP3</button></div></div></div>
 <div class="fp" id="fp1">
 <table class="top5">
 <thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Zeit</th><th>Abstand</th></tr></thead>
@@ -527,7 +527,33 @@ document.addEventListener('resume',schedule);
 </table>
 </div>
 <div class="fp" id="fp2" hidden>
-<p>noch keine Daten</p>
+<table class="top5">
+<thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Zeit</th><th>Abstand</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Antonelli</td><td>Mercedes</td><td>1:23.077</td><td>+234.823</td></tr>
+<tr><td>2</td><td>Russell</td><td>Mercedes</td><td>1:23.204</td><td>+0.127</td></tr>
+<tr><td>3</td><td>Norris</td><td>McLaren</td><td>1:23.522</td><td>+0.445</td></tr>
+<tr><td>4</td><td>Piastri</td><td>McLaren</td><td>1:23.549</td><td>+0.472</td></tr>
+<tr><td>5</td><td>Verstappen</td><td>Red Bull</td><td>1:23.576</td><td>+0.499</td></tr>
+<tr><td>6</td><td>Hadjar</td><td>Red Bull</td><td>1:23.583</td><td>+0.506</td></tr>
+<tr><td>7</td><td>Leclerc</td><td>Ferrari</td><td>1:24.099</td><td>+1.022</td></tr>
+<tr><td>8</td><td>Hamilton</td><td>Ferrari</td><td>1:24.216</td><td>+1.139</td></tr>
+<tr><td>9</td><td>Lawson</td><td>Racing Bulls</td><td>1:24.425</td><td>+1.348</td></tr>
+<tr><td>10</td><td>Lindblad</td><td>Racing Bulls</td><td>1:24.547</td><td>+1.470</td></tr>
+<tr><td>11</td><td>Bortoleto</td><td>Audi</td><td>1:24.614</td><td>+1.537</td></tr>
+<tr><td>12</td><td>Gasly</td><td>Alpine</td><td>1:24.764</td><td>+1.687</td></tr>
+<tr><td>13</td><td>Hülkenberg</td><td>Audi</td><td>1:24.871</td><td>+1.794</td></tr>
+<tr><td>14</td><td>Albon</td><td>Williams</td><td>1:25.276</td><td>+2.199</td></tr>
+<tr><td>15</td><td>Colapinto</td><td>Alpine</td><td>1:25.733</td><td>+2.656</td></tr>
+<tr><td>16</td><td>Sainz</td><td>Williams</td><td>1:25.839</td><td>+2.762</td></tr>
+<tr><td>17</td><td>Câmara</td><td>Haas</td><td>1:25.962</td><td>+2.885</td></tr>
+<tr><td>18</td><td>Bearman</td><td>Haas</td><td>1:25.996</td><td>+2.919</td></tr>
+<tr><td>19</td><td>Alonso</td><td>Aston Martin</td><td>1:26.046</td><td>+2.969</td></tr>
+<tr><td>20</td><td>Stroll</td><td>Aston Martin</td><td>1:26.648</td><td>+3.571</td></tr>
+<tr><td>21</td><td>Bottas</td><td>Cadillac</td><td>1:27.394</td><td>+4.317</td></tr>
+<tr><td>22</td><td>Pérez</td><td>Cadillac</td><td>1:27.511</td><td>+4.434</td></tr>
+</tbody>
+</table>
 </div>
 <div class="fp" id="fp3" hidden>
 <p>noch keine Daten</p>
@@ -607,10 +633,11 @@ document.addEventListener('resume',schedule);
 </section>
 
 <section id="motortausch">
-<div class="head"><h2>Strafen</h2><span class="cap">FIA Doc 61 (Las Vegas)</span></div>
+<div class="head"><h2>Strafen</h2><span class="cap">FIA Doc 18 (Katar), Doc 61 (Las Vegas)</span></div>
 <table>
 <thead><tr><th>Fahrer</th><th>Element / Vergehen</th><th>Strafe</th></tr></thead>
 <tbody>
+<tr><td>Red Bull (Hadjar)</td><td>Unsichere Freigabe in der Boxengasse, FP1 (Doc 18)</td><td>30.000 € Geldstrafe, davon 20.000 € auf 12 Monate zur Bewährung</td></tr>
 <tr><td>Pérez</td><td>Kollision mit Camara in Las Vegas (10 s, nach Ausfall umgewandelt)</td><td>5 Startplätze Gridstrafe (Katar, übertragen)</td></tr>
 </tbody>
 </table>
@@ -634,6 +661,12 @@ document.addEventListener('resume',schedule);
 <li><a href="https://www.fia.com/system/files/decision-document/2026_qatar_grand_prix_-_competition_notes_-_pirelli_preview_v2.pdf">Doc 13 – Pirelli Preview V2<span class="meta">fia.com · 27.11.26</span></a></li>
 <li><a href="https://www.fia.com/system/files/decision-document/2026_qatar_grand_prix_-_race_directors_competition_notes_v2.pdf">Doc 14 – Race Director’s Competition Notes V2<span class="meta">fia.com · 27.11.26</span></a></li>
 <li><a href="https://www.fia.com/system/files/decision-document/2026_qatar_grand_prix_-_summons_-_car_6_-_alleged_unsafe_act.pdf">Doc 15 – Summons HAD #6 (unsichere Situation Boxengasse)<span class="meta">fia.com · 27.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_qatar_grand_prix_-_free_practice_1_classification.pdf">Doc 16 – Free Practice 1 Classification<span class="meta">fia.com · 27.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_qatar_grand_prix_-_infringement_-_free_practice_1_deleted_lap_times.pdf">Doc 17 – FP1 gelöschte Rundenzeiten<span class="meta">fia.com · 27.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_qatar_grand_prix_-_infringement_-_car_6_-_unsafe_act.pdf">Doc 18 – Strafe HAD #6 / Red Bull (Boxenfreigabe)<span class="meta">fia.com · 27.11.26</span></a></li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_qatar_grand_prix_-_infringement_-_car_11_-_media_commitment.pdf">Doc 19 – PER #11 Pressekonferenz, keine Strafe<span class="meta">fia.com · 27.11.26</span></a></li>
+<li class="gap" style="font-size:.8em;color:#888">Doc 20 – nicht veröffentlicht</li>
+<li><a href="https://www.fia.com/system/files/decision-document/2026_qatar_grand_prix_-_free_practice_2_classification.pdf">Doc 21 – Free Practice 2 Classification<span class="meta">fia.com · 27.11.26</span></a></li>
 </ol>
 </section>
 
